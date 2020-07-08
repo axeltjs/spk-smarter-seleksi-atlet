@@ -7,7 +7,7 @@
                     <span class='icon-bar'></span>
                 </button>
                 <div class='navbar-brand navbar-brand-logo' align='center'>
-                   <img src='images/135556_620.jpg' width='700' height='60'>
+                   <img src='images/fcsi.jpeg' width='700' height='60'>
                 </div>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -21,7 +21,7 @@
                     <li class='dropdown'>
                         <a href='#' class='dropdown-toggle' data-toggle='dropdown'>Tentang  <span class='caret'></span></a>
                         <ul class='dropdown-menu'>
-                            <li><a href='?p=sejarah'>Sejarah Bank BRI </a></li>
+                            <li><a href='?p=sejarah'>Sejarah </a></li>
                             <li><a href='?p=visimisi'>Visi dan Misi </a></li>
                            
                           </ul>
@@ -39,8 +39,8 @@
                         <a href='#' class='dropdown-toggle' data-toggle='dropdown'>Login  <span class='caret'></span></a>
                         <ul class='dropdown-menu'>
                             <li><a href='spksdm/index.php'>Login Admin </a></li>
-                            <li><a href='spkpeserta/index.php'>Login Pendaftar </a></li>
-                            <li><a href='spkpimpinan/index.php'>Login Pimpinan </a></li>
+                            <li><a href='spkpeserta/index.php'>Login Atlet </a></li>
+                            <li><a href='spkpimpinan/index.php'>Login Pelatih </a></li>
 
                           </ul>
                     </li>

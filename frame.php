@@ -10,7 +10,7 @@ error_reporting(0);
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>SPK PENERIMAAN TELLER</title>
+    <title>SPK SELEKSI ATLET</title>
    <?php include"style.php";?>
    <?php include"appConfig/conn.php";
          include"appConfig/libb.php";
@@ -26,7 +26,7 @@ error_reporting(0);
     <!-- Footer -->
    
     <footer class="footer">
-        <strong>BANK BRI - </strong>SAMARINDA <STRONG>|Design By : </STRONG>M.SURIANSYAH</STRONG>  &copy; Copyright 2019
+        <b>FEDERASI CHEERLEADING SELURUH INDONESIA (FSCI) SAMARINDA &copy; 2020</b>
     </footer>
     <!-- // Footer -->
     <!-- Inline Script for colors and config objects; used by various external scripts; -->

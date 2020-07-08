@@ -14,7 +14,7 @@
          <li class="bg_lb"> <a href="?load=dashboard"> <i class=""></i> <span class="">
 		
         
-		<h1 class="text-primary">SELAMAT DATANG DI APLIKASI SISTEM PENDUKUNG KEPUTUSAN (SPK) PENERIMAAN TELLER PADA BANK BRI CABANG SAMARINDA</h1>
+		<h1 class="text-primary">SELAMAT DATANG DI APLIKASI SISTEM PENDUKUNG KEPUTUSAN (SPK) SELEKSI ATLET PADA FEDERASI CHEERLEADING SELURUH INDONESIA (FSCI)</h1>
  
         
       </ul>

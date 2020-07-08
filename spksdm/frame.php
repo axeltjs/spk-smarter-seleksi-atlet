@@ -64,7 +64,7 @@ include"../appConfig/libb.php";
 </div>
 
 <div class="row-fluid">
-  <div id="footer" class="span12"> 2019 &copy; SPK Admin. Design By : <a href="#">M.SURIANSYAH</a> </div>
+  <div id="footer" class="span12"> FEDERASI CHEERLEADING SELURUH INDONESIA(FCSI) SAMARINDA </div>
 </div>
 <script src="js/excanvas.min.js"></script> 
 <script src="js/jquery.min.js"></script> 

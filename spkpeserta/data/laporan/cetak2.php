@@ -74,7 +74,7 @@ while($data = mysqli_fetch_array($tampil)){
       <td width="55">&nbsp;</td>
       <td width="229">&nbsp;</td>
       <td width="386">&nbsp;</td>
-      <td width="295"><div align="center">Ketua Unit BANK BRI</div></td>
+      <td width="295"><div align="center">Ketua</div></td>
     </tr>
     <tr>
       <td>&nbsp;</td>
