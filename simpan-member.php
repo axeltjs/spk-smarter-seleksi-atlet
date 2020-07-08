@@ -28,7 +28,7 @@ if($ketemu > 0){
 		 $tgl=date('Y');
 	  if(empty($addres_file)){	   
 				mysqli_query($koneksi,"INSERT INTO peserta (id_calon,username,pass,aktif,nama,no_hp,email,alamat,tgl_input)
-							VALUES ('$_POST[idp]','$_POST[txtUsername]','$pass','N','$_POST[txtNmLengkap]','$hp','$_POST[txtEmail]','$_POST[txtAlamat]','$tgl')")or die(mysql_error());
+							VALUES ('$_POST[idp]','$_POST[txtUsername]','$pass','N','$_POST[txtNmLengkap]','$hp','$_POST[txtEmail]','$_POST[txtAlamat]','$tgl')")or die(mysqli_error());
 							
 							echo"
 		<script language='javascript'>
@@ -48,7 +48,7 @@ if($ketemu > 0){
 				$pass = $_POST['txtPassMember'];
 				 upMemberLaman($filenameenkrip);	 
 					mysqli_query($koneksi,"INSERT INTO peserta (id_calon,username,pass,foto,aktif,status,validasi,validasi1,nama,no_hp,email,alamat,tgl_input)
-							VALUES ('$_POST[idp]','$_POST[txtUsername]','$pass','$filenameenkrip','N','BELUM DIPROSES','OF','CEK','$_POST[txtNmLengkap]','$hp','$_POST[txtEmail]','$_POST[txtAlamat]','$tgl')")or die(mysql_error());
+							VALUES ('$_POST[idp]','$_POST[txtUsername]','$pass','$filenameenkrip','N','BELUM DIPROSES','OF','CEK','$_POST[txtNmLengkap]','$hp','$_POST[txtEmail]','$_POST[txtAlamat]','$tgl')")or die(mysqli_error());
 							
 		
 	echo"

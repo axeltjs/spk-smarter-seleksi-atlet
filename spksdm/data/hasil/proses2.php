@@ -8,7 +8,7 @@ for ($i=1; $i<=$angka; $i++){
 $kt=$_POST['ket'];
 
 $query="update hasil set ket='".$kt[$i]."' where id_calon='".$kd[$i]."'";
-mysqli_query($koneksi,$query) or die(mysql_error());
+mysqli_query($koneksi,$query) or die(mysqli_error());
 
 echo"
 <script language='javascript'>

@@ -16,7 +16,7 @@ if(isset($_SESSION['username']) AND isset($_SESSION['password'])){
 	 
 	if($loadPage=="hasil" AND $action=="hapusData"){
 		
-		mysqli_query($koneksi,"DELETE FROM hasil WHERE id_calon='$_GET[id]'")or die (mysql_error());
+		mysqli_query($koneksi,"DELETE FROM hasil WHERE id_calon='$_GET[id]'")or die (mysqli_error());
 		
 		
 	echo"
@@ -38,4 +38,3 @@ if(isset($_SESSION['username']) AND isset($_SESSION['password'])){
 		
 		";
 		}
-?>

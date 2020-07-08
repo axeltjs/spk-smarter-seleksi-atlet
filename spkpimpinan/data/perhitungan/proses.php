@@ -115,11 +115,11 @@ if(isset($_SESSION['username']) AND isset($_SESSION['password'])){
 	if($loadPage=="hitung" AND $action=="prosesData" ){	
     $SQL="INSERT INTO utility (id_calon,nama,hasil) 
 	VALUES 	('$_POST[id]','$nama1','$rank')";
-	mysqli_query($koneksi,$SQL) or die (mysql_error());
+	mysqli_query($koneksi,$SQL) or die (mysqli_error());
 	
 	$SQL2="INSERT INTO hasil (id_calon,nama,thn_hitung,jpendidikan,usia,pengalaman,nilaites,wawancara,kesehatan,nreal,rank) 
 	VALUES 	('$_POST[id]','$nama1','$tgl','$kriteria1','$kriteria2','$kriteria3','$kriteria4','$kriteria5','$kriteria6','100','$rank')";
-	mysqli_query($koneksi,$SQL2) or die (mysql_error());
+	mysqli_query($koneksi,$SQL2) or die (mysqli_error());
 	
 	$SQL="UPDATE peserta SET nama='$nama1',
 	                             status='SUDAH DIPROSES',
@@ -132,7 +132,7 @@ if(isset($_SESSION['username']) AND isset($_SESSION['password'])){
 							 kesehatan='$kriteria6'
 							
 		                     WHERE id_calon='$_POST[id]'";	
-	mysqli_query($koneksi,$SQL) or die (mysql_error());
+	mysqli_query($koneksi,$SQL) or die (mysqli_error());
 	
    echo"
 	<script language='javascript'>
@@ -148,7 +148,7 @@ if(isset($_SESSION['username']) AND isset($_SESSION['password'])){
 							 
 							 
 		                     WHERE id_calon='$_POST[id]'";	
-	mysqli_query($koneksi,$SQL) or die (mysql_error());
+	mysqli_query($koneksi,$SQL) or die (mysqli_error());
 		 
 	echo"
 	<script language='javascript'>

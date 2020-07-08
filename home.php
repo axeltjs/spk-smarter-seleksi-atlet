@@ -1,16 +1,14 @@
 <div class="parallax cover overlay cover-image-full home">
-        <img  class="user-image img-responsive" src="images/Bank-BRI_Cloudera.jpeg" alt="Learning Cover" />
+        <img  class="user-image img-responsive" src="images/banner2.jpeg" alt="Learning Cover" />
         <div class="parallax-layer overlay overlay-full overlay-bg-white bg-transparent" data-speed="8" data-opacity="true">
             
         </div>
     </div>
  <?php
-include"../../../appConfig/conn.php";
-
-		
+    include("appConfig/conn.php");
 		//membaca kode barang terbesar
 	$sql = "SELECT max(id_calon) FROM peserta";
-	$query = mysqli_query($koneksi, $sql) or die (mysqli_error());
+	$query = mysqli_query($koneksi, $sql) or die (mysqli_error($koneksi));
  
 	$nip = mysqli_fetch_array($query);
  
@@ -24,8 +22,6 @@ include"../../../appConfig/conn.php";
 	} else {
 		$auto_kode = "A0001";
 	}
-
- 
  ?>  
     <div class="modal grow modal-overlay modal-backdrop-body fade" id="modal-overlay-signup">
         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>

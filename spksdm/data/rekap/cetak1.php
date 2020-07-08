@@ -51,7 +51,7 @@ include"conn.php";
 $tgl1= $_POST['tahun'];
 
 $no=1;
-$tampil = mysqli_query($koneksi,"SELECT * FROM peserta where  tgl_input ='$tgl1' AND validasi='SIAP1' order by id_calon DESC") or die(mysql_error());
+$tampil = mysqli_query($koneksi,"SELECT * FROM peserta where  tgl_input ='$tgl1' AND validasi='SIAP1' order by id_calon DESC") or die(mysqli_error());
 while($data = mysqli_fetch_array($tampil)){
 ?>
     

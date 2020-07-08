@@ -29,7 +29,7 @@ if($ketemu > 0){
 	  if(empty($addres_file)){
 		  $SQL="INSERT INTO tpengguna (kdPengguna,username,password,nmPengguna,foto,emailPengguna,alamatPengguna,kontak,aktif,level) 
 		VALUES ('$_POST[idp]','$_POST[txtuser]','$_POST[txtpass]','$_POST[txtNmLengkap]','$filename','$_POST[txtemail]','$_POST[txtAlamat]','$_POST[txtKontak]','Y','$_POST[level] ')";
-	mysqli_query($koneksi,$SQL) or die (mysql_error());
+	mysqli_query($koneksi,$SQL) or die (mysqli_error());
 	
     echo"
 	<script language='javascript'>
@@ -51,7 +51,7 @@ if($ketemu > 0){
 		
 				 upAvatar($filename);
 					mysqli_query($koneksi,"INSERT INTO tpengguna (kdPengguna,username,password,nmPengguna,foto,emailPengguna,alamatPengguna,kontak,aktif,level) 
-		VALUES ('$_POST[idp]','$_POST[txtuser]','$_POST[txtpass]','$_POST[txtNmLengkap]','$filename','$_POST[txtemail]','$_POST[txtAlamat]','$_POST[txtKontak]','Y','$_POST[level]')")or die(mysql_error());
+		VALUES ('$_POST[idp]','$_POST[txtuser]','$_POST[txtpass]','$_POST[txtNmLengkap]','$filename','$_POST[txtemail]','$_POST[txtAlamat]','$_POST[txtKontak]','Y','$_POST[level]')")or die(mysqli_error());
 							
 		
 	echo"

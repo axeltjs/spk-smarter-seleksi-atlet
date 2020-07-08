@@ -7,7 +7,7 @@ include"../../../appConfig/conn.php";
 		
 		//membaca kode barang terbesar
 	$sql = "SELECT max(id_calon) FROM peserta";
-	$query = mysqli_query($koneksi,$sql) or die (mysql_error());
+	$query = mysqli_query($koneksi,$sql) or die (mysqli_error());
  
 	$nip = mysqli_fetch_array($query);
  

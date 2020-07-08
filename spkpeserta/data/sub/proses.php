@@ -62,7 +62,7 @@ $subpengalaman1= 1/1+1/2+1/3 ;
 	if($loadPage=="sub" AND $action=="simpanData" AND $prioritas == 1 AND $kriteria=="JENJANG PENDIDIKAN"){	
     $SQL="INSERT INTO sub_kriteria (id_sub,nama_sub,prioritas,bobot,nama_kriteria) 
 	VALUES 	('$_POST[txtid]','$_POST[txtnamasub]','$_POST[txtpr]','$hasilsub1','$_POST[kriteria]')";
-	mysqli_query($koneksi,$SQL) or die (mysql_error());
+	mysqli_query($koneksi,$SQL) or die (mysqli_error());
    echo"
 	<script language='javascript'>
 	window.alert('Data Berhasil Disimpan $kriteria');
@@ -73,7 +73,7 @@ $subpengalaman1= 1/1+1/2+1/3 ;
 	}elseif($loadPage=="sub" AND $action=="simpanData" AND $prioritas == 2 AND $kriteria=="JENJANG PENDIDIKAN"){	
     $SQL="INSERT INTO sub_kriteria (id_sub,nama_sub,prioritas,bobot,nama_kriteria) 
 	VALUES 	('$_POST[txtid]','$_POST[txtnamasub]','$_POST[txtpr]','$hasilsub2','$_POST[kriteria]')";
-	mysqli_query($koneksi,$SQL) or die (mysql_error());
+	mysqli_query($koneksi,$SQL) or die (mysqli_error());
    echo"
 	<script language='javascript'>
 	window.alert('Data Berhasil Disimpan');
@@ -84,7 +84,7 @@ $subpengalaman1= 1/1+1/2+1/3 ;
 	}elseif($loadPage=="sub" AND $action=="simpanData" AND $prioritas == 1  AND $kriteria=="USIA"){	
     $SQL="INSERT INTO sub_kriteria (id_sub,nama_sub,prioritas,bobot,nama_kriteria) 
 	VALUES 	('$_POST[txtid]','$_POST[txtnamasub]','$_POST[txtpr]','$hasilsubusia1','$_POST[kriteria]')";
-	mysqli_query($koneksi,$SQL) or die (mysql_error());
+	mysqli_query($koneksi,$SQL) or die (mysqli_error());
    echo"
 	<script language='javascript'>
 	window.alert('Data Berhasil Disimpan');
@@ -95,7 +95,7 @@ $subpengalaman1= 1/1+1/2+1/3 ;
 	}elseif($loadPage=="sub" AND $action=="simpanData" AND $prioritas == 2  AND $kriteria=="USIA"){	
     $SQL="INSERT INTO sub_kriteria (id_sub,nama_sub,prioritas,bobot,nama_kriteria) 
 	VALUES 	('$_POST[txtid]','$_POST[txtnamasub]','$_POST[txtpr]','$hasilsubusia2','$_POST[kriteria]')";
-	mysqli_query($koneksi,$SQL) or die (mysql_error());
+	mysqli_query($koneksi,$SQL) or die (mysqli_error());
    echo"
 	<script language='javascript'>
 	window.alert('Data Berhasil Disimpan');
@@ -106,7 +106,7 @@ $subpengalaman1= 1/1+1/2+1/3 ;
 	}elseif($loadPage=="sub" AND $action=="simpanData" AND $prioritas == 3  AND $kriteria=="USIA"){	
     $SQL="INSERT INTO sub_kriteria (id_sub,nama_sub,prioritas,bobot,nama_kriteria) 
 	VALUES 	('$_POST[txtid]','$_POST[txtnamasub]','$_POST[txtpr]','$hasilsubusia3','$_POST[kriteria]')";
-	mysqli_query($koneksi,$SQL) or die (mysql_error());
+	mysqli_query($koneksi,$SQL) or die (mysqli_error());
    echo"
 	<script language='javascript'>
 	window.alert('Data Berhasil Disimpan');
@@ -117,7 +117,7 @@ $subpengalaman1= 1/1+1/2+1/3 ;
 	}elseif($loadPage=="sub" AND $action=="simpanData" AND $prioritas == 1  AND $kriteria=="PENGALAMAN KERJA"){	
     $SQL="INSERT INTO sub_kriteria (id_sub,nama_sub,prioritas,bobot,nama_kriteria) 
 	VALUES 	('$_POST[txtid]','$_POST[txtnamasub]','$_POST[txtpr]','$hasilpengalaman1','$_POST[kriteria]')";
-	mysqli_query($koneksi,$SQL) or die (mysql_error());
+	mysqli_query($koneksi,$SQL) or die (mysqli_error());
    echo"
 	<script language='javascript'>
 	window.alert('Data Berhasil Disimpan');
@@ -128,7 +128,7 @@ $subpengalaman1= 1/1+1/2+1/3 ;
 	}elseif($loadPage=="sub" AND $action=="simpanData" AND $prioritas == 2  AND $kriteria=="PENGALAMAN KERJA"){	
     $SQL="INSERT INTO sub_kriteria (id_sub,nama_sub,prioritas,bobot,nama_kriteria) 
 	VALUES 	('$_POST[txtid]','$_POST[txtnamasub]','$_POST[txtpr]','$hasilpengalaman2','$_POST[kriteria]')";
-	mysqli_query($koneksi,$SQL) or die (mysql_error());
+	mysqli_query($koneksi,$SQL) or die (mysqli_error());
    echo"
 	<script language='javascript'>
 	window.alert('Data Berhasil Disimpan');
@@ -139,7 +139,7 @@ $subpengalaman1= 1/1+1/2+1/3 ;
 	}elseif($loadPage=="sub" AND $action=="simpanData" AND $prioritas == 3  AND $kriteria=="PENGALAMAN KERJA"){	
     $SQL="INSERT INTO sub_kriteria (id_sub,nama_sub,prioritas,bobot,nama_kriteria) 
 	VALUES 	('$_POST[txtid]','$_POST[txtnamasub]','$_POST[txtpr]','$hasilpengalaman3','$_POST[kriteria]')";
-	mysqli_query($koneksi,$SQL) or die (mysql_error());
+	mysqli_query($koneksi,$SQL) or die (mysqli_error());
    echo"
 	<script language='javascript'>
 	window.alert('Data Berhasil Disimpan');
@@ -150,7 +150,7 @@ $subpengalaman1= 1/1+1/2+1/3 ;
 	}elseif($loadPage=="sub" AND $action=="simpanData" AND $prioritas == 1  AND $kriteria=="NILAI TES"){	
     $SQL="INSERT INTO sub_kriteria (id_sub,nama_sub,prioritas,bobot,nama_kriteria) 
 	VALUES 	('$_POST[txtid]','$_POST[txtnamasub]','$_POST[txtpr]','$hasiltes1','$_POST[kriteria]')";
-	mysqli_query($koneksi,$SQL) or die (mysql_error());
+	mysqli_query($koneksi,$SQL) or die (mysqli_error());
    echo"
 	<script language='javascript'>
 	window.alert('Data Berhasil Disimpan');
@@ -161,7 +161,7 @@ $subpengalaman1= 1/1+1/2+1/3 ;
 	}elseif($loadPage=="sub" AND $action=="simpanData" AND $prioritas == 2  AND $kriteria=="NILAI TES"){	
     $SQL="INSERT INTO sub_kriteria (id_sub,nama_sub,prioritas,bobot,nama_kriteria) 
 	VALUES 	('$_POST[txtid]','$_POST[txtnamasub]','$_POST[txtpr]','$hasiltes2','$_POST[kriteria]')";
-	mysqli_query($koneksi,$SQL) or die (mysql_error());
+	mysqli_query($koneksi,$SQL) or die (mysqli_error());
    echo"
 	<script language='javascript'>
 	window.alert('Data Berhasil Disimpan');
@@ -172,7 +172,7 @@ $subpengalaman1= 1/1+1/2+1/3 ;
 	}elseif($loadPage=="sub" AND $action=="simpanData" AND $prioritas == 3  AND $kriteria=="NILAI TES"){	
     $SQL="INSERT INTO sub_kriteria (id_sub,nama_sub,prioritas,bobot,nama_kriteria) 
 	VALUES 	('$_POST[txtid]','$_POST[txtnamasub]','$_POST[txtpr]','$hasiltes3','$_POST[kriteria]')";
-	mysqli_query($koneksi,$SQL) or die (mysql_error());
+	mysqli_query($koneksi,$SQL) or die (mysqli_error());
    echo"
 	<script language='javascript'>
 	window.alert('Data Berhasil Disimpan');
@@ -183,7 +183,7 @@ $subpengalaman1= 1/1+1/2+1/3 ;
 	}elseif($loadPage=="sub" AND $action=="simpanData" AND $prioritas == 1  AND $kriteria=="KEMAMPUAN BERKOMUNIKASI"){	
     $SQL="INSERT INTO sub_kriteria (id_sub,nama_sub,prioritas,bobot,nama_kriteria) 
 	VALUES 	('$_POST[txtid]','$_POST[txtnamasub]','$_POST[txtpr]','$hasilwawancara1','$_POST[kriteria]')";
-	mysqli_query($koneksi,$SQL) or die (mysql_error());
+	mysqli_query($koneksi,$SQL) or die (mysqli_error());
    echo"
 	<script language='javascript'>
 	window.alert('Data Berhasil Disimpan');
@@ -194,7 +194,7 @@ $subpengalaman1= 1/1+1/2+1/3 ;
 	}elseif($loadPage=="sub" AND $action=="simpanData" AND $prioritas == 2  AND $kriteria=="KEMAMPUAN BERKOMUNIKASI"){	
     $SQL="INSERT INTO sub_kriteria (id_sub,nama_sub,prioritas,bobot,nama_kriteria) 
 	VALUES 	('$_POST[txtid]','$_POST[txtnamasub]','$_POST[txtpr]','$hasilwawancara2','$_POST[kriteria]')";
-	mysqli_query($koneksi,$SQL) or die (mysql_error());
+	mysqli_query($koneksi,$SQL) or die (mysqli_error());
    echo"
 	<script language='javascript'>
 	window.alert('Data Berhasil Disimpan');
@@ -206,7 +206,7 @@ $subpengalaman1= 1/1+1/2+1/3 ;
 	elseif($loadPage=="sub" AND $action=="simpanData" AND $prioritas == 3  AND $kriteria=="KEMAMPUAN BERKOMUNIKASI"){	
     $SQL="INSERT INTO sub_kriteria (id_sub,nama_sub,prioritas,bobot,nama_kriteria) 
 	VALUES 	('$_POST[txtid]','$_POST[txtnamasub]','$_POST[txtpr]','$hasilwawancara3','$_POST[kriteria]')";
-	mysqli_query($koneksi,$SQL) or die (mysql_error());
+	mysqli_query($koneksi,$SQL) or die (mysqli_error());
    echo"
 	<script language='javascript'>
 	window.alert('Data Berhasil Disimpan');
@@ -217,7 +217,7 @@ $subpengalaman1= 1/1+1/2+1/3 ;
 	}elseif($loadPage=="sub" AND $action=="simpanData" AND $prioritas == 1  AND $kriteria=="KESEHATAN"){	
     $SQL="INSERT INTO sub_kriteria (id_sub,nama_sub,prioritas,bobot,nama_kriteria) 
 	VALUES 	('$_POST[txtid]','$_POST[txtnamasub]','$_POST[txtpr]','$hasilkesehatan1','$_POST[kriteria]')";
-	mysqli_query($koneksi,$SQL) or die (mysql_error());
+	mysqli_query($koneksi,$SQL) or die (mysqli_error());
    echo"
 	<script language='javascript'>
 	window.alert('Data Berhasil Disimpan');
@@ -228,7 +228,7 @@ $subpengalaman1= 1/1+1/2+1/3 ;
 	}elseif($loadPage=="sub" AND $action=="simpanData" AND $prioritas == 2  AND $kriteria=="KESEHATAN"){	
     $SQL="INSERT INTO sub_kriteria (id_sub,nama_sub,prioritas,bobot,nama_kriteria) 
 	VALUES 	('$_POST[txtid]','$_POST[txtnamasub]','$_POST[txtpr]','$hasilkesehatan2','$_POST[kriteria]')";
-	mysqli_query($koneksi,$SQL) or die (mysql_error());
+	mysqli_query($koneksi,$SQL) or die (mysqli_error());
    echo"
 	<script language='javascript'>
 	window.alert('Data Berhasil Disimpan');
@@ -239,7 +239,7 @@ $subpengalaman1= 1/1+1/2+1/3 ;
 	}elseif($loadPage=="sub" AND $action=="simpanData" AND $prioritas == 3  AND $kriteria=="KESEHATAN"){	
     $SQL="INSERT INTO sub_kriteria (id_sub,nama_sub,prioritas,bobot,nama_kriteria) 
 	VALUES 	('$_POST[txtid]','$_POST[txtnamasub]','$_POST[txtpr]','$hasilkesehatan3','$_POST[kriteria]')";
-	mysqli_query($koneksi,$SQL) or die (mysql_error());
+	mysqli_query($koneksi,$SQL) or die (mysqli_error());
    echo"
 	<script language='javascript'>
 	window.alert('Data Berhasil Disimpan');
@@ -250,7 +250,7 @@ $subpengalaman1= 1/1+1/2+1/3 ;
 	}
 	elseif($loadPage=="sub" AND $action=="hapusData"){
 		
-	mysqli_query($koneksi,"DELETE FROM sub_kriteria WHERE id_sub='$_GET[id_sub]'")or die (mysql_error());
+	mysqli_query($koneksi,"DELETE FROM sub_kriteria WHERE id_sub='$_GET[id_sub]'")or die (mysqli_error());
 		
 	echo"
 	<script language='javascript'>
@@ -268,7 +268,7 @@ $subpengalaman1= 1/1+1/2+1/3 ;
 							 nama_kriteria='$_POST[kriteria]'
 							 
 		                     WHERE id_sub='$_POST[id]'";	
-	mysqli_query($koneksi,$SQL) or die (mysql_error());
+	mysqli_query($koneksi,$SQL) or die (mysqli_error());
 		 
 	echo"
 	<script language='javascript'>

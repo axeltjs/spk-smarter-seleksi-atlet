@@ -42,7 +42,7 @@ $tgl1= $_POST['tahun'];
 
 
 $no=1;
-$tampil = mysqli_query($koneksi,"SELECT * FROM hasil where  thn_hitung ='$tgl1' AND ket='TIDAK LULUS' order by rank DESC") or die(mysql_error());
+$tampil = mysqli_query($koneksi,"SELECT * FROM hasil where  thn_hitung ='$tgl1' AND ket='TIDAK LULUS' order by rank DESC") or die(mysqli_error());
 while($data = mysqli_fetch_array($tampil)){
 ?>
     

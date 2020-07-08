@@ -21,10 +21,10 @@ if(isset($_SESSION['username']) AND isset($_SESSION['password'])){
 	
 	$SQL="INSERT INTO peserta (id_calon,nama,tgl_lhr,tempat_lhr,jenkel,alamat,no_hp,tgl_input,jpendidikan,usia,pengalaman,nilaites,wawancara,kesehatan) 
 		VALUES ('$_POST[idp]','$_POST[txtNmLengkap]','$_POST[txttgllhr]','$_POST[txttmptlhr]','$_POST[jk]','$_POST[txtAlamat]','$_POST[txtKontak]','$tgl','$_POST[txtjp]','$_POST[txtusia] ','$_POST[pengalaman]','$_POST[txtnilaites]','$_POST[txtwawancara]','$_POST[txtmcu]')";
-	mysqli_query($koneksi,$SQL) or die (mysql_error());
+	mysqli_query($koneksi,$SQL) or die (mysqli_error());
 	$SQL2="INSERT INTO perhitungan (id_calon,nama,status,jpendidikan,usia,pengalaman,nilaites,wawancara,kesehatan) 
 		VALUES ('$_POST[idp]','$_POST[txtNmLengkap]','BELUM DIPROSES','$_POST[txtjp]','$_POST[txtusia]','$_POST[pengalaman]','$_POST[txtnilaites]','$_POST[txtwawancara]','$_POST[txtmcu]')";
-	mysqli_query($koneksi,$SQL2) or die (mysql_error());
+	mysqli_query($koneksi,$SQL2) or die (mysqli_error());
 	
     echo"
 	<script language='javascript'>
@@ -35,8 +35,8 @@ if(isset($_SESSION['username']) AND isset($_SESSION['password'])){
 	
 	}elseif($loadPage=="member" AND $action=="hapusData"){
 		
-		mysqli_query($koneksi,"DELETE FROM peserta WHERE id_calon='$_GET[id]'")or die (mysql_error());
-		mysqli_query($koneksi,"DELETE FROM perhitungan WHERE id_calon='$_GET[id]'")or die (mysql_error());
+		mysqli_query($koneksi,"DELETE FROM peserta WHERE id_calon='$_GET[id]'")or die (mysqli_error());
+		mysqli_query($koneksi,"DELETE FROM perhitungan WHERE id_calon='$_GET[id]'")or die (mysqli_error());
 		
 	echo"
 	<script language='javascript'>
@@ -53,7 +53,7 @@ if(isset($_SESSION['username']) AND isset($_SESSION['password'])){
 		
 		
 		$SQL5="UPDATE peserta SET aktif='Y' where id_calon='$_GET[id]'";
-	mysqli_query($koneksi,$SQL5) or die (mysql_error());
+	mysqli_query($koneksi,$SQL5) or die (mysqli_error());
 	
 	
 	echo"
@@ -72,7 +72,7 @@ if(isset($_SESSION['username']) AND isset($_SESSION['password'])){
 		
 		
 		$SQL5="UPDATE peserta SET aktif='N' where id_calon='$_GET[id]'";
-	mysqli_query($koneksi,$SQL5) or die (mysql_error());
+	mysqli_query($koneksi,$SQL5) or die (mysqli_error());
 	
 	
 	echo"
@@ -106,7 +106,7 @@ if(isset($_SESSION['username']) AND isset($_SESSION['password'])){
 								 wawancara='$_POST[txtwawancara]',
 								  kesehatan='$_POST[txtmcu]'
 			WHERE id_calon='$_POST[id]'";
-	mysqli_query($koneksi,$SQL1) or die (mysql_error());
+	mysqli_query($koneksi,$SQL1) or die (mysqli_error());
 	
 	$SQL3="UPDATE perhitungan SET nama='$_POST[txtNmLengkap]',
 								  
@@ -119,7 +119,7 @@ if(isset($_SESSION['username']) AND isset($_SESSION['password'])){
 								 wawancara='$_POST[txtwawancara]',
 								  kesehatan='$_POST[txtmcu]'
 			WHERE id_calon='$_POST[id]'";
-	mysqli_query($koneksi,$SQL3) or die (mysql_error());
+	mysqli_query($koneksi,$SQL3) or die (mysqli_error());
 	
 	
 		

@@ -1,7 +1,7 @@
 <?php
 $SQL=mysqli_query($koneksi,"SELECT * FROM tboking WHERE kdBoking='$_GET[id]'");
 
-$_data=mysqli_fetch_array($SQL) or die (mysql_error());
+$_data=mysqli_fetch_array($SQL) or die (mysqli_error());
 $tglInvoice=region($_data['tglInvoice']);
 $totalRp=idr_f($_data['totalBayar']);
 echo"

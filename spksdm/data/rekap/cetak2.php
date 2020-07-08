@@ -50,7 +50,7 @@ include"conn.php";
 if (isset($_GET['id'])) {
 $id = $_GET['id'];
 $no=1;
-$tampil = mysqli_query($koneksi,"SELECT * FROM peserta where id_calon='$id' AND validasi='SIAP1' order by id_calon DESC") or die(mysql_error());
+$tampil = mysqli_query($koneksi,"SELECT * FROM peserta where id_calon='$id' AND validasi='SIAP1' order by id_calon DESC") or die(mysqli_error());
 $data = mysqli_fetch_array($tampil);
 }
 else {
