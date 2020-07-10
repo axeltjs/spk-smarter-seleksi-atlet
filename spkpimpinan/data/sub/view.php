@@ -19,10 +19,8 @@
 				  <th width="5%">Kriteria</th>
                   <th width="10%">Sub Kriteria</th>
                   <th width="5%">Prioritas</th>
-				   
                   <th width="5%">Bobot</th>
-                  
-                
+                  <th width="5%">Aksi</th>
                 </tr>
               </thead>
               <tbody>
@@ -38,8 +36,8 @@
 				   <td>$_data[nama_kriteria] </td>
                   <td>$_data[nama_sub]</td>
                   <td>$_data[prioritas] </td>
-				 
 				  <td>$_data[bobot] </td>
+          <td><a class='btn btn-warning' href='frame.php?load=subedit&id=".$_data[id_sub]."'> Edit</a></td>
 				  
                  
                 </tr> 

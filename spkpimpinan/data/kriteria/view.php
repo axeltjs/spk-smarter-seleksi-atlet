@@ -3,6 +3,7 @@
     <h1>Data Kriteria</h1>
   </div>
   <div class="container-fluid">
+  <!-- <a href="frame.php?load=kinput" class="btn btn-primary">Tambah Kriteria</a> -->
     <hr>
     <div class="row-fluid">
       <div class="span12">
@@ -19,8 +20,7 @@
                   <th width="15%">NAMA KRITERIA</th>
                   <th width="2%">PRIORITAS</th>
                   <th width="2%">BOBOT</th>
-                 
-                
+                  <th width="3%">AKSI</th>
                 </tr>
               </thead>
               <tbody>
@@ -37,10 +37,7 @@
 				  <td>$_data[nama_kriteria]</td>
 				  <td>$_data[prioritas]</td>
 				   <td>$_data[bobot]</td>
-				  
-				  
-				
-                 
+           <td><a class='btn btn-warning' href='frame.php?load=kedit&id=".$_data[id_kriteria]."'> Edit</a></td>
                 </tr> 
 				   
 				   ";

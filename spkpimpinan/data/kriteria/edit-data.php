@@ -1,6 +1,20 @@
 <?php
 $SQL=mysqli_query($koneksi,"SELECT * FROM kriteria WHERE id_kriteria='$_GET[id]'");
 $_data=mysqli_fetch_array($SQL);
+if(isset($_POST['id'])){
+  $SQL="UPDATE kriteria SET nama_kriteria ='$_POST[kriteria]',
+							 prioritas='$_POST[txtp]'
+		                     WHERE id_kriteria='$_POST[id]'";	
+	mysqli_query($koneksi,$SQL) or die (mysqli_error());
+		 
+	echo"
+	<script language='javascript'>
+	window.alert('Data Berhasil Diubah');
+	window.location=('/spkpimpinan/frame.php?load=k')
+	</script>
+	";
+	
+}
 echo"
 <div id='content-header'>
   <div id='breadcrumb'> <a href='?load=dashboard' title='Go to Home' class='tip-bottom'><i class='icon-home'></i> Home</a> <a href='?load=k' class='tip-bottom'>Module Kriteria</a> <a href='?load=k&action=edit&id=$_GET[id_kriteria]' class='current'>Edit Data Kriteria</a> </div>
@@ -15,7 +29,7 @@ echo"
           <h5>Isi Data Dengan Lengkap</h5>
         </div>
         <div class='widget-content nopadding'>
-          <form action='$loadModule?load=k&action=ubahData' method='POST' class='form-horizontal' enctype='multipart/form-data'>
+          <form method='POST' class='form-horizontal' enctype='multipart/form-data'>
 		  <input type='hidden' name='id' value='$_data[id_kriteria]'>
             
 			  <div class='control-group'>
