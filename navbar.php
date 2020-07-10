@@ -34,15 +34,14 @@
                 <div class='navbar-right'>
                     <ul class='nav navbar-nav navbar-nav-bordered navbar-nav-margin-right'>
                         <!-- user -->
-                        
                              <li class='dropdown'>
-                        <a href='#' class='dropdown-toggle' data-toggle='dropdown'>Login  <span class='caret'></span></a>
-                        <ul class='dropdown-menu'>
-                            <li><a href='spksdm/index.php'>Login Admin </a></li>
+                        <a href='spksdm/index.php'>Login </a>
+                        <!-- <ul class='dropdown-menu'>
+                            <li><a href='spksdm/index.php'>Login  </a></li>
                             <li><a href='spkpeserta/index.php'>Login Atlet </a></li>
                             <li><a href='spkpimpinan/index.php'>Login Pelatih </a></li>
 
-                          </ul>
+                          </ul> -->
                     </li>
 
                              

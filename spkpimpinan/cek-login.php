@@ -25,10 +25,6 @@ if ($in == 1){
   $_SESSION['username']    		  = $r['username'];
   $_SESSION['password']      	  = $r['password'];
   $_SESSION['foto']      	  = $r['foto'];
-  
-	
-	  
-  
   $_SESSION['timeout']		= $waktu+$expired;
   $waktulog= time();												
 }if ($r['username'] == $username AND $r['password'] == $pass AND $r['level'] == $level  AND $r['aktif'] == 'Y' ){									

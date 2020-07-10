@@ -42,7 +42,7 @@ include"../appConfig/libb.php";
 
 <!--Header-part-->
 <div id="header">
-  <h1><a href="#">PIMPINAN</a></h1>
+  <h1></h1>
 </div>
 
 <div id="user-nav" class="navbar navbar-inverse">
@@ -50,8 +50,6 @@ include"../appConfig/libb.php";
    <?php include"nav.php";?>
   </ul>
 </div>
-
-
 
 <div id="sidebar"><a href="?load=dashboard" class="visible-phone"><i class="icon icon-home"></i> Dashboard</a>
   <ul>

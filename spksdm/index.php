@@ -33,7 +33,11 @@
 				 <div class="control-group">
                     <div class="controls">
                         <div class="main_input_box">
-                            <input type="hidden" placeholder="level" name="level" value="admin" required />
+                            <select name="level" id="level" class="form-control" style="width:88%">
+                                <option value="admin">Login sebagai Admin</option>
+                                <option value="peserta">Login sebagai Atlet</option>
+                                <option value="pimpinan">Login sebagai Pelatih</option>
+                            </select>
                         </div>
                     </div>
                 </div>

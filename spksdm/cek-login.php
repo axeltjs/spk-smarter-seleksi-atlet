@@ -15,33 +15,65 @@ $level		= antiinjection($_POST['level']);
 $waktu = time()+25200;
 $expired=60;
 
-$query=mysqli_query($koneksi,"SELECT * FROM tpengguna WHERE username='$username' AND password='$pass' AND aktif='Y' AND level='$level' ");
+if($level === 'admin' || $level === 'pimpinan'){
+  $query=mysqli_query($koneksi,"SELECT * FROM tpengguna WHERE username='$username' AND password='$pass' AND aktif='Y' AND level='$level' ");
+}elseif($level === 'peserta'){
+  $query=mysqli_query($koneksi,"SELECT * FROM peserta WHERE username='$username' 
+  AND pass='$pass' AND aktif='Y'");
+  // echo 'saya peserta';
+  // return 'ew';
+}
 $in=mysqli_num_rows($query);
 $r=mysqli_fetch_array($query);
+// echo var_dump($in);
 
 if ($in == 1){
   session_start();
-  
-  $_SESSION['kdPengguna']   	  = $r['kdPengguna'];
-  $_SESSION['username']    		  = $r['username'];
-  $_SESSION['password']      	  = $r['password'];
-  $_SESSION['nmPengguna']  		  = $r['nmPengguna'];
- 
-	$_SESSION['foto']      		  = $r['foto'];
-	  
-  
-  $_SESSION['timeout']		= $waktu+$expired;
   $waktulog= time();												
-										
-  
-}
-if ($r['username']== $username AND $r['password'] == $pass  AND $r['level']=='admin' AND $r['aktif']=='Y' ){									
- header('location:frame.php?load=dashboard');
+  $_SESSION['timeout']		= $waktu+$expired;
+  $_SESSION['foto']      	  = $r['foto'];
+  $_SESSION['username']    		  = $r['username'];
+
+  if($level === 'admin'){
+    $_SESSION['kdPengguna']   	  = $r['kdPengguna'];
+    $_SESSION['nmPengguna']  		  = $r['nmPengguna'];
+    $_SESSION['password']      	  = $r['password'];
+  }elseif($level === 'pimpinan'){
+    $_SESSION['kdPengguna']   	  = $r['kdPengguna'];
+    $_SESSION['password']      	  = $r['password'];
+  }else{
+    $_SESSION['id_calon']   	  = $r['id_calon'];
+    $_SESSION['email']         = $r['email'];
+    $_SESSION['password']      	  = $r['pass'];
+    $_SESSION['nmLengkap']  		  = $r['nama'];
+  }
 }
 
-else{
+if($level === 'admin'){
+  if ($r['username']== $username AND $r['password'] == $pass AND $r['aktif']=='Y' ){	
+    header('location:frame.php?load=dashboard');
+  }else{
     echo "<script type='text/javascript'>
-	window.alert('Username Atau Password Anda Salah'); 
-	window.location =('index.php')</script>";
-}
+    window.alert('Username Atau Password Anda Salah'); 
+    window.location =('index.php')</script>";
+  }
+}elseif($level === 'pimpinan'){
+  if ($r['username']== $username AND $r['password'] == $pass AND $r['aktif']=='Y' ){	
+    header('location:/spkpimpinan/frame.php?load=dashboard');
+  }else{
+    echo "<script type='text/javascript'>
+    window.alert('Username Atau Password Anda Salah'); 
+    window.location =('index.php')</script>";
+  }
+}else{
+  if ($r['username']== $username AND $r['pass'] == $pass AND $r['aktif']=='Y' ){	
+    header('location:/spkpeserta/frame.php?load=dashboard');
+  }else{
+    echo "<script type='text/javascript'>
+    window.alert('Username Atau Password Anda Salah'); 
+    window.location =('index.php')</script>";
+  }
+}								
+
+
 ?>
