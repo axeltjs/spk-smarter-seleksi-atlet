@@ -1,3 +1,17 @@
+<style>
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #ccc !important;
+  opacity: 1 !important; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #ccc !important;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: #ccc !important;
+}
+</style>
 <div class="parallax cover overlay cover-image-full home">
         <img  class="user-image img-responsive" src="images/banner2.jpeg" alt="Learning Cover" />
         <div class="parallax-layer overlay overlay-full overlay-bg-white bg-transparent" data-speed="8" data-opacity="true">
@@ -59,7 +73,6 @@
               </div>
                                         <div class="form-group form-control-material">
                                         <input class="form-control" type="text" id="wiz-lusername" name="txtUsername" placeholder="Username" required />
-                                   
                                     </div>
                                        <div class="form-group form-control-material">
                                         <input class="form-control" type="password" id="wiz-lpass" name="txtPassMember" placeholder="Password" required />
