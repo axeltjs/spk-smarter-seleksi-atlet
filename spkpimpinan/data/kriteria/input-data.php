@@ -7,7 +7,7 @@ include"../../../appConfig/conn.php";
 
 		
 		//membaca kode barang terbesar
-	$sql = "SELECT max(id_KRITERIA) FROM KRITERIA";
+	$sql = "SELECT max(id_kriteria) FROM kriteria";
 	$query = mysqli_query($koneksi,$sql) or die (mysqli_error($koneksi));
  
 	$nip = mysqli_fetch_array($query);
