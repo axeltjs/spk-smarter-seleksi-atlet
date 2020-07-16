@@ -6,12 +6,6 @@ if(isset($_SESSION['username']) AND isset($_SESSION['password'])){
 	$loadPage= $_GET['load'];
 	$action =$_GET['action'];
 	$tgl=date('Y');
-	
-	
-	
-	 
-	 
-	 
 	 
 	 
 	if($loadPage=="member" AND $action=="simpanData" ){
