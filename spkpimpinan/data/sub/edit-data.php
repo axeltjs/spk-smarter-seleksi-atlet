@@ -4,7 +4,8 @@ $_data=mysqli_fetch_array($SQL);
 if(isset($_POST['id'])){
   $SQL="UPDATE sub_kriteria SET nama_sub='$_POST[txtsub]',
 							 prioritas='$_POST[txtpr]',
-							 nama_kriteria='$_POST[kriteria]'
+							 nama_kriteria='$_POST[kriteria]',
+               bobot='$_POST[bobot]'
 							 
 		                     WHERE id_sub='$_POST[id]'";	
 	mysqli_query($koneksi,$SQL) or die (mysqli_error($koneksi));
@@ -57,7 +58,7 @@ echo"
             <div class='control-group'>
               <label class='control-label'>Bobot :</label>
               <div class='controls'>
-                <input type='text' class='span2'  name='bobot' value='$_data[bobot]' disabled/>
+                <input type='text' class='span2'  name='bobot' value='$_data[bobot]' />
               </div>
             </div>
             <div class='form-actions'>

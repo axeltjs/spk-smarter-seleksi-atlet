@@ -3,6 +3,7 @@
     <h1>Daftar Data Sub Kriteria</h1>
   </div>
   <div class="container-fluid">
+  <a href="frame.php?load=subinput" class="btn btn-primary">Tambah Sub Kriteria</a>
     <hr>
     <div class="row-fluid">
       <div class="span12">
@@ -37,11 +38,9 @@
                   <td>$_data[nama_sub]</td>
                   <td>$_data[prioritas] </td>
 				  <td>$_data[bobot] </td>
-          <td><a class='btn btn-warning' href='frame.php?load=subedit&id=".$_data[id_sub]."'> Edit</a></td>
-				  
-                 
+          <td><a class='btn btn-warning' href='frame.php?load=subedit&id=".$_data[id_sub]."'> Edit</a> 
+          <a class='btn btn-danger' onclick='return confirm(".'"Anda yakin ingin menghapus data ini?"'.")' href='/spkpimpinan/data/sub/hapus.php?id=".$_data[id_sub]."'> Hapus</a></td>
                 </tr> 
-				   
 				   ";
 				   
 				   
