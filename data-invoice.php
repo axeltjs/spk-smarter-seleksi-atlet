@@ -45,7 +45,7 @@
 									$no=1;
 									$tglSekarang =date("Ymd");
 									$SQL="SELECT * FROM tboking,trincian_boking WHERE trincian_boking.kdBoking=tboking.kdBoking AND tboking.usernameBoking='$_SESSION[username]'";
-									$ExecuteQuery=mysqli_query($koneksi,$SQL)or die(mysqli_error());
+									$ExecuteQuery=mysqli_query($koneksi,$SQL)or die(mysqli_error($koneksi));
 									
 									if($no%2==1){
 										$class="odd gradeX";

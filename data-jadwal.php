@@ -39,7 +39,7 @@
 										  tjadwal.kdLapangan=tlapangan.kdLapangan AND
 										  tjadwal.kdJam=tjam.kdJam AND tjadwal.tglJadwal > '$tglSekarang' ORDER BY 
 										  tjadwal.tglJadwal ASC ";
-									$ExecuteQuery=mysqli_query($koneksi,$SQL)or die(mysqli_error());
+									$ExecuteQuery=mysqli_query($koneksi,$SQL)or die(mysqli_error($koneksi));
 									
 									if($no%2==1){
 										$class="odd gradeX";

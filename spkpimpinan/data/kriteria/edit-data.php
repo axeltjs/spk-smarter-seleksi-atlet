@@ -5,7 +5,7 @@ if(isset($_POST['id'])){
   $SQL="UPDATE kriteria SET nama_kriteria ='$_POST[kriteria]',
 							 prioritas='$_POST[txtp]'
 		                     WHERE id_kriteria='$_POST[id]'";	
-	mysqli_query($koneksi,$SQL) or die (mysqli_error());
+	mysqli_query($koneksi,$SQL) or die (mysqli_error($koneksi));
 		 
 	echo"
 	<script language='javascript'>

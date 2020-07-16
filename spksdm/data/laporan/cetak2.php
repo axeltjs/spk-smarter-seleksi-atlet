@@ -47,7 +47,7 @@ $tgl1= $_POST['tahun'];
 
 
 $no=1;
-$tampil = mysqli_query($koneksi,"SELECT * FROM hasil where  thn_hitung ='$tgl1' order by id_calon DESC") or die(mysqli_error());
+$tampil = mysqli_query($koneksi,"SELECT * FROM hasil where  thn_hitung ='$tgl1' order by id_calon DESC") or die(mysqli_error($koneksi));
 while($data = mysqli_fetch_array($tampil)){
 ?>
     
