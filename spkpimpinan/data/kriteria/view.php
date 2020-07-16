@@ -3,7 +3,7 @@
     <h1>Data Kriteria</h1>
   </div>
   <div class="container-fluid">
-  <!-- <a href="frame.php?load=kinput" class="btn btn-primary">Tambah Kriteria</a> -->
+  <a href="frame.php?load=kinput" class="btn btn-primary">Tambah Kriteria</a>
     <hr>
     <div class="row-fluid">
       <div class="span12">
@@ -28,21 +28,16 @@
 			   $SQL=mysqli_query($koneksi,"SELECT * FROM kriteria order by prioritas asc");
 			   $no=1;
 			   while($_data=mysqli_fetch_array($SQL)){
-				  
-				   
-				   
 				   echo"
 				  <tr class='$class'>
                   <td>$no</td>
 				  <td>$_data[nama_kriteria]</td>
 				  <td>$_data[prioritas]</td>
 				   <td>$_data[bobot]</td>
-           <td><a class='btn btn-warning' href='frame.php?load=kedit&id=".$_data[id_kriteria]."'> Edit</a></td>
+           <td><a class='btn btn-warning' href='frame.php?load=kedit&id=".$_data[id_kriteria]."'> Edit</a> 
+           <a class='btn btn-danger' onclick='return confirm(".'"Anda yakin ingin menghapus data ini?"'.")' href='/spkpimpinan/data/kriteria/hapus.php?id=".$_data[id_kriteria]."'> Hapus</a></td>
                 </tr> 
-				   
 				   ";
-				   
-				   
 				  $no++; }
 			   ?>
                

@@ -23,6 +23,17 @@ include"../../../appConfig/conn.php";
 		$auto_kode = "S0001";
 	}
 
+  if(isset($_POST['txtid'])){
+    $SQL="INSERT INTO sub_kriteria (id_sub,nama_sub,prioritas,bobot,nama_kriteria) 
+    VALUES 	('$_POST[txtid]','$_POST[txtnamasub]','$_POST[txtpr]','$_POST[txtbobot]','$_POST[kriteria]')";
+    mysqli_query($koneksi,$SQL) or die (mysqli_error($koneksi));
+    echo"
+    <script language='javascript'>
+    window.alert('Data Berhasil Disimpan');
+    window.location=('/spkpimpinan/frame.php?load=sub')
+    </script>
+    ";
+  }
  
  ?>  
 <div class="container-fluid">
@@ -34,7 +45,7 @@ include"../../../appConfig/conn.php";
           <h5>Isi Data Dengan Lengkap</h5>
         </div>
         <div class="widget-content nopadding">
-          <form action="data/sub/proses.php?load=sub&action=simpanData" method="POST" class="form-horizontal" enctype="multipart/form-data">
+          <form method="POST" class="form-horizontal" enctype="multipart/form-data">
            <div class="control-group">
               <label class="control-label">ID SUB KRITERIA</label>
               <div class="controls">
@@ -51,6 +62,12 @@ include"../../../appConfig/conn.php";
               <label class="control-label">Prioritas</label>
               <div class="controls">
                 <input type="number" class="span1"  name="txtpr" required />
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label">Bobot</label>
+              <div class="controls">
+                <input type="number" class="span1"  name="txtbobot" required />
               </div>
             </div>
               <div class="control-group">

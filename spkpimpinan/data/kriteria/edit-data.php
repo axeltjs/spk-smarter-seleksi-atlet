@@ -3,7 +3,8 @@ $SQL=mysqli_query($koneksi,"SELECT * FROM kriteria WHERE id_kriteria='$_GET[id]'
 $_data=mysqli_fetch_array($SQL);
 if(isset($_POST['id'])){
   $SQL="UPDATE kriteria SET nama_kriteria ='$_POST[kriteria]',
-							 prioritas='$_POST[txtp]'
+							 prioritas='$_POST[txtp]',
+               bobot='$_POST[bobot]'
 		                     WHERE id_kriteria='$_POST[id]'";	
 	mysqli_query($koneksi,$SQL) or die (mysqli_error($koneksi));
 		 
@@ -51,7 +52,7 @@ echo"
             <div class='control-group'>
               <label class='control-label'>Bobot :</label>
               <div class='controls'>
-                <input type='text' class='span3'  name='bobot' value='$_data[bobot]' disabled/>
+                <input type='text' class='span3'  name='bobot' value='$_data[bobot]'/>
               </div>
             </div>
             <div class='form-actions'>
