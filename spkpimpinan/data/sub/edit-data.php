@@ -7,7 +7,7 @@ if(isset($_POST['id'])){
 							 nama_kriteria='$_POST[kriteria]'
 							 
 		                     WHERE id_sub='$_POST[id]'";	
-	mysqli_query($koneksi,$SQL) or die (mysqli_error());
+	mysqli_query($koneksi,$SQL) or die (mysqli_error($koneksi));
 		 
 	echo"
 	<script language='javascript'>

@@ -31,7 +31,7 @@ if(isset($_SESSION['username']) AND isset($_SESSION['password'])){
 								bobot) 
 		VALUES ('$_POST[txtid]','$_POST[txtnamasub]',
 				'$_POST[txtp]','$hasilkriteria1')";
-	mysqli_query($koneksi,$SQL) or die (mysqli_error());
+	mysqli_query($koneksi,$SQL) or die (mysqli_error($koneksi));
     echo"
 	<script language='javascript'>
 	window.alert('Data Berhasil Disimpan');
@@ -46,7 +46,7 @@ if(isset($_SESSION['username']) AND isset($_SESSION['password'])){
 								bobot) 
 		VALUES ('$_POST[txtid]','$_POST[txtnamasub]',
 				'$_POST[txtp]','$hasilkriteria2')";
-	mysqli_query($koneksi,$SQL) or die (mysqli_error());
+	mysqli_query($koneksi,$SQL) or die (mysqli_error($koneksi));
     echo"
 	<script language='javascript'>
 	window.alert('Data Berhasil Disimpan');
@@ -61,7 +61,7 @@ if(isset($_SESSION['username']) AND isset($_SESSION['password'])){
 								bobot) 
 		VALUES ('$_POST[txtid]','$_POST[txtnamasub]',
 				'$_POST[txtp]','$hasilkriteria3')";
-	mysqli_query($koneksi,$SQL) or die (mysqli_error());
+	mysqli_query($koneksi,$SQL) or die (mysqli_error($koneksi));
     echo"
 	<script language='javascript'>
 	window.alert('Data Berhasil Disimpan');
@@ -76,7 +76,7 @@ if(isset($_SESSION['username']) AND isset($_SESSION['password'])){
 								bobot) 
 		VALUES ('$_POST[txtid]','$_POST[txtnamasub]',
 				'$_POST[txtp]','$hasilkriteria4')";
-	mysqli_query($koneksi,$SQL) or die (mysqli_error());
+	mysqli_query($koneksi,$SQL) or die (mysqli_error($koneksi));
     echo"
 	<script language='javascript'>
 	window.alert('Data Berhasil Disimpan');
@@ -91,7 +91,7 @@ if(isset($_SESSION['username']) AND isset($_SESSION['password'])){
 								bobot) 
 		VALUES ('$_POST[txtid]','$_POST[txtnamasub]',
 				'$_POST[txtp]','$hasilkriteria5')";
-	mysqli_query($koneksi,$SQL) or die (mysqli_error());
+	mysqli_query($koneksi,$SQL) or die (mysqli_error($koneksi));
     echo"
 	<script language='javascript'>
 	window.alert('Data Berhasil Disimpan');
@@ -104,7 +104,7 @@ if(isset($_SESSION['username']) AND isset($_SESSION['password'])){
 	}
 	elseif($loadPage=="sub" AND $action=="hapusData"){
 		
-	mysqli_query($koneksi,"DELETE FROM sub_kriteria WHERE id_sub='$_GET[id_sub]'")or die (mysqli_error());
+	mysqli_query($koneksi,"DELETE FROM sub_kriteria WHERE id_sub='$_GET[id_sub]'")or die (mysqli_error($koneksi));
 		
 	echo"
 	<script language='javascript'>
@@ -122,7 +122,7 @@ if(isset($_SESSION['username']) AND isset($_SESSION['password'])){
 							 
 							 
 		                     WHERE id_kriteria='$_POST[id]'";	
-	mysqli_query($koneksi,$SQL) or die (mysqli_error());
+	mysqli_query($koneksi,$SQL) or die (mysqli_error($koneksi));
 		 
 	echo"
 	<script language='javascript'>

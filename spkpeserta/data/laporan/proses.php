@@ -26,7 +26,7 @@ if(isset($_SESSION['username']) AND isset($_SESSION['password'])){
 		 
 	$SQL="INSERT INTO tboking_temp (kdJadwal,nomorLapangan,tglBokingTemp,jamBokingTemp,hargaTemp,subTotalTemp,idSession) 
 	VALUES ('$_data[kdJadwal]','$_data[noLapangan]','$_data[tglJadwal]','$_data[jam]','$_data[harga]','$subtotal','$_SESSION[username]')";
-	mysqli_query($koneksi,$SQL) or die (mysqli_error());
+	mysqli_query($koneksi,$SQL) or die (mysqli_error($koneksi));
     echo"
    <script language='javascript'>
 	window.alert('Jam Boking Berhasil Ditambah');
@@ -36,7 +36,7 @@ if(isset($_SESSION['username']) AND isset($_SESSION['password'])){
 	}
 	}elseif($loadPage=="boking" AND $action=="hapusData"){
 		
-		mysqli_query($koneksi,"DELETE FROM tboking_temp WHERE kdbokingTemp=$_GET[id]")or die (mysqli_error());
+		mysqli_query($koneksi,"DELETE FROM tboking_temp WHERE kdbokingTemp=$_GET[id]")or die (mysqli_error($koneksi));
 		
 	echo"
 	<script language='javascript'>
@@ -91,7 +91,7 @@ $r=mysqli_fetch_array($tot);
 mysqli_query($koneksi,"INSERT INTO tboking (noInvoice,tglInvoice,usernameBoking,an,alamat,email,kontak,totalBayar,statusBayar)
 			 VALUES('$newID','$tgl_skrg','$_SESSION[username]',
 			'$_POST[txtNmLengkap]','$_POST[txtAlamat]','$_POST[txtEmail]',
-			 		'$_POST[txtKontak]','$r[totalBayar]','$lunas')") or die(mysqli_error());
+			 		'$_POST[txtKontak]','$r[totalBayar]','$lunas')") or die(mysqli_error($koneksi));
 
   
 $id_orders=mysql_insert_id();
@@ -101,7 +101,7 @@ $jml          = count($isikeranjang);
 for ($i = 0; $i < $jml; $i++){
   mysqli_query($koneksi,"INSERT INTO trincian_boking(kdBoking,noLapangan,kdJadwal,hargaBoking,jamBoking,tglBoking,subTotal) 
                VALUES('$id_orders','{$isikeranjang[$i]['nomorLapangan']}','{$isikeranjang[$i]['kdJadwal']}', '{$isikeranjang[$i]['hargaTemp']}','{$isikeranjang[$i]['jamBokingTemp']}','{$isikeranjang[$i]['tglBokingTemp']}',
-'{$isikeranjang[$i]['subTotalTemp']}')") or die(mysqli_error());
+'{$isikeranjang[$i]['subTotalTemp']}')") or die(mysqli_error($koneksi));
 mysqli_query($koneksi,"UPDATE tjadwal SET statusBoking='B' WHERE kdJadwal='{$isikeranjang[$i]['kdJadwal']}'");
 
 }

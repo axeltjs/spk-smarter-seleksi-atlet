@@ -22,14 +22,14 @@ if($p=="boking" AND $action=="tambah-boking"){
 			
 				$jadwal=mysqli_query($koneksi,"SELECT * FROM tjadwal,tlapangan,tjam WHERE
 						 tjadwal.kdLapangan=tlapangan.kdLapangan AND
-						 tjadwal.kdJam=tjam.kdJam AND tjadwal.kdJadwal='$_GET[id]'")or die(mysqli_error());
+						 tjadwal.kdJam=tjam.kdJam AND tjadwal.kdJadwal='$_GET[id]'")or die(mysqli_error($koneksi));
 							$_data=mysqli_fetch_array($jadwal);
 							$subtotal=$_data['harga'] *1;
 	$SQL="INSERT INTO tboking_temp (kdJadwal,nomorLapangan,tglBokingTemp,
 									jamBokingTemp,hargaTemp,subTotalTemp,idSession)
 		VALUES('$_data[kdJadwal]','$_data[noLapangan]','$_data[tglJadwal]','$_data[jam]','$_data[harga]',
 		'$subtotal','$_SESSION[username]')";
-	mysqli_query($koneksi,$SQL) or die(mysqli_error());
+	mysqli_query($koneksi,$SQL) or die(mysqli_error($koneksi));
 	
 	echo"
 	<script language='javascript'>
@@ -94,7 +94,7 @@ $jml          = count($isikeranjang);
 for ($i = 0; $i < $jml; $i++){
   mysqli_query($koneksi,"INSERT INTO trincian_boking(kdBoking,kdJadwal,noLapangan,tglBoking,jamBoking,hargaBoking,subTotal) 
                VALUES('$id_orders','{$isikeranjang[$i]['kdJadwal']}','{$isikeranjang[$i]['nomorLapangan']}', '{$isikeranjang[$i]['tglBokingTemp']}','{$isikeranjang[$i]['jamBokingTemp']}','{$isikeranjang[$i]['hargaTemp']}',
-'{$isikeranjang[$i]['subTotalTemp']}')") or die(mysqli_error());
+'{$isikeranjang[$i]['subTotalTemp']}')") or die(mysqli_error($koneksi));
 
 mysqli_query($koneksi,"UPDATE tjadwal SET statusBoking='B' WHERE kdJadwal='{$isikeranjang[$i]['kdJadwal']}'");
 }

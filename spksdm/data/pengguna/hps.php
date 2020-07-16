@@ -7,7 +7,7 @@ if(isset($_SESSION['username']) AND isset($_SESSION['password'])){
  
  IF ( $action=="hapusData"){
 		
-		mysqli_query($koneksi,"DELETE FROM tpengguna WHERE kdPengguna='$_GET[id]'")or die (mysqli_error());
+		mysqli_query($koneksi,"DELETE FROM tpengguna WHERE kdPengguna='$_GET[id]'")or die (mysqli_error($koneksi));
 		
 	echo"
 	<script language='javascript'>
