@@ -11,21 +11,27 @@ if(isset($_SESSION['username']) AND isset ($_SESSION['password'])){
 		include"data/sub/edit-data.php";
 	}elseif($_GET['load']=="hitung"){
 		include"data/perhitungan/perhitungan.php";
-		}elseif($_GET['load']=="member"){
+	}elseif($_GET['load']=="member"){
 		include"data/member/member.php";
-		}elseif($_GET['load']=="laporan"){
+	}elseif($_GET['load']=="laporan"){
 		include"data/laporan/laporan.php";
-		}elseif($_GET['load']=="k"){
+	}elseif($_GET['load']=="k"){
 		include"data/kriteria/kriteria.php";
-		}elseif($_GET['load']=="kinput"){
-			include"data/kriteria/input-data.php";
-		}elseif($_GET['load']=="kedit"){
-			include"data/kriteria/edit-data.php";
-		}elseif($_GET['load']=="hasil"){
+	}elseif($_GET['load']=="kinput"){
+		include"data/kriteria/input-data.php";
+	}elseif($_GET['load']=="kedit"){
+		include"data/kriteria/edit-data.php";
+	}elseif($_GET['load']=="hasil"){
 		include"data/hasil/hasil.php";
-		}elseif($_GET['load']=="rekap"){
+	}elseif($_GET['load']=="rekap"){
 		include"data/rekap/view.php";
-		}
+	}elseif($_GET['load']=="kategori"){
+		include"data/kategori/view.php";
+	}elseif($_GET['load']=="kategori-input"){
+		include"data/kategori/input-data.php";
+	}elseif($_GET['load']=="kategori-edit"){
+		include"data/kategori/edit-data.php";
+	}
 
 
 
