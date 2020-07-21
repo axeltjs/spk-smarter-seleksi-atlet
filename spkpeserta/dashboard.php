@@ -37,20 +37,15 @@
 			$SQL=mysqli_query($koneksi,"SELECT * FROM peserta where id_calon='$s'");
 			 
 			   $_data=mysqli_fetch_array($SQL);
-				 $k= $_data['jpendidikan'];
+				 $k= $_data['jenkel'];
 				
-				 
 				   if (($k == '' AND $k == '')) {
-		echo" <div class='alert alert-danger'><P><b>Silahkan Isi dan Lengkapi Data Anda !!!!!!.</b></P></div>";
+		echo" <div class='alert alert-danger'><P><b>Silahkan Isi dan Lengkapi Data Anda !.</b></P></div>";
 				   
 					
 				 
-				}elseIF (($k == 'SARJANA' OR $k == 'DIPLOMA'))  {
-						echo" <div class='alert alert-success'><P><b>*DATA SUDAH LENGKAP. APABILA PENDAFTAR LOLOS DALAM SELEKSI BERKAS MAKA AKAN DIHUBUNGI OLEH PIHAK BANK UNTUK MELAKUKAN SELEKSI TAHAP SELANJUTNYA!!!!!!*.</b></P></div>";
-			
-						}	
-						else {
-						echo" ";
+				}else {
+						echo" <div class='alert alert-success'><P><b>APABILA DATA SUDAH LENGKAP. PENDAFTAR YANG LOLOS DALAM SELEKSI BERKAS MAKA AKAN DIHUBUNGI OLEH PIHAK FSCI UNTUK MELAKUKAN SELEKSI TAHAP SELANJUTNYA!</b></P></div>";
 			
 						}	
 				?>		

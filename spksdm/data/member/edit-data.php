@@ -23,7 +23,7 @@ echo"
               <label class='control-label'>Foto :</label>
               <div class='controls'>
                 ";
-				if(isset($_data['foto'])){
+				if(strlen($_data['foto']) > 1){
 					echo"<a href ='../gambar/member_img/height/$_small_$_data[foto]' class='besar'print><img src='../gambar/member_img/height/$_small_$_data[foto]' width='118' heigh='37'></a>";
 					
 					
@@ -94,80 +94,14 @@ echo"
             </div>
 			
             <div class='control-group'>
-              <label class='control-label'>Jenjang Pendidikan</label>
+              <label class='control-label'>Keminatan</label>
               <div class='controls'>
-                <select name='txtjp' readonly >
-				
-                  <option  >$_data[jpendidikan]</option>
-				  
-				 
-					<option value='SARJANA''$_data[jpendidikan]'=='SARJANA'selected >SARJANA</option>
-					 
-					 <option value='DIPLOMA''$_data[jpendidikan]'=='diploma'selected>DIPLOMA</option>
-					 
+				<select name='keminatan' >
+					<option>$_data[keminatan]</option>
+					<option value='90' ".($_data[keminatan] == 90 ? 'selected' : '').">Sangat Berminat</option>
+					<option value='80' ".($_data[keminatan] == 80 ? 'selected' : '').">Berminat</option>
+					<option value='70' ".($_data[keminatan] == 70 ? 'selected' : '').">Kurang Berminat</option>
                 </select> ";
-			  if (($_data['jpendidikan']== 'SARJANA' )){
-						
-						echo"
-				Nilai <select name='txtn1' class='span2'  required>
-				
-						
-                  <option  >$_data[n1]</option>
-				  
-				 
-					<option value='100' >100</option>
-					 
-					 <option value='99'>99</option>
-					 <option value='98'>98</option>
-					 <option value='97'>97</option>
-					 <option value='96'>96</option>
-					 <option value='95'>95</option>
-					 <option value='94'>94</option>
-					 <option value='93 >93</option>
-					 <option value='92' >92</option>
-					 <option value='91'>91</option>
-					 <option value='90' >90</option>
-					 <option value='89' >89</option>
-					 <option value='88'>88</option>
-					 <option value='87' >87</option>
-					 <option value='86' >86</option>
-					 <option value='85'>85</option>
-					 <option value='84' >84</option>
-					 <option value='83'>83</option>
-					 <option value='82'>82</option>
-					 <option value='81'>81</option>
-					 
-					 
-                </select>
-			  
-				";
-			  }elseif(($_data['jpendidikan']== 'DIPLOMA' )){
-						
-						echo"
-				Nilai <select name='txtn1' class='span2' required >
-				
-						
-                  <option  >$_data[n1]</option>
-				  
-				 
-					<option value='80' >80</option>
-					 
-					 <option value='79'>79</option>
-					 <option value='78'>78</option>
-					 <option value='77'>77</option>
-					 <option value='76'>76</option>
-					 <option value='75'>75</option>
-					 <option value='74'>74</option>
-					 <option value='73 >73</option>
-					 <option value='72' >72</option>
-					 <option value='71'>71</option>
-					 <option value='70' >70</option>
-					 
-					 
-                </select>
-			  
-				";
-			  }
 				echo" 
               </div>
             </div>
@@ -175,7 +109,7 @@ echo"
               <label class='control-label'>Gambar Ijazah :</label>
               <div class='controls'>
                 ";
-				if(isset($_data['ijazah'])){
+				if(strlen($_data['ijazah']) > 1){
 					echo"<a href ='../gambar/lapangan_img/height/$_small_$_data[ijazah]' class='besar'print><img src='../gambar/lapangan_img/height/$_small_$_data[ijazah]' width='118' heigh='37'></a>";
 					
 					
@@ -190,24 +124,6 @@ echo"
               </div>
             </div>		
 			
-			<div class='control-group'>
-              <label class='control-label'>Gambar Transkrip Nilai :</label>
-              <div class='controls'>
-                ";
-				if(isset($_data['transkrip'])){
-					echo"<a href ='../gambar/lapangan_img/height/$_small_$_data[transkrip]' class='besar'print><img src='../gambar/lapangan_img/height/$_small_$_data[transkrip]' width='118' heigh='37'></a>";
-					
-					
-					}
-					else{
-						
-						echo"Tidak Ada Gambar";
-						}
-				
-				
-				echo" 
-              </div>
-            </div>		
 			
 <div class='control-group'>
               <label class='control-label'>Usia:</label>
@@ -279,132 +195,11 @@ echo"
 				echo" 
               </div>
             </div>
-			
-			<div class='control-group'>
-              <label class='control-label'>Pengalaman Kerja</label>
-              <div class='controls'>
-                <select name='pengalaman' required readonly >
-				
-                  <option  >$_data[pengalaman]</option>
-				  
-				  <option value='> 2 Tahun'> > 2 Tahun</option>
-													<option value='< 2 Tahun'> < 2 Tahun</option>
-													<option value='Belum Pernah'> Belum Pernah</option>
-				 
-					
-                </select>
-				";
-				
-				
-			  if (($_data['pengalaman']== "Lebih Dari Samadengan 2 Tahun" )){
-						
-						echo"
-				Nilai <select name='txtn3' class='span2' required >
-				
-						
-                  <option  >$_data[n3]</option>
-				  
-				 
-					<option value='100' >100</option>
-					 
-					 <option value='99'>99</option>
-					 <option value='98'>98</option>
-					 <option value='97'>97</option>
-					 <option value='96'>96</option>
-					 <option value='95'>95</option>
-					 <option value='94'>94</option>
-					 <option value='93 >93</option>
-					 <option value='92' >92</option>
-					 <option value='91'>91</option>
-					 <option value='90' >90</option>
-					 <option value='89' >89</option>
-					 <option value='88'>88</option>
-					 <option value='87' >87</option>
-					 <option value='86' >86</option>
-					 <option value='85'>85</option>
-					 <option value='84' >84</option>
-					 <option value='83'>83</option>
-					 <option value='82'>82</option>
-					 <option value='81'>81</option>
-					 
-					 
-                </select>
-			  
-				";
-				
-				
-			  }elseif(($_data['pengalaman']== "Kurang Dari 2 Tahun" )){
-						
-						echo"
-				Nilai <select name='txtn3' class='span2' required >
-				
-						
-                  <option  >$_data[n3]</option>
-				  
-				 
-					<option value='80' >80</option>
-					<option value='79'>79</option>
-					 <option value='78'>78</option>
-					 <option value='77'>77</option>
-					 <option value='76'>76</option>
-					 <option value='75'>75</option>
-					 <option value='74'>74</option>
-					 <option value='73'>73</option>
-					 <option value='72'>72</option>
-					 <option value='71' >71</option>
-					 <option value='70' >70</option>
-					
-					 
-					 
-                </select>
-			  
-				";
-			  }elseif(($_data['pengalaman']== 'Belum Pernah' )){
-						
-						echo"
-				Nilai <select name='txtn3' class='span2' required >
-				
-						
-                  <option  >$_data[n3]</option>
-				  
-				 
-					
-					 <option value='60'>60</option>
-					 
-					 
-                </select>
-			  
-				";
-			  }
-			  
-				echo" 
-              </div>
-            </div>
-			<div class='control-group'>
-              <label class='control-label'>Bukti Pengalaman Kerja :</label>
-              <div class='controls'>
-                ";
-				if(isset($_data['buktip'])){
-					
-					echo"<a href ='../gambar/lapangan_img/height/$_small_$_data[buktip]'width='210' heigh='297' class='besar2'> <img src='../gambar/lapangan_img/height/$_data[buktip]'width='118' heigh='37'></a>";
-					
-					
-					
-					}
-					else{
-						
-						echo"Tidak Ada Gambar";
-						}
-				
-				
-				echo"
-              </div>
-            </div>	
 <div class='control-group'>
-              <label class='control-label'>SKCK :</label>
+              <label class='control-label'>Daftar Riwayat Hidup (CV) :</label>
               <div class='controls'>
                 ";
-				if(isset($_data['skck'])){
+				if(strlen($_data['skck']) > 1){
 					
 					echo"<a href ='../gambar/lapangan_img/height/$_small_$_data[skck]'width='210' heigh='297' class='besar2'> <img src='../gambar/lapangan_img/height/$_data[skck]'width='118' heigh='37'></a>";
 					
@@ -421,10 +216,10 @@ echo"
               </div>
             </div>	
 <div class='control-group'>
-              <label class='control-label'>KTP :</label>
+              <label class='control-label'>KTP/Kartu Pelajar :</label>
               <div class='controls'>
                 ";
-				if(isset($_data['ktp'])){
+				if(strlen($_data['ktp']) > 1){
 					
 					echo"<a href ='../gambar/lapangan_img/height/$_small_$_data[ktp]'width='210' heigh='297' class='besar2'> <img src='../gambar/lapangan_img/height/$_data[ktp]'width='118' heigh='37'></a>";
 					
@@ -444,7 +239,7 @@ echo"
               <label class='control-label'>Gambar CV :</label>
               <div class='controls'>
                 ";
-				if(isset($_data['cv'])){
+				if(strlen($_data['cv']) > 1){
 					echo"<a href ='../gambar/lapangan_img/height/$_small_$_data[cv]'width='210' heigh='297' class='besar2'><img src='../gambar/lapangan_img/height/$_small_$_data[cv]'width='118' heigh='37'></a>";
 					
 					
@@ -465,17 +260,13 @@ echo"
               </div>
             </div>
 			<div class='control-group'>
-              <label class='control-label'>Kemampuan Berkomunikasi</label>
+              <label class='control-label'>Keterampilan</label>
               <div class='controls'>
-                <select name='txtwawancara' required >
-				
-                  <option  >$_data[wawancara]</option>
-				  
-				  <option value='Sangat Komunikatif'> Sangat Komunikatif</option>
-					<option value='Komunikatif'> Komunikatif</option>
-					<option value='Tidak Komunikatif'> Tidak Komunikatif</option>
-				 
-					
+                <select name='keterampilan' required >
+                  <option >$_data[keterampilan]</option>
+				  <option value='90' ".($_data[keterampilan] == 90 ? 'selected' : '')."> Sangat Terampil</option>
+					<option value='80' ".($_data[keterampilan] == 80 ? 'selected' : '')."> Cukup Terampil</option>
+					<option value='70' ".($_data[keterampilan] == 70 ? 'selected' : '')."> Kurang Terampil</option>
                 </select>
 				
               </div>
@@ -484,7 +275,7 @@ echo"
               <label class='control-label'>SURAT KESEHATAN :</label>
               <div class='controls'>
                 ";
-				if(isset($_data['suratkesehatan'])){
+				if(strlen($_data['suratkesehatan']) > 1){
 					
 					echo"<a href ='../gambar/lapangan_img/height/$_small_$_data[suratkesehatan]'width='210' heigh='297' class='besar2'> <img src='../gambar/lapangan_img/height/$_small_$_data[suratkesehatan]'width='118' heigh='37'></a>";
 					
@@ -501,38 +292,26 @@ echo"
               </div>
             </div>	
 <div class='control-group'>
-              <label class='control-label'>SURAT KETERANGAN BELUM NIKAH :</label>
+              <label class='control-label'>Kartu Keluarga :</label>
               <div class='controls'>
                 ";
-				if(isset($_data['blm_nikah'])){
-					
-					echo"<a href ='../gambar/lapangan_img/height/$_small_$_data[blm_nikah]'width='210' heigh='297' class='besar2'> <img src='../gambar/lapangan_img/height/$_small_$_data[blm_nikah]'width='118' heigh='37'></a>";
-					
-					
-					
+				if(strlen($_data['kk']) > 1){
+					echo"<a href ='../gambar/lapangan_img/height/$_small_$_data[kk]'width='210' heigh='297' class='besar2'> <img src='../gambar/lapangan_img/height/$_small_$_data[kk]'width='118' heigh='37'></a>";
 					}
 					else{
-						
 						echo"Tidak Ada Gambar";
 						}
-				
-				
 				echo"
               </div>
             </div>				
+		
 			<div class='control-group'>
-              <label class='control-label'>Kesehatan</label>
+              <label class='control-label'>Kelengkapan Berkas</label>
               <div class='controls'>
-                <select name='txtmcu' required >
-				
-                  <option >$_data[kesehatan]</option>
-				  
-				  
-				<option value='Tidak ADA(sehat,bebas narkoba, tidak buta warna)'> Tidak ADA(sehat,bebas narkoba, tidak buta warna)</option>
-				<option value='Memili Penyakit yang berhubungan dengan pendengaran dan penglihatan'> Memili Penyakit yang berhubungan dengan pendengaran dan penglihatan</option>
-				<option value='Memiliki Penyakit Dalam'> Memiliki Penyakit Dalam</option>
-                                         
-					
+                <select name='kelengkapan' required >
+				  <option value='90'".($_data[kelengkapan] == 90 ? 'selected' : '')."> Sangat Lengkap</option>
+					<option value='80' ".($_data[kelengkapan] == 80 ? 'selected' : '')."> Cukup Lengkap</option>
+					<option value='70'".($_data[kelengkapan] == 70 ? 'selected' : '')." > Kurang Lengkap</option>
                 </select>
               </div>
             </div>

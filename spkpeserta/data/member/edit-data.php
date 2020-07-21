@@ -30,13 +30,13 @@ echo"
               <div class='controls'>
                ";
 				if(($_data['tgl_lhr']== '')){
-					echo"<input type='date' class='span6' placeholder='Tgl Lahir' name='txttgllhr' value='$_data[tgl_lhr]' required/>";
+					echo"<input type='date' class='span6' placeholder='Tgl Lahir' name='txttgllhr' value='$_data[tgl_lhr]'/>";
 					
 					
 					}
 					elseif (($_data['tgl_lhr']== $_data['tgl_lhr'])){
 						
-						echo"<input type='date' class='span6' placeholder='Tgl Lahir' name='txttgllhr' value='$_data[tgl_lhr]' readonly required/>";
+						echo"<input type='date' class='span6' placeholder='Tgl Lahir' name='txttgllhr' value='$_data[tgl_lhr]' readonly />";
 					
 						}
 				
@@ -49,14 +49,14 @@ echo"
               <div class='controls'>
                   ";
 				if(($_data['tempat_lhr']== '')){
-					echo"<input type='text' class='span6' placeholder='Tempat lahir' name='txttmptlhr' value='$_data[tempat_lhr]' required/>
+					echo"<input type='text' class='span6' placeholder='Tempat lahir' name='txttmptlhr' value='$_data[tempat_lhr]' />
            ";
 					
 					
 					}
 					elseif (($_data['tempat_lhr']== $_data['tempat_lhr'])){
 						
-						echo"<input type='text' class='span6' placeholder='Tempat lahir' name='txttmptlhr' value='$_data[tempat_lhr]' readonly required/>";
+						echo"<input type='text' class='span6' placeholder='Tempat lahir' name='txttmptlhr' value='$_data[tempat_lhr]' readonly />";
 					
 						}
 				
@@ -113,13 +113,13 @@ echo"
               <div class='controls'>
                ";
 				if(($_data['alamat']== '')){
-					echo" <input type='text' class='span7' placeholder='Jl.Example' name='txtAlamat' value='$_data[alamat]' required/>";
+					echo" <input type='text' class='span7' placeholder='Jl.Example' name='txtAlamat' value='$_data[alamat]' />";
 					
 					
 					}
 					elseif (($_data['alamat']== $_data['alamat'])){
 						
-						echo" <input type='text' class='span7' placeholder='Jl.Example' name='txtAlamat' value='$_data[alamat]' readonly required/>";
+						echo" <input type='text' class='span7' placeholder='Jl.Example' name='txtAlamat' value='$_data[alamat]' readonly />";
 					
 						}
 				
@@ -132,69 +132,49 @@ echo"
               <div class='controls'>
                ";
 				if(($_data['no_hp']== '')){
-					echo"                 <input type='number' class='span6'  name='txtkontak' value='$_data[no_hp]' required/>";
+					echo"                 <input type='number' class='span6'  name='txtkontak' value='$_data[no_hp]' />";
 					
 					
 					}
 					elseif (($_data['no_hp']== $_data['no_hp'])){
 						
-						echo" <input type='number' class='span6'  name='txtkontak' value='$_data[no_hp]'  readonly required/>";
+						echo" <input type='number' class='span6'  name='txtkontak' value='$_data[no_hp]'  readonly />";
 					
 						}
 				
 				
 				echo" 
+              </div>
+			</div>
+			<div class='control-group'>
+              <label class='control-label'>Agama:</label>
+			  <div class='controls'>
+			  "; 
+			  	if(isset($_data['agama'])){
+					echo "<select name='agama' readonly>
+						<option value='$_data[agama]'>$_data[agama]</option>
+					";
+				}else{
+					echo "<select name='agama'>";
+				}
+				echo "
+					<option > Pilih Agama</option>
+				  <option value='Islam'>Islam</option>
+				  <option value='Kristen Protestan'>Kristen Protestan</option>
+				  <option value='Kristen Katolik'>Kristen Katolik</option>
+				  <option value='Budha'>Budha</option>
+				  <option value='Hindu'>Hindu</option>
+				  <option value='Kong Hu Chu'>Kong Hu Chu</option>
+                </select>
               </div>
             </div>
 			
-            <div class='control-group'>
-              <label class='control-label'>Jenjang Pendidikan</label>
-              <div class='controls'>
-                
-				
-				 ";
-				if(($_data['jpendidikan']== '')){
-					echo"  <select name='txtjp'  >
-				
-                  <option  >$_data[jpendidikan]</option>
-				  
-				 
-					<option value='SARJANA''$_data[jpendidikan]'=='SARJANA'selected >SARJANA</option>
-					 
-					 <option value='DIPLOMA''$_data[jpendidikan]'=='diploma'selected>DIPLOMA</option>
-					 
-                </select> Wajib Di Isi";
-					
-					
-					}
-					elseif (($_data['jpendidikan']== $_data['jpendidikan'])){
-						
-						echo" <select name='txtjp' readonly >
-				
-                  <option  >$_data[jpendidikan]</option>
-				  
-				 
-					<option value='SARJANA''$_data[jpendidikan]'=='SARJANA'selected >SARJANA</option>
-					 
-					 <option value='DIPLOMA''$_data[jpendidikan]'=='diploma'selected>DIPLOMA</option>
-					 
-                </select> Wajib Di Isi
-				";
-					
-						}
-				
-				
-				echo" 
-				
-				
-              </div>
-            </div>
 			                <div class='control-group'>
               <label class='control-label'>Upload Gambar Ijazah :</label>
               <div class='controls'>
-                <input type='file' class='span12'  name='upPhoto1' required />
+                <input type='file' class='span12'  name='upPhoto1'  />
 				";
-				if(isset($_data['ijazah'])){
+				if(strlen($_data['ijazah']) > 1){
 					echo"<a href ='../gambar/lapangan_img/height/$_small_$_data[ijazah]' class='besar'print><img src='../gambar/lapangan_img/height/$_small_$_data[ijazah]' width='118' heigh='37'></a>";
 					
 					
@@ -210,115 +190,14 @@ echo"
 				
               </div>
             </div>
-			<div class='control-group'>
-              <label class='control-label'>Gambar Transkrip Nilai :</label>
-              <div class='controls'>
-                <input type='file' class='span12'  name='upPhoto44' required />
-				";
-				if(isset($_data['transkrip'])){
-					echo"<a href ='../gambar/lapangan_img/height/$_small_$_data[transkrip]' class='besar'print><img src='../gambar/lapangan_img/height/$_small_$_data[transkrip]' width='118' heigh='37'></a>";
-					
-					
-					}
-					else{
-						
-						echo"Tidak Ada Gambar";
-						}
-				
-				
-				echo" 
-				
-				
-              </div>
-            </div>
-			
 
-			<div class='control-group'>
-              <label class='control-label'>Pengalaman Kerja</label>
-              <div class='controls'>
-                
-				
-				 ";
-				if(($_data['pengalaman']== '')){
-					echo" <select name='pengalaman'  >
-				
-                  <option  >$_data[pengalaman]</option>
-				  
-				  <option value='Lebih Dari Samadengan 2 Tahun'> Lebih Dari Samadengan 2 Tahun</option>
-													<option value='Kurang Dari 2 Tahun'> Kurang Dari 2 Tahun</option>
-													<option value='Belum Pernah'> Belum Pernah</option>
-				 
-					
-                </select> Wajib Di Isi";
-					
-					
-					}
-					elseif (($_data['pengalaman']== $_data['pengalaman'])){
-					echo" <select name='pengalaman'  readonly >
-				
-                  <option  >$_data[pengalaman]</option>
-				  
-				  <option value='> 2 Tahun'> > 2 Tahun</option>
-													<option value='< 2 Tahun'> < 2 Tahun</option>
-													<option value='Belum Pernah'> Belum Pernah</option>
-				 
-					
-                </select> Wajib Di Isi";
-					
-					
-					}
-				
-				
-				echo" 
-				
-				
-              </div>
-            </div>
 			 <div class='control-group'>
-              <label class='control-label'> Bukti Pengalaman Kerja :</label>
+              <label class='control-label'> KTP/Kartu Pelajar :</label>
               <div class='controls'>
-                <input type='file' class='span12' name='upPhoto2'  /> 
+                <input type='file' class='span12' name='upPhoto5'  />
 				";
-				if(isset($_data['buktip'])){
-					echo"<a href ='../gambar/lapangan_img/height/$_small_$_data[buktip]' class='besar'print><img src='../gambar/lapangan_img/height/$_small_$_data[buktip]' width='118' heigh='37'></a>";
-					
-					
-					}
-					else{
-						
-						echo"Tidak Ada Gambar";
-						}
-				
-				
-				echo" 
-              </div>
-            </div>
-			 <div class='control-group'>
-              <label class='control-label'> KTP :</label>
-              <div class='controls'>
-                <input type='file' class='span12' name='upPhoto5' required />
-				";
-				if(isset($_data['ktp'])){
+				if(strlen($_data['ktp']) > 1){
 					echo"<a href ='../gambar/lapangan_img/height/$_small_$_data[ktp]' class='besar'print><img src='../gambar/lapangan_img/height/$_small_$_data[ktp]' width='118' heigh='37'></a>";
-					
-					
-					}
-					else{
-						
-						echo"Tidak Ada Gambar";
-						}
-				
-				
-				echo" 
-              </div>
-            </div>
-			 <div class='control-group'>
-              <label class='control-label'> SKCK :</label>
-              <div class='controls'>
-                <input type='file' class='span12' name='upPhoto6' required />
-				";
-				if(isset($_data['skck'])){
-					echo"<a href ='../gambar/lapangan_img/height/$_small_$_data[skck]' class='besar'print><img src='../gambar/lapangan_img/height/$_small_$_data[skck]' width='118' heigh='37'></a>";
 					
 					
 					}
@@ -334,9 +213,9 @@ echo"
 			<div class='control-group'>
               <label class='control-label'> SURAT KESEHATAN :</label>
               <div class='controls'>
-                <input type='file' class='span12' name='upPhoto9' required />
+                <input type='file' class='span12' name='upPhoto9'  />
 				";
-				if(isset($_data['suratkesehatan'])){
+				if(strlen($_data['suratkesehatan']) > 1){
 					echo"<a href ='../gambar/lapangan_img/height/$_small_$_data[suratkesehatan]' class='besar'print><img src='../gambar/lapangan_img/height/$_small_$_data[suratkesehatan]' width='118' heigh='37'></a>";
 					
 					
@@ -351,11 +230,11 @@ echo"
               </div>
             </div>
 			<div class='control-group'>
-              <label class='control-label'> Upload CV :</label>
+              <label class='control-label'> Daftar Riwayat Hidup (CV) :</label>
               <div class='controls'>
-                <input type='file' class='span12'  name='upPhoto' required />
+                <input type='file' class='span12'  name='upPhoto'  />
 				";
-				if(isset($_data['cv'])){
+				if(strlen($_data['cv']) > 1){
 					echo"<a href ='../gambar/lapangan_img/height/$_small_$_data[cv]' class='besar'print><img src='../gambar/lapangan_img/height/$_small_$_data[cv]' width='118' heigh='37'></a>";
 					
 					
@@ -368,27 +247,21 @@ echo"
 				
 				echo" 
               </div>
-            </div>
+			</div>
 			<div class='control-group'>
-              <label class='control-label'> Surat Keterangan Belum Menikah :</label>
+              <label class='control-label'> Kartu Keluarga (KK) :</label>
               <div class='controls'>
-                <input type='file' class='span12'  name='upPhotoblm' required />
+                <input type='file' class='span12' name='kk'/>
 				";
-				if(isset($_data['blm_nikah'])){
-					echo"<a href ='../gambar/lapangan_img/height/$_small_$_data[blm_nikah]' class='besar'print><img src='../gambar/lapangan_img/height/$_small_$_data[blm_nikah]' width='118' heigh='37'></a>";
-					
-					
+				if(strlen($_data['kk']) > 1){
+					echo"<a href ='../gambar/lapangan_img/height/$_small_$_data[kk]' class='besar'print><img src='../gambar/lapangan_img/height/$_small_$_data[kk]' width='118' heigh='37'></a>";
 					}
 					else{
-						
 						echo"Tidak Ada Gambar";
 						}
-				
-				
 				echo" 
               </div>
             </div>
-			
             <div class='form-actions'>
              
 			  ";

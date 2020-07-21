@@ -263,7 +263,7 @@ function upLapangan4($upImage_name){
   $upFile_s = $upDir_s . $upImage_name;
 
   //Simpan gambar dalam ukuran sebenarnya
-  move_uploaded_file($_FILES["upPhoto6"]["tmp_name"], $upFile_h);
+  move_uploaded_file($_FILES["kk"]["tmp_name"], $upFile_h);
 
   //identitas file asli
   $imgSrc = imagecreatefromjpeg($upFile_h);

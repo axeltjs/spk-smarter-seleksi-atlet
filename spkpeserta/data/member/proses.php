@@ -88,71 +88,54 @@ if(isset($_SESSION['username']) AND isset($_SESSION['password'])){
 		}
 	elseif($loadPage=="member" AND $action=="ubahData"){
 	
-	
-		  
-		
-		 
-		  
-		 
-		 
-		
-		 
-		  
-		  $addres_file2 = $_FILES['upPhoto2']['tmp_name'];
-		  $tipe_file2   = $_FILES['upPhoto2']['type'];
-		  $filename2    = $_FILES['upPhoto2']['name'];
-		  
+		  $addres_kk 	= $_FILES['kk']['tmp_name'];
+		  $tipe_kk   	= $_FILES['kk']['type'];
+		  $filename_kk  = $_FILES['kk']['name'];
 		  
 		  $addres_file5 = $_FILES['upPhoto5']['tmp_name'];
 		  $tipe_file5   = $_FILES['upPhoto5']['type'];
 		  $filename5    = $_FILES['upPhoto5']['name'];
 		  
-		 $addres_file6 = $_FILES['upPhoto6']['tmp_name'];
-		  $tipe_file6   = $_FILES['upPhoto6']['type'];
-		  $filename6    = $_FILES['upPhoto6']['name'];
-		  
 		 $addres_file9 = $_FILES['upPhoto9']['tmp_name'];
 		  $tipe_file9   = $_FILES['upPhoto9']['type'];
 		  $filename9    = $_FILES['upPhoto9']['name'];
-		  
-		  
-		   $addres_file44 = $_FILES['upPhoto44']['tmp_name'];
-		  $tipe_file44   = $_FILES['upPhoto44']['type'];
-		  $filename44    = $_FILES['upPhoto44']['name'];
-		  
-		  
 		  
 		  $addres_file = $_FILES['upPhoto']['tmp_name'];
 		  $tipe_file   = $_FILES['upPhoto']['type'];
 		  $filename    = $_FILES['upPhoto']['name'];
 		 
-	
-		
 		  $addres_file1 = $_FILES['upPhoto1']['tmp_name'];
 		  $tipe_file1   = $_FILES['upPhoto1']['type'];
 		  $filename1    = $_FILES['upPhoto1']['name'];
-		
-		$addres_fileblm = $_FILES['upPhotoblm']['tmp_name'];
-		  $tipe_fileblm   = $_FILES['upPhotoblm']['type'];
-		  $filenameblm    = $_FILES['upPhotoblm']['name'];
-		  
-		  
 		  
 		  $tgllhr= $_POST['txttgllhr'];
 	      $rubah = date_format(date_create($tgllhr),'Y');
 		  $thn_skrg = date('Y');
 		  $usia = $thn_skrg - $rubah;
 		
+		  //   if($tipe_kk != "image/jpg" AND $tipe_kk != "image/jpeg"){
+		// 	echo"
+		// 		<script language='javascript'>
+		// 		window.alert('Upload Gambar KK Gagal Pastikan File Bertipe JPEG atau JPG');
+		// 		window.location=('../../frame.php?load=member&action=edit&id=$_POST[id]')
+		// 		</script>
+		// 	";
+		// 	}
+
+		upLapangan4($filename_kk);
+
+		  $SQL="UPDATE peserta SET 
+		  		agama = '$_POST[agama]',
+		 		kk ='$filename_kk' 
+		  WHERE id_calon='$_POST[id]'";	
+		  mysqli_query($koneksi,$SQL) or die (mysqli_error($koneksi));
+
 	
 		if(empty($_POST['upPhoto2'])){
-				 $SQL="UPDATE peserta SET 
-					skck='$filename6',
-					   transkrip='$filename44 ',
-					   
+				 $SQL="UPDATE peserta SET 					   
 						buktip='nofoto.jpg',
 						
                            		nama='$_POST[txtNmLengkap]',
-								  
 								  tgl_lhr='$_POST[txttgllhr]',
 								  tempat_lhr='$_POST[txttmptlhr]',
 								  jenkel='$_POST[jk]',
@@ -174,18 +157,9 @@ if(isset($_SESSION['username']) AND isset($_SESSION['password'])){
 	</script>
 	";
 				  }
-	else{
-				upLapangan4($filename6);
-				upLapangan2($filename44);
-				
-				upLapangan3($filename2);
+	else{				
 				
 					$SQL="UPDATE peserta SET 
-					skck='$filename6',
-					   transkrip='$filename44 ',
-					   
-						buktip='$filename2',
-						
                            		nama='$_POST[txtNmLengkap]',
 								  
 								  tgl_lhr='$_POST[txttgllhr]',
@@ -224,17 +198,9 @@ if(isset($_SESSION['username']) AND isset($_SESSION['password'])){
 				  ";
 				  }
 	else{
-				upLapangan4($filename6);
-				upLapangan2($filename44);
-				
-				upLapangan3($filename2);
 				
 					$SQL="UPDATE peserta SET 
-					skck='$filename6',
-					   transkrip='$filename44 ',
 					   
-						buktip='$filename2',
-						
                            		nama='$_POST[txtNmLengkap]',
 								  
 								  tgl_lhr='$_POST[txttgllhr]',
@@ -270,11 +236,9 @@ if(isset($_SESSION['username']) AND isset($_SESSION['password'])){
 	else{
 				upLapangan5($filename5);
 				upLapangan1($filename);
-				upLapanganblm($filenameblm);
 					$SQL="UPDATE peserta SET  
 					ktp='$filename5',
                     cv='$filename',  
-                     blm_nikah='$filenameblm',    					
                            		nama='$_POST[txtNmLengkap]',
 								  
 								  tgl_lhr='$_POST[txttgllhr]',

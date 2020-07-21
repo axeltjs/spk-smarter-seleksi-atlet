@@ -83,71 +83,55 @@ if(isset($_SESSION['username']) AND isset($_SESSION['password'])){
 	
 		
 			
-		}elseif($loadPage=="member" AND $action=="ubahData" AND $_POST['txtnilaites'] < 60 ){
-			
-			echo"
-	<script language='javascript'>
-	window.alert('Nilai tes tidak boleh kurang dari 60');
-	window.location=('../../frame.php?load=member')
-	</script>
-	";
-		}
-	elseif($loadPage=="member" AND $action=="ubahData" AND $_POST['txtwawancara'] =='Sangat Komunikatif' ){
-	
-	$txtn2 = $_POST['txtn2'] ?? 0;
-	$txtn3 = $_POST['txtn3'] ?? 0;
-		
-		$SQL1="UPDATE peserta SET 
-		validasi1='ACC',
-		validasi='SIAP1',
-                            		nama='$_POST[txtNmLengkap]',
-								  
-								  tgl_lhr='$_POST[txttgllhr]',
-								  tempat_lhr='$_POST[txttmptlhr]',
-								  jenkel='$_POST[jk]',
-								 
-								  alamat='$_POST[txtAlamat]',
-								  no_hp='$_POST[txtkontak]',
-								  jpendidikan='$_POST[txtjp]',
-								  usia='$_POST[txtusia]',
-								  pengalaman='$_POST[pengalaman]',
-								  nilaites='$_POST[txtnilaites]',
-								 wawancara='$_POST[txtwawancara]',
-								  kesehatan='$_POST[txtmcu]',
-								  n1='$_POST[txtn1]',
-								  n2='$txtn2',
-								  n3='$txtn3',
-								    n4='90'
-								  
-			WHERE id_calon='$_POST[id]'";
-	mysqli_query($koneksi,$SQL1) or die (mysqli_error($koneksi));
-	
-	$SQL3="UPDATE perhitungan SET nama='$_POST[txtNmLengkap]',
-								
-								  status='BELUM DIPROSES',
+		}elseif($loadPage=="member" AND $action=="ubahData"  ){
+			$txtn2 = $_POST['txtn2'] ?? 0;
+			// $txtn3 = $_POST['txtn3'] ?? 0;
+				
+				$SQL1="UPDATE peserta SET 
+				validasi1='ACC',
+				validasi='SIAP1',
+				nama='$_POST[txtNmLengkap]',
+				
+				tgl_lhr='$_POST[txttgllhr]',
+				tempat_lhr='$_POST[txttmptlhr]',
+				jenkel='$_POST[jk]',
+				
+				alamat='$_POST[txtAlamat]',
+				no_hp='$_POST[txtkontak]',
+				usia='$_POST[txtusia]',
+				nilaites='$_POST[txtnilaites]',
+				n1=0,
+				n2='$txtn2',
+				keminatan='$_POST[keminatan]',
+				kelengkapan='$_POST[kelengkapan]',
+				keterampilan='$_POST[keterampilan]',
+				n3=0
+				WHERE id_calon='$_POST[id]'";
+				mysqli_query($koneksi,$SQL1) or die (mysqli_error($koneksi));
+			// Hai axel, yg dipake cuma n2, keminatan s/d keterampilan
 
-								  jpendidikan='$_POST[txtjp]',
-								  usia='$_POST[txtusia]',
-								  pengalaman='$_POST[pengalaman]',
-								  nilaites='$_POST[txtnilaites]',
-								 wawancara='$_POST[txtwawancara]',
-								  kesehatan='$_POST[txtmcu]'
-			WHERE id_calon='$_POST[id]'";
-	mysqli_query($koneksi,$SQL3) or die (mysqli_error($koneksi));
-	
-	
+			// $SQL3="UPDATE perhitungan SET nama='$_POST[txtNmLengkap]',
+										
+			// 							  status='BELUM DIPROSES',
 		
-		 
-	echo"
-	<script language='javascript'>
-	window.alert('Data Berhasil Divalidasi');
-	window.location=('../../frame.php?load=member')
-	</script>
-	";
-	
-		
-			
+			// 							  jpendidikan='$_POST[txtjp]',
+			// 							  usia='$_POST[txtusia]',
+			// 							  pengalaman='$_POST[pengalaman]',
+			// 							  nilaites='$_POST[txtnilaites]',
+			// 							 wawancara='$_POST[txtwawancara]',
+			// 							  kesehatan='$_POST[txtmcu]'
+			// 		WHERE id_calon='$_POST[id]'";
+			// mysqli_query($koneksi,$SQL3) or die (mysqli_error($koneksi));
+				 
+			echo"
+			<script language='javascript'>
+			window.alert('Data Berhasil Divalidasi');
+			window.location=('../../frame.php?load=member')
+			</script>
+			";		
 		}
+	// elseif($loadPage=="member" AND $action=="ubahData" AND $_POST['txtwawancara'] =='Sangat Komunikatif' ){
+	// }
 elseif($loadPage=="member" AND $action=="ubahData" AND $_POST['txtnilaites'] < 60 ){
 			
 			echo"
@@ -157,64 +141,64 @@ elseif($loadPage=="member" AND $action=="ubahData" AND $_POST['txtnilaites'] < 6
 	</script>
 	";
 		}
-	elseif($loadPage=="member" AND $action=="ubahData" AND $_POST['txtwawancara'] =='Komunikatif' ){
+	// elseif($loadPage=="member" AND $action=="ubahData" AND $_POST['txtwawancara'] =='Komunikatif' ){
 	
 	
-		$txtn1 = $_POST['txtn1'] ?? 0;
-		$txtn2 = $_POST['txtn2'] ?? 0;
-		$txtn3 = $_POST['txtn3'] ?? 0;
+	// 	$txtn1 = $_POST['txtn1'] ?? 0;
+	// 	$txtn2 = $_POST['txtn2'] ?? 0;
+	// 	$txtn3 = $_POST['txtn3'] ?? 0;
 		
-		$SQL1="UPDATE peserta SET 
-		validasi1='ACC',
-		validasi='SIAP1',
-                            		nama='$_POST[txtNmLengkap]',
+	// 	$SQL1="UPDATE peserta SET 
+	// 	validasi1='ACC',
+	// 	validasi='SIAP1',
+    //                         		nama='$_POST[txtNmLengkap]',
 								  
-								  tgl_lhr='$_POST[txttgllhr]',
-								  tempat_lhr='$_POST[txttmptlhr]',
-								  jenkel='$_POST[jk]',
+	// 							  tgl_lhr='$_POST[txttgllhr]',
+	// 							  tempat_lhr='$_POST[txttmptlhr]',
+	// 							  jenkel='$_POST[jk]',
 								 
-								  alamat='$_POST[txtAlamat]',
-								  no_hp='$_POST[txtkontak]',
-								  jpendidikan='$_POST[txtjp]',
-								  usia='$_POST[txtusia]',
-								  pengalaman='$_POST[pengalaman]',
-								  nilaites='$_POST[txtnilaites]',
-								 wawancara='$_POST[txtwawancara]',
-								  kesehatan='$_POST[txtmcu]',
-								  n1='$txtn1',
-								  n2='$txtn2',
-								   n3='$txtn3',
-								    n4='80'
+	// 							  alamat='$_POST[txtAlamat]',
+	// 							  no_hp='$_POST[txtkontak]',
+	// 							  jpendidikan='$_POST[txtjp]',
+	// 							  usia='$_POST[txtusia]',
+	// 							  pengalaman='$_POST[pengalaman]',
+	// 							  nilaites='$_POST[txtnilaites]',
+	// 							 wawancara='$_POST[txtwawancara]',
+	// 							  kesehatan='$_POST[txtmcu]',
+	// 							  n1='$txtn1',
+	// 							  n2='$txtn2',
+	// 							   n3='$txtn3',
+	// 							    n4='80'
 								  
-			WHERE id_calon='$_POST[id]'";
-	mysqli_query($koneksi,$SQL1) or die (mysqli_error($koneksi));
+	// 		WHERE id_calon='$_POST[id]'";
+	// mysqli_query($koneksi,$SQL1) or die (mysqli_error($koneksi));
 	
-	$SQL3="UPDATE perhitungan SET nama='$_POST[txtNmLengkap]',
+	// $SQL3="UPDATE perhitungan SET nama='$_POST[txtNmLengkap]',
 								
-								  status='BELUM DIPROSES',
+	// 							  status='BELUM DIPROSES',
 
-								  jpendidikan='$_POST[txtjp]',
-								  usia='$_POST[txtusia]',
-								  pengalaman='$_POST[pengalaman]',
-								  nilaites='$_POST[txtnilaites]',
-								 wawancara='$_POST[txtwawancara]',
-								  kesehatan='$_POST[txtmcu]'
-			WHERE id_calon='$_POST[id]'";
-	mysqli_query($koneksi,$SQL3) or die (mysqli_error($koneksi));
+	// 							  jpendidikan='$_POST[txtjp]',
+	// 							  usia='$_POST[txtusia]',
+	// 							  pengalaman='$_POST[pengalaman]',
+	// 							  nilaites='$_POST[txtnilaites]',
+	// 							 wawancara='$_POST[txtwawancara]',
+	// 							  kesehatan='$_POST[txtmcu]'
+	// 		WHERE id_calon='$_POST[id]'";
+	// mysqli_query($koneksi,$SQL3) or die (mysqli_error($koneksi));
 	
 	
 		
 		 
-	echo"
-	<script language='javascript'>
-	window.alert('Data Berhasil Divalidasi');
-	window.location=('../../frame.php?load=member')
-	</script>
-	";
+	// echo"
+	// <script language='javascript'>
+	// window.alert('Data Berhasil Divalidasi');
+	// window.location=('../../frame.php?load=member')
+	// </script>
+	// ";
 	
 		
 			
-		}	
+	// 	}	
 elseif($loadPage=="member" AND $action=="ubahData" AND $_POST['txtnilaites'] < 60 ){
 			
 			echo"
@@ -224,63 +208,63 @@ elseif($loadPage=="member" AND $action=="ubahData" AND $_POST['txtnilaites'] < 6
 	</script>
 	";
 		}
-	elseif($loadPage=="member" AND $action=="ubahData" AND $_POST['txtwawancara'] =='Tidak Komunikatif' ){
+	// elseif($loadPage=="member" AND $action=="ubahData" AND $_POST['txtwawancara'] =='Tidak Komunikatif' ){
 	
-		$txtn1 = $_POST['txtn1'] ?? 0;
-		$txtn2 = $_POST['txtn2'] ?? 0;
-		$txtn3 = $_POST['txtn3'] ?? 0;
+	// 	$txtn1 = $_POST['txtn1'] ?? 0;
+	// 	$txtn2 = $_POST['txtn2'] ?? 0;
+	// 	$txtn3 = $_POST['txtn3'] ?? 0;
 		
-		$SQL1="UPDATE peserta SET 
-		validasi1='ACC',
-		validasi='SIAP1',
-                            		nama='$_POST[txtNmLengkap]',
+	// 	$SQL1="UPDATE peserta SET 
+	// 	validasi1='ACC',
+	// 	validasi='SIAP1',
+    //                         		nama='$_POST[txtNmLengkap]',
 								  
-								  tgl_lhr='$_POST[txttgllhr]',
-								  tempat_lhr='$_POST[txttmptlhr]',
-								  jenkel='$_POST[jk]',
+	// 							  tgl_lhr='$_POST[txttgllhr]',
+	// 							  tempat_lhr='$_POST[txttmptlhr]',
+	// 							  jenkel='$_POST[jk]',
 								 
-								  alamat='$_POST[txtAlamat]',
-								  no_hp='$_POST[txtkontak]',
-								  jpendidikan='$_POST[txtjp]',
-								  usia='$_POST[txtusia]',
-								  pengalaman='$_POST[pengalaman]',
-								  nilaites='$_POST[txtnilaites]',
-								 wawancara='$_POST[txtwawancara]',
-								  kesehatan='$_POST[txtmcu]',
-								  n1='$txtn1',
-								  n2='$txtn2',
-								   n3='$txtn3',
-								    n4='70'
+	// 							  alamat='$_POST[txtAlamat]',
+	// 							  no_hp='$_POST[txtkontak]',
+	// 							  jpendidikan='$_POST[txtjp]',
+	// 							  usia='$_POST[txtusia]',
+	// 							  pengalaman='$_POST[pengalaman]',
+	// 							  nilaites='$_POST[txtnilaites]',
+	// 							 wawancara='$_POST[txtwawancara]',
+	// 							  kesehatan='$_POST[txtmcu]',
+	// 							  n1='$txtn1',
+	// 							  n2='$txtn2',
+	// 							   n3='$txtn3',
+	// 							    n4='70'
 								  
-			WHERE id_calon='$_POST[id]'";
-	mysqli_query($koneksi,$SQL1) or die (mysqli_error($koneksi));
+	// 		WHERE id_calon='$_POST[id]'";
+	// mysqli_query($koneksi,$SQL1) or die (mysqli_error($koneksi));
 	
-	$SQL3="UPDATE perhitungan SET nama='$_POST[txtNmLengkap]',
+	// $SQL3="UPDATE perhitungan SET nama='$_POST[txtNmLengkap]',
 								
-								  status='BELUM DIPROSES',
+	// 							  status='BELUM DIPROSES',
 
-								  jpendidikan='$_POST[txtjp]',
-								  usia='$_POST[txtusia]',
-								  pengalaman='$_POST[pengalaman]',
-								  nilaites='$_POST[txtnilaites]',
-								 wawancara='$_POST[txtwawancara]',
-								  kesehatan='$_POST[txtmcu]'
-			WHERE id_calon='$_POST[id]'";
-	mysqli_query($koneksi,$SQL3) or die (mysqli_error($koneksi));
+	// 							  jpendidikan='$_POST[txtjp]',
+	// 							  usia='$_POST[txtusia]',
+	// 							  pengalaman='$_POST[pengalaman]',
+	// 							  nilaites='$_POST[txtnilaites]',
+	// 							 wawancara='$_POST[txtwawancara]',
+	// 							  kesehatan='$_POST[txtmcu]'
+	// 		WHERE id_calon='$_POST[id]'";
+	// mysqli_query($koneksi,$SQL3) or die (mysqli_error($koneksi));
 	
 	
 		
 		 
-	echo"
-	<script language='javascript'>
-	window.alert('Data Berhasil Divalidasi');
-	window.location=('../../frame.php?load=member')
-	</script>
-	";
+	// echo"
+	// <script language='javascript'>
+	// window.alert('Data Berhasil Divalidasi');
+	// window.location=('../../frame.php?load=member')
+	// </script>
+	// ";
 	
 		
 			
-		}		
+	// 	}		
 	}else{
 		
 		echo"
