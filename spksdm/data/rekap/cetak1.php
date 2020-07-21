@@ -19,7 +19,7 @@ $tgl1=$_POST['tahun'];
 <body onLoad="window.print();">
 <p align="center">&nbsp;</p>
 <p align="center">&nbsp;</p>
-<p align="center"><img src="KOPBARU1.PNG" width="957" height="134"> </p>
+<p align="center"><img src="/images/kop-fcsi.png" width="957" height="auto"> </p>
 <p align="center" class="style1">LAPORAN DATA REKAP NILAI PESERTA PER PERIODE TAHUN <?php echo $tgl1?> </p>
 <p align="center" class="style1">&nbsp;</p>
 <div align="center">

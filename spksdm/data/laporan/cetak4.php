@@ -16,7 +16,7 @@ $tgl1= $_POST['tahun'];
 <body onLoad="window.print();">
 <p align="center">&nbsp;</p>
 <p align="center">&nbsp;</p>
-<p align="center"><img src="KOPBARU1.PNG" width="1016" height="118"></p>
+<p align="center"><img src="/images/kop-fcsi.png" width="1016" height="118"></p>
 <p align="center" class="style1">Laporan Data Pengumuman Pendaftar Yang Tidak Lulus Per Periode Tahun <?php echo $tgl1?> </p>
 <p align="center" class="style1">&nbsp;</p>
 <div align="center">
