@@ -71,7 +71,7 @@ while($data = mysqli_fetch_array($tampil)){
       <td width="55">&nbsp;</td>
       <td width="229">&nbsp;</td>
       <td width="386">&nbsp;</td>
-      <td width="295"><div align="center"><strong>PT. BANK RAKYAT INDONESIA (PERSERO) Tbk KANTOR CABANG</strong></div></td>
+      <td width="295"><div align="center"><strong>FEDERASI CHEERLEADING SELURUH INDONESIA (FSCI) SAMARINDA</strong></div></td>
     </tr>
     <tr>
       <td>&nbsp;</td>
@@ -97,12 +97,12 @@ while($data = mysqli_fetch_array($tampil)){
       <td width="55">&nbsp;</td>
       <td width="229">&nbsp;</td>
       <td width="386">&nbsp;</td>
-      <td rowspan="3"><div align="center"><strong><u>Rainhard r marpaung</u></strong></div>
+      <td rowspan="3"><div align="center"><strong><u>Siti Fatiyah</u></strong></div>
         <div align="center"></div>
         <div align="center"></div>
         <div align="center"></div>
        <div align="center"></div>       
-       <div align="center">Pemimpin Cabang</div></td>
+       <div align="center">Ketua Harian</div></td>
     </tr>
     <tr>
       <td>&nbsp;</td>
