@@ -25,15 +25,10 @@ echo"
                 ";
 				if(strlen($_data['foto']) > 1){
 					echo"<a href ='../gambar/member_img/height/$_small_$_data[foto]' class='besar'print><img src='../gambar/member_img/height/$_small_$_data[foto]' width='118' heigh='37'></a>";
-					
-					
 					}
 					else{
-						
 						echo"Tidak Ada Gambar";
 						}
-				
-				
 				echo" 
               </div>
             </div>	
@@ -256,7 +251,7 @@ echo"
             <div class='control-group'>
               <label class='control-label'>Nilai Tes:</label>
               <div class='controls'>
-                <input type='number' class='span2'  name='txtnilaites' value='$_data[nilaites]' required />
+                <input type='number' class='span2'  name='txtnilaites' value='$_data[nilaites]' readonly />
               </div>
             </div>
 			<div class='control-group'>

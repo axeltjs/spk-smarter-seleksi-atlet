@@ -1,19 +1,18 @@
  <div id="content-header">
-    <div id="breadcrumb"> <a href="?load=dashboard" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a> <a href="?load=jadwal" class="current">Module Perhitungan</a> </div>
-    <h1>Daftar Data Perhitungan</h1>
+    <div id="breadcrumb"> <a href="?load=dashboard" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a> <a href="?load=pengguna" class="current">DATA KRITERIA</a> </div>
+    <h1>Data Record Atlet</h1>
   </div>
   <div class="container-fluid">
     <hr>
     <div class="row-fluid">
       <div class="span12">
-       
         <div class="widget-box">
           <div class="widget-title"> <span class="icon"><i class="icon-th"></i></span>
-            <h5>Semua Data Perhitungan</h5>
+            <h5>Semua Data pengguna</h5>
           </div>
 		   <div style="overflow-x:auto;">
           <div class="widget-content nopadding">
-            <table class="table table-bordered data-table">
+          <table class="table table-bordered data-table">
               <thead>
                 <tr>
                   <th width="1%">No</th>
@@ -40,14 +39,10 @@
 				    <td>$_data[usia] </td>
 					<td>$_data[nilaites] </td>
 				   <td>$_data[status] </td>
-                  
                   <td class='center'>  
-                  "; if($_data['nilaites'] > 0): 
-                    echo "
-           <a href='?load=hitung&action=edit&id=$_data[id_calon]'><button class='btn btn-primary'> <i class='icon-pencil'></i> &nbsp; Proses</button></a>
-             ";
-                endif;
-		  echo "
+           <a href='?load=record-edit&action=edit&id=$_data[id_calon]'><button class='btn btn-primary'> <i class='icon-star'></i> &nbsp; Proses</button></a>
+             
+		  
            </td>
                 </tr> 
 				   
@@ -61,7 +56,7 @@
               </tbody>
             </table>
           </div>
-		   </div>
+		    </div>
         </div>
       </div>
     </div>
@@ -78,5 +73,3 @@
 <script src="js/jquery.dataTables.min.js"></script> 
 <script src="js/matrix.js"></script> 
 <script src="js/matrix.tables.js"></script>
-
-
