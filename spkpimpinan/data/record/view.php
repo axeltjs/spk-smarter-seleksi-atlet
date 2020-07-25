@@ -19,8 +19,8 @@
                     <th width="2%">Nama</th>
                   <th width="2%">Usia</th>
                   <th width="2%">Nilai Tes</th>
+                  <th width="2%">Kategori</th>
                   <th width="1%">Status</th>
-                  
                   <th width="1%">Aksi</th>
                 </tr>
               </thead>
@@ -38,6 +38,7 @@
 				  <td>$_data[nama] </td>
 				    <td>$_data[usia] </td>
 					<td>$_data[nilaites] </td>
+					<td>$_data[kategori] </td>
 				   <td>$_data[status] </td>
                   <td class='center'>  
            <a href='?load=record-edit&action=edit&id=$_data[id_calon]'><button class='btn btn-primary'> <i class='icon-star'></i> &nbsp; Proses</button></a>

@@ -3,6 +3,8 @@
 $SQL=mysqli_query($koneksi,"SELECT * FROM peserta WHERE id_calon='$_GET[id]'");
 $_data=mysqli_fetch_array($SQL);
 
+$sql_kategori =  mysqli_query($koneksi, "SELECT * FROM kategori");
+
 if(isset($_POST['id'])){
 
   $nilai = 0;
@@ -13,7 +15,8 @@ if(isset($_POST['id'])){
                           disiplin ='$_POST[disiplin]',
                           kehandalan ='$_POST[kehandalan]',
                           kerjasama ='$_POST[kerjasama]',
-                          tanggungjawab ='$_POST[tanggungjawab]'
+                          tanggungjawab ='$_POST[tanggungjawab]',
+                          kategori = '$_POST[kategori]'
                          WHERE id_calon='$_POST[id]'";	
 	mysqli_query($koneksi,$SQL) or die (mysqli_error($koneksi));
 		 
@@ -158,6 +161,20 @@ echo"
                     for($i = 90; $i >= 60; $i--):
                       echo "<option ".($_data[disiplin] == $i ? 'selected' : '')." value='".$i."'>".$i."</option>";
                     endfor;
+                    echo "
+                    </select>
+                  </div>
+                </div>
+
+                <div class='control-group'>
+                  <label class='control-label'>Kategori:</label>
+                  <div class='controls'>
+                  <select name='kategori' id='kategori'>
+                    <option>Pilih Kategori</option>
+                    ";
+                    while($dataKategori = mysqli_fetch_array($sql_kategori)): 
+                      echo "<option ".($_data[kategori] == $dataKategori['nama'] ? 'selected' : '')." value='".$dataKategori['nama']."'>".$dataKategori['nama']."</option>";
+                    endwhile;
                     echo "
                     </select>
                   </div>
