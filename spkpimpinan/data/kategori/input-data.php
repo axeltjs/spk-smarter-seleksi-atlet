@@ -30,7 +30,7 @@ include"../../../appConfig/conn.php";
           <form action="" method="POST" class="form-horizontal" enctype="multipart/form-data">
      
           <div class="control-group">
-              <label class="control-label">Nama Kategori</label>
+              <label class="control-label">Nama Grup</label>
               <div class="controls">
                 <input type="text" class="span2"  name="txtnama" required />
               </div>

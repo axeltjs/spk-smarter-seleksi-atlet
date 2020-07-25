@@ -33,7 +33,7 @@ echo"
             
 			  <div class='control-group'>
 			  
-              <label class='control-label'>Kriteria</label>
+              <label class='control-label'>Nama Grup</label>
 			   <div class='controls'>
               <input type='text' class='span4'  name='nama' value='$_data[nama]' />
             </div>

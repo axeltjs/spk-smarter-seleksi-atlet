@@ -37,12 +37,11 @@
 				  <th width="5%" height="58">Rangking</th>
 				  <th >kode</th>
                   <th width="14%">Nama</th>
-                   <th width="13%">Jenjang Pendidikan</th>
 				    <th width="5%">Usia</th>
-					 <th width="13%">Pengalaman</th>
+					 <th width="13%">Keminatan</th>
 					  <th width="13%">Nilai Tes</th>
-					   <th width="13%">Wawancar</th>
-					    <th width="15%">Kesehatan</th>
+					   <th width="13%">Keterampilan</th>
+					    <th width="15%">Kelengkapan Berkas</th>
                   <th width="13%">Hasil Akhir</th>
 				   <th width="20%">Keterangan</th>
 					
@@ -77,14 +76,11 @@
 				  <td>$no </td>
 				 <td><input type='text'name='idc[]' value='$_data[id_calon]' readonly></td>
 				  <td>$_data[nama] </td>
-				  <td>$_data[jpendidikan] </td>
 				  <td>$_data[usia] </td>
-				  <td>$_data[pengalaman] </td>
+				  <td>$_data[n1] </td>
 				  <td>$_data[nilaites] </td>
-				  <td>$_data[wawancara] </td>
-				  <td>$_data[kesehatan] </td>
-					
-					
+				  <td>$_data[n5] </td>
+				  <td>$_data[n4] </td>
 					<td>$_data[rank] </td>
 					<td><div class='alert alert-danger'><input type='text' name='ket[]'  value='$keputusan 'readonly></div></td>
 				  

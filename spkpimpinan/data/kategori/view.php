@@ -1,9 +1,9 @@
  <div id="content-header">
     <div id="breadcrumb"> <a href="?load=dashboard" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a> <a href="?load=pengguna" class="current">DATA KRITERIA</a> </div>
-    <h1>Data Kategori</h1>
+    <h1>Data Grup</h1>
   </div>
   <div class="container-fluid">
-  <a href="frame.php?load=kategori-input" class="btn btn-primary">Tambah Kategori</a>
+  <a href="frame.php?load=kategori-input" class="btn btn-primary">Tambah Grup</a>
     <hr>
     <div class="row-fluid">
       <div class="span12">
@@ -17,7 +17,7 @@
               <thead>
                 <tr>
                   <th width="1%">No</th>
-                  <th width="15%">NAMA KATEGORI</th>
+                  <th width="15%">NAMA Grup</th>
                   <th width="3%">AKSI</th>
                 </tr>
               </thead>

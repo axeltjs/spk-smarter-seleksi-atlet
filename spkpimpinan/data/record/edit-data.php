@@ -167,10 +167,10 @@ echo"
                 </div>
 
                 <div class='control-group'>
-                  <label class='control-label'>Kategori:</label>
+                  <label class='control-label'>Grup:</label>
                   <div class='controls'>
                   <select name='kategori' id='kategori'>
-                    <option>Pilih Kategori</option>
+                    <option>Pilih Grup</option>
                     ";
                     while($dataKategori = mysqli_fetch_array($sql_kategori)): 
                       echo "<option ".($_data[kategori] == $dataKategori['nama'] ? 'selected' : '')." value='".$dataKategori['nama']."'>".$dataKategori['nama']."</option>";
