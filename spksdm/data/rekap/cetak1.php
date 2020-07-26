@@ -9,9 +9,7 @@
 -->
 </style>
 
-<?php
-$tgl1=$_POST['tahun'];
-?>
+
 
 
 
@@ -20,7 +18,7 @@ $tgl1=$_POST['tahun'];
 <p align="center">&nbsp;</p>
 <p align="center">&nbsp;</p>
 <p align="center"><img src="/images/kop-fcsi.png" width="957" height="auto"> </p>
-<p align="center" class="style1">LAPORAN DATA REKAP NILAI PESERTA PER PERIODE TAHUN <?php echo $tgl1?> </p>
+<p align="center" class="style1">LAPORAN DATA REKAP NILAI PESERTA PER PARIODE TAHUN</p>
 <p align="center" class="style1">&nbsp;</p>
 <div align="center">
   <div align="center">
@@ -29,23 +27,11 @@ $tgl1=$_POST['tahun'];
         
          <th><div align="center">No</span></th>
        <th><div align="center">NAMA</span></th>
-      <th><div align="center">JENJANG PENDIDIKAN</span></th>
-      <th><div align="center">NILAI</span></th>
 	   <th><div align="center">USIA</span></th>
-       
-      <th><div align="center">NILAI</span></th>
-      <th><div align="center">PENGALAMAN KERJA</span></th>
-	  <th><div align="center">NILAI</span></th>
+      <th><div align="center">NILAI KEMINATAN</span></th>
+      <th><div align="center">NILAI KETERAMPILAN</span></th>
        <th><div align="center">NILAI TES</span></th>
-	   <th><div align="center">KEMAMPUAN BERKOMUNIKASI</span></th>
-	   <th><div align="center">NILAI</span></th>
-	   <th><div align="center">KESEHATAN</span></th>
-      
-       
-      
-	  
-	 
-	
+	   <th><div align="center">NILAI KELENGKAPAN BERKAS</span></th>
       <?php
 include"conn.php";
 $tgl1= $_POST['tahun'];
@@ -59,19 +45,11 @@ while($data = mysqli_fetch_array($tampil)){
       <td> <div align="center"><?php echo $no; ?></div></td>
      
       <td> <div align="center"><?php echo $data ['nama']; ?></div></td>
-      <td> <div align="center"><?php echo $data ['jpendidikan']; ?></div></td>
-	  <td> <div align="center"><?php echo $data ['n1']; ?></div></td>
       <td> <div align="center"><?php echo $data ['usia']; ?></div></td>
-	  <td> <div align="center"><?php echo $data ['n2']; ?></div></td>
-	  <td> <div align="center"><?php echo $data ['pengalaman']; ?></div></td>
-	  <td> <div align="center"><?php echo $data ['n3']; ?></div></td>
+      <td> <div align="center"><?php echo $data ['keminatan']; ?></div></td>
+      <td> <div align="center"><?php echo $data ['keterampilan']; ?></div></td>
       <td> <div align="center"><?php echo $data ['nilaites']; ?></div></td>
-	  <td> <div align="center"><?php echo $data ['wawancara']; ?></div></td>
-	  <td> <div align="center"><?php echo $data ['n4']; ?></div></td>
-	 <td> <div align="center"><?php echo $data ['kesehatan']; ?></div></td>
-	 
-      
-      
+      <td> <div align="center"><?php echo $data ['kelengkapan']; ?></div></td>
       </tr>
       <?php
 	$no++;
@@ -94,7 +72,7 @@ while($data = mysqli_fetch_array($tampil)){
       <td>&nbsp;</td>
       <td>&nbsp;</td>
       <td><div align="center">
-        <div align="center"><span class="style4">SAMARINDA , <?php echo date("Y-m-d");?></span></div>
+        <div align="center"><span class="style4">SAMARINDA, <?php echo date("Y-m-d");?></span></div>
       </div></td>
     </tr>
     <tr>

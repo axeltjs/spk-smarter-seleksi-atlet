@@ -24,22 +24,13 @@
   <div align="center">
     <table width="957" height="69" border="1">
       <tr>
-        
-         <th><div align="center">No</span></th>
+      <th><div align="center">No</span></th>
        <th><div align="center">NAMA</span></th>
-      <th><div align="center">JENJANG PENDIDIKAN</span></th>
-      <th><div align="center">NILAI</span></th>
 	   <th><div align="center">USIA</span></th>
-       
-      <th><div align="center">NILAI</span></th>
-      <th><div align="center">PENGALAMAN KERJA</span></th>
-	  <th><div align="center">NILAI</span></th>
+      <th><div align="center">NILAI KEMINATAN</span></th>
+      <th><div align="center">NILAI KETERAMPILAN</span></th>
        <th><div align="center">NILAI TES</span></th>
-	   <th><div align="center">KEMAMPUAN BERKOMUNIKASI</span></th>
-	   <th><div align="center">NILAI</span></th>
-	   <th><div align="center">KESEHATAN</span></th>
-      
-       
+	   <th><div align="center">NILAI KELENGKAPAN BERKAS</span></th>
       
 	  
 	 
@@ -62,17 +53,13 @@ else {
     <tr>
       <td> <div align="center"><?php echo $no; ?></div></td>
      
+      
       <td> <div align="center"><?php echo $data ['nama']; ?></div></td>
-      <td> <div align="center"><?php echo $data ['jpendidikan']; ?></div></td>
-	  <td> <div align="center"><?php echo $data ['n1']; ?></div></td>
       <td> <div align="center"><?php echo $data ['usia']; ?></div></td>
-	  <td> <div align="center"><?php echo $data ['n2']; ?></div></td>
-	  <td> <div align="center"><?php echo $data ['pengalaman']; ?></div></td>
-	  <td> <div align="center"><?php echo $data ['n3']; ?></div></td>
+      <td> <div align="center"><?php echo $data ['keminatan']; ?></div></td>
+      <td> <div align="center"><?php echo $data ['keterampilan']; ?></div></td>
       <td> <div align="center"><?php echo $data ['nilaites']; ?></div></td>
-	  <td> <div align="center"><?php echo $data ['wawancara']; ?></div></td>
-	  <td> <div align="center"><?php echo $data ['n4']; ?></div></td>
-	 <td> <div align="center"><?php echo $data ['kesehatan']; ?></div></td>
+      <td> <div align="center"><?php echo $data ['kelengkapan']; ?></div></td>
 	 
       
       

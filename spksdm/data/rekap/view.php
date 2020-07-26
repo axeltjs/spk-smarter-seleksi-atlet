@@ -1,5 +1,5 @@
- <div id="content-header">
-    <div id="breadcrumb"> <a href="?load=dashboard" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a> <a href="?load=member" class="current">Module Peserta</a> </div>
+<div id="content-header">
+    <div id="breadcrumb"> <a href="?load=dashboard" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a> <a href="?load=member" class="current">Module Pimpinan</a> </div>
     <h1>Daftar Data Rekap Nilai</h1>
   </div>
   
@@ -67,19 +67,12 @@
               <thead>
                 <tr>
                   <th width="2%">No</th>
-                
                   <th width="2%">Nama </th>
-                  
-				  <th width="2%">Jenjang Pendidikan</th>
-				  <th th width="2%">Nilai Jenjang Pendidikan  </th>
                   <th th width="2%">Usia</th>
-				  <th th width="2%">Nilai Usia</th>
-				   <th width="2%">Pengalaman Kerja</th>
-				    <th width="2%">Nilai Pengalaman Kerja </th>
+				  <th th width="2%">Nilai Keminatan</th>
+				  <th th width="2%">Nilai Keterampilan</th>
 				  <th width="2%">Nilai Tes</th>
-                  <th width="2%">Kemampuan Berkomunikasi</th>
-				  <th width="2%">Nilai Kemampuan Berkomunikasi</th>
-				  <th width="2%">Kesehatan</th>
+				  <th th width="2%">Nilai Kelengkapan Berkas</th>
                   <th width="1%">Aksi</th>
                 </tr>
               </thead>
@@ -95,20 +88,12 @@
 				  <tr class='$class'>
                   <td>$no</td>
 				  <td>$_data[nama]</td>
-				  <td>$_data[jpendidikan]</td>
-				  <td>$_data[n1]</td>
 				  <td>$_data[usia]</td>
-				  <td>$_data[n2]</td>
-				  <td>$_data[pengalaman]</td>
-				  <td>$_data[n3]</td>
+				  <td>$_data[keminatan]</td>
+				  <td>$_data[keterampilan]</td>
 				  <td>$_data[nilaites]</td> 
+				  <td>$_data[kelengkapan]</td> 
 				  
-				   <td>$_data[wawancara]</td> 
-				   <td>$_data[n4]</td> 
-				   <td>$_data[kesehatan]</td> 
-				  
-				  
-				
                   <td class='center'> 
          				  
            <a href='data/rekap/cetak2.php?id=$_data[id_calon]'><button class='btn btn-primary'> <i class='icon-print'></i> &nbsp; Cetak</button></a>
