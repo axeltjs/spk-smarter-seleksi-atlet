@@ -27,13 +27,11 @@ $tgl1=$_POST['tahun'];
          <th><div align="center">No</span></th>
       
       <th><div align="center">NAMA</span></th>
-      <th><div align="center">Jenjang Pendidikan</span></th>
 	   <th><div align="center"> Usia</span></th>
-       
-      <th><div align="center">Pengalaman Kerja</span></th>
+	   <th><div align="center"> Keminatan</span></th>
+	   <th><div align="center"> Keterampilan</span></th>
       <th><div align="center">Nilai Tes</span></th>
-       <th><div align="center">Kemampuan Berkomunikasi</span></th>
-       <th><div align="center">Kesehatan(MCU)</span></th>
+	   <th><div align="center"> Kelengkapan Berkas</span></th>
        <th><div align="center">Rank</span></th>
        
        
@@ -55,12 +53,11 @@ while($data = mysqli_fetch_array($tampil)){
       <td> <div align="center"><?php echo $no; ?></div></td>
      
       <td> <div align="center"><?php echo $data ['nama']; ?></div></td>
-      <td> <div align="center"><?php echo $data ['jpendidikan']; ?></div></td>
       <td> <div align="center"><?php echo $data ['usia']; ?></div></td>
-	  <td> <div align="center"><?php echo $data ['pengalaman']; ?></div></td>
+      <td> <div align="center"><?php echo $data ['h1']; ?></div></td>
+      <td> <div align="center"><?php echo $data ['h5']; ?></div></td>
       <td> <div align="center"><?php echo $data ['nilaites']; ?></div></td>
-	  <td> <div align="center"><?php echo $data ['wawancara']; ?></div></td>
-	  <td> <div align="center"><?php echo $data ['kesehatan']; ?></div></td>
+      <td> <div align="center"><?php echo $data ['h4']; ?></div></td>
       <td> <div align="center"><?php echo $data ['rank']; ?></div></td>
       
       
