@@ -21,13 +21,8 @@
                <input type='number' class='span3'  name='jml' required />
               </div>
             </div>
-         
-			
-                
             <div class="form-actions">
-             
-			  <button type="submit" class="btn btn-success" > Proses</button>
-
+      			  <button type="submit" class="btn btn-success" > Proses</button>
             </div>
           </form>
         </div>

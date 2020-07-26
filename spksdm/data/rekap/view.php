@@ -34,8 +34,11 @@
               <label class="control-label">Cetak Laporan</label>
               <div class="controls">
                <ul style="list-style:none;margin:10px 0 0">
-	<li><input id="op_semua" checked type="radio" class="" name="op_lap" value="hasil"/><label for="op_s">&nbsp; Rekap Nilai</label></li>
-	</ul>
+                <li style="display:inline-flex;"><input id="semua_atlet" checked type="checkbox" id="semua_atlet" class="" name="semua" value="semua"/><label for="op_semua">&nbsp; Semua</label></li>
+                <li id="limit">
+                  <input type="number" name="limit" id="txtlimit" class="form-control" placeholder="Jumlah Atlet"> Orang
+              </li>
+	            </ul>
               </div>
             </div>
                 
@@ -123,6 +126,27 @@
 
 <!--end-Footer-part-->
 <script src="js/jquery.min.js"></script> 
+<script>
+
+$(document).ready(function(){
+  checkAll();
+});
+
+$('#semua_atlet').on('click', function(e){
+  checkAll();
+});
+
+let checkAll = () => {
+  var checked = $("input[@id=semua_atlet]:checked").length;
+  if(checked){
+    $('#limit').hide(500);
+    $('#txtlimit').val("");
+  }else{
+    $('#limit').show(500);
+  }
+}
+
+</script>
 <script src="js/jquery.ui.custom.js"></script> 
 <script src="js/bootstrap.min.js"></script> 
 <script src="js/jquery.uniform.js"></script> 

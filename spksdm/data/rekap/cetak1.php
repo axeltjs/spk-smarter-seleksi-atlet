@@ -35,9 +35,13 @@
       <?php
 include"conn.php";
 $tgl1= $_POST['tahun'];
-
+$limit = $_POST['limit'];
 $no=1;
+if($limit > 0){
+  $tampil = mysqli_query($koneksi,"SELECT * FROM peserta where  tgl_input ='$tgl1' AND validasi='SIAP1' order by id_calon DESC limit $limit") or die(mysqli_error($koneksi));
+}else{
 $tampil = mysqli_query($koneksi,"SELECT * FROM peserta where  tgl_input ='$tgl1' AND validasi='SIAP1' order by id_calon DESC") or die(mysqli_error($koneksi));
+}
 while($data = mysqli_fetch_array($tampil)){
 ?>
     

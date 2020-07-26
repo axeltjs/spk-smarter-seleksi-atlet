@@ -68,7 +68,7 @@
 									$keputusan = 'TIDAK LULUS';
 								}
 		
-				 
+				 	mysqli_query($koneksi, "UPDATE hasil SET ket = '$keputusan' WHERE id_calon = '$_data[id_calon]'");
 				   
 				   echo"
 				  <tr class='$class'>
