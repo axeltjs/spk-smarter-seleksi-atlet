@@ -92,7 +92,6 @@ echo"
               <label class='control-label'>Keminatan</label>
               <div class='controls'>
 				<select name='keminatan' >
-					<option>$_data[keminatan]</option>
 					<option value='90' ".($_data[keminatan] == 90 ? 'selected' : '').">Sangat Berminat</option>
 					<option value='80' ".($_data[keminatan] == 80 ? 'selected' : '').">Berminat</option>
 					<option value='70' ".($_data[keminatan] == 70 ? 'selected' : '').">Kurang Berminat</option>
@@ -258,7 +257,6 @@ echo"
               <label class='control-label'>Keterampilan</label>
               <div class='controls'>
                 <select name='keterampilan' required >
-                  <option >$_data[keterampilan]</option>
 				  <option value='90' ".($_data[keterampilan] == 90 ? 'selected' : '')."> Sangat Terampil</option>
 					<option value='80' ".($_data[keterampilan] == 80 ? 'selected' : '')."> Cukup Terampil</option>
 					<option value='70' ".($_data[keterampilan] == 70 ? 'selected' : '')."> Kurang Terampil</option>

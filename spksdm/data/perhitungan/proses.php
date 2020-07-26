@@ -36,25 +36,25 @@ if(isset($_SESSION['username']) AND isset($_SESSION['password'])){
 	$nama1				= $_POST['txtnama'];
 	
 	// nilai
-	$nilai_keminatan 	= $_POST['nilai_keminatan'];
-	$nilai_usia			= $_POST['nilai_usia'];
-	$nilai_tes			= $_POST['nilai_tes'];
-	$nilai_kelengkapan	= $_POST['nilai_kelengkapan'];
-	$nilai_keterampilan	= $_POST['nilai_keterampilan'];
+	$nilai_keminatan 	= floatval($_POST['nilai_keminatan']);
+	$nilai_usia			= floatval($_POST['nilai_usia']);
+	$nilai_tes			= floatval($_POST['nilai_tes']);
+	$nilai_kelengkapan	= floatval($_POST['nilai_kelengkapan']);
+	$nilai_keterampilan	= floatval($_POST['nilai_keterampilan']);
 
 	// bobot kriteria
-	$bobot_keminatan 	= $_POST['bobot_keminatan'];
-	$bobot_usia			= $_POST['bobot_usia'];
-	$bobot_nilai_tes	= $_POST['bobot_nilai_tes'];
-	$bobot_kelengkapan	= $_POST['bobot_kelengkapan'];
-	$bobot_keterampilan	= $_POST['bobot_keterampilan'];
+	$bobot_keminatan 	= floatval($_POST['bobot_keminatan']);
+	$bobot_usia			= floatval($_POST['bobot_usia']);
+	$bobot_nilai_tes	= floatval($_POST['bobot_nilai_tes']);
+	$bobot_kelengkapan	= floatval($_POST['bobot_kelengkapan']);
+	$bobot_keterampilan	= floatval($_POST['bobot_keterampilan']);
 	
 	// bobot sub kriteria
-	$sub_bobot_keminatan 	= $_POST['sub_bobot_keminatan'];
-	$sub_bobot_usia			= $_POST['sub_bobot_usia'];
-	$sub_bobot_nilai_tes	= $_POST['sub_bobot_nilai_tes'];
-	$sub_bobot_kelengkapan	= $_POST['sub_bobot_kelengkapan'];
-	$sub_bobot_keterampilan	= $_POST['sub_bobot_keterampilan'];
+	$sub_bobot_keminatan 	= floatval($_POST['sub_bobot_keminatan']);
+	$sub_bobot_usia			= floatval($_POST['sub_bobot_usia']);
+	$sub_bobot_nilai_tes	= floatval($_POST['sub_bobot_nilai_tes']);
+	$sub_bobot_kelengkapan	= floatval($_POST['sub_bobot_kelengkapan']);
+	$sub_bobot_keterampilan	= floatval($_POST['sub_bobot_keterampilan']);
 	
 	// utility
 	$utility_keminatan   	= $bobot_keminatan * $sub_bobot_keminatan;
