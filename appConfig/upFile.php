@@ -1,6 +1,7 @@
 <?php
 function upMemberLaman($upImage_name){
-  //direktori gambar
+  if(isset($upImage_name)){
+    //direktori gambar
   $upDir_h = "gambar/member_img/height/";
   $upDir_m = "gambar/member_img/medium/";
   $upDir_s = "gambar/member_img/small/";
@@ -46,9 +47,11 @@ function upMemberLaman($upImage_name){
   imagedestroy($imgSrc);
   imagedestroy($imColor);
   imagedestroy($imColor2);
+  }
 }
 function upLapangan($upImage_name){
-  //direktori gambar
+  if(isset($upImage_name)){
+    //direktori gambar
   $upDir_h = "../../../gambar/lapangan_img/height/";
   $upDir_m = "../../../gambar/lapangan_img/medium/";
   $upDir_s = "../../../gambar/lapangan_img/small/";
@@ -94,11 +97,13 @@ function upLapangan($upImage_name){
   imagedestroy($imgSrc);
   imagedestroy($imColor);
   imagedestroy($imColor2);
+  }
 }
 
 
 function upLapangan1($upImage_name){
-  //direktori gambar
+  if(isset($upImage_name)){
+    //direktori gambar
   $upDir_h = "../../../gambar/lapangan_img/height/";
   $upDir_m = "../../../gambar/lapangan_img/medium/";
   $upDir_s = "../../../gambar/lapangan_img/small/";
@@ -144,12 +149,14 @@ function upLapangan1($upImage_name){
   imagedestroy($imgSrc);
   imagedestroy($imColor);
   imagedestroy($imColor2);
+  }
 }
 
 
 
 function upLapangan2($upImage_name){
-  //direktori gambar
+ if(isset($upImage_name)){
+    //direktori gambar
   $upDir_h = "../../../gambar/lapangan_img/height/";
   $upDir_m = "../../../gambar/lapangan_img/medium/";
   $upDir_s = "../../../gambar/lapangan_img/small/";
@@ -195,6 +202,7 @@ function upLapangan2($upImage_name){
   imagedestroy($imgSrc);
   imagedestroy($imColor);
   imagedestroy($imColor2);
+ }
 }
 
 
@@ -202,7 +210,8 @@ function upLapangan2($upImage_name){
 
 
 function upLapangan3($upImage_name){
-  //direktori gambar
+  if(isset($upImage_name)){
+   //direktori gambar
   $upDir_h = "../../../gambar/lapangan_img/height/";
   $upDir_m = "../../../gambar/lapangan_img/medium/";
   $upDir_s = "../../../gambar/lapangan_img/small/";
@@ -247,13 +256,17 @@ function upLapangan3($upImage_name){
   //Hapus gambar di memori komputer
   imagedestroy($imgSrc);
   imagedestroy($imColor);
-  imagedestroy($imColor2);
+  imagedestroy($imColor2); 
+  }
 }
 
 
 
 function upLapangan4($upImage_name){
-  //direktori gambar
+  if(isset($upImage_name)){
+    echo $upImage_name;
+  return true;
+    //direktori gambar
   $upDir_h = "../../../gambar/lapangan_img/height/";
   $upDir_m = "../../../gambar/lapangan_img/medium/";
   $upDir_s = "../../../gambar/lapangan_img/small/";
@@ -299,62 +312,67 @@ function upLapangan4($upImage_name){
   imagedestroy($imgSrc);
   imagedestroy($imColor);
   imagedestroy($imColor2);
+  }
+  
 }
 
 
 function upLapanganblm($upImage_name){
-  //direktori gambar
-  $upDir_h = "../../../gambar/lapangan_img/height/";
-  $upDir_m = "../../../gambar/lapangan_img/medium/";
-  $upDir_s = "../../../gambar/lapangan_img/small/";
-  
-  $upFile_h = $upDir_h . $upImage_name;
-  $upFile_m = $upDir_m . $upImage_name;
-  $upFile_s = $upDir_s . $upImage_name;
+  if(isset($upImage_name)){
+//direktori gambar
+$upDir_h = "../../../gambar/lapangan_img/height/";
+$upDir_m = "../../../gambar/lapangan_img/medium/";
+$upDir_s = "../../../gambar/lapangan_img/small/";
 
-  //Simpan gambar dalam ukuran sebenarnya
-  move_uploaded_file($_FILES["upPhotoblm"]["tmp_name"], $upFile_h);
+$upFile_h = $upDir_h . $upImage_name;
+$upFile_m = $upDir_m . $upImage_name;
+$upFile_s = $upDir_s . $upImage_name;
 
-  //identitas file asli
-  $imgSrc = imagecreatefromjpeg($upFile_h);
-  $srcWidth = imageSX($imgSrc);
-  $srcHeight = imageSY($imgSrc);
+//Simpan gambar dalam ukuran sebenarnya
+move_uploaded_file($_FILES["upPhotoblm"]["tmp_name"], $upFile_h);
 
-  //Simpan dalam versi small 110 pixel
-  //Set ukuran gambar hasil perubahan
-  $rstWidth = 110;
-  $rstHeight = ($rstWidth/$srcWidth)*$srcHeight;
+//identitas file asli
+$imgSrc = imagecreatefromjpeg($upFile_h);
+$srcWidth = imageSX($imgSrc);
+$srcHeight = imageSY($imgSrc);
 
-  //proses perubahan ukuran
-  $imColor = imagecreatetruecolor($rstWidth,$rstHeight);
-  imagecopyresampled($imColor, $imgSrc, 0, 0, 0, 0, $rstWidth, $rstHeight, $srcWidth, $srcHeight);
+//Simpan dalam versi small 110 pixel
+//Set ukuran gambar hasil perubahan
+$rstWidth = 110;
+$rstHeight = ($rstWidth/$srcWidth)*$srcHeight;
 
-  //Simpan gambar
-  imagejpeg($imColor,$upDir_s . "small_" . $upImage_name);
-  
+//proses perubahan ukuran
+$imColor = imagecreatetruecolor($rstWidth,$rstHeight);
+imagecopyresampled($imColor, $imgSrc, 0, 0, 0, 0, $rstWidth, $rstHeight, $srcWidth, $srcHeight);
 
-  //Simpan dalam versi medium 360 pixel
-  //Set ukuran gambar hasil perubahan
-  $rstWidth2 = 233;
-  $rstHeight2 = 288;
+//Simpan gambar
+imagejpeg($imColor,$upDir_s . "small_" . $upImage_name);
 
-  //proses perubahan ukuran
-  $imColor2 = imagecreatetruecolor($rstWidth2,$rstHeight2);
-  imagecopyresampled($imColor2, $imgSrc, 0, 0, 0, 0, $rstWidth2, $rstHeight2, $srcWidth, $srcHeight);
 
-  //Simpan gambar
-  imagejpeg($imColor2,$upDir_m . "medium_" . $upImage_name);
-  
-  //Hapus gambar di memori komputer
-  imagedestroy($imgSrc);
-  imagedestroy($imColor);
-  imagedestroy($imColor2);
+//Simpan dalam versi medium 360 pixel
+//Set ukuran gambar hasil perubahan
+$rstWidth2 = 233;
+$rstHeight2 = 288;
+
+//proses perubahan ukuran
+$imColor2 = imagecreatetruecolor($rstWidth2,$rstHeight2);
+imagecopyresampled($imColor2, $imgSrc, 0, 0, 0, 0, $rstWidth2, $rstHeight2, $srcWidth, $srcHeight);
+
+//Simpan gambar
+imagejpeg($imColor2,$upDir_m . "medium_" . $upImage_name);
+
+//Hapus gambar di memori komputer
+imagedestroy($imgSrc);
+imagedestroy($imColor);
+imagedestroy($imColor2);
+  }
 }
 
 
 
 function upLapangan5($upImage_name){
-  //direktori gambar
+ if(isset($upImage_name)){
+    //direktori gambar
   $upDir_h = "../../../gambar/lapangan_img/height/";
   $upDir_m = "../../../gambar/lapangan_img/medium/";
   $upDir_s = "../../../gambar/lapangan_img/small/";
@@ -400,13 +418,15 @@ function upLapangan5($upImage_name){
   imagedestroy($imgSrc);
   imagedestroy($imColor);
   imagedestroy($imColor2);
+ }
 }
 
 
 
 
 function upLapangan6($upImage_name){
-  //direktori gambar
+  if(isset($upImage_name)){
+    //direktori gambar
   $upDir_h = "../../../gambar/lapangan_img/height/";
   $upDir_m = "../../../gambar/lapangan_img/medium/";
   $upDir_s = "../../../gambar/lapangan_img/small/";
@@ -452,6 +472,7 @@ function upLapangan6($upImage_name){
   imagedestroy($imgSrc);
   imagedestroy($imColor);
   imagedestroy($imColor2);
+  }
 }
 
 

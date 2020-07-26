@@ -122,7 +122,10 @@ if(isset($_SESSION['username']) AND isset($_SESSION['password'])){
 		// 	";
 		// 	}
 
-		upLapangan4($filename_kk);
+
+		if(isset($filename_kk)){
+			upLapangan4($filename_kk);
+		}
 
 		  $SQL="UPDATE peserta SET 
 		  		agama = '$_POST[agama]',
@@ -234,8 +237,13 @@ if(isset($_SESSION['username']) AND isset($_SESSION['password'])){
 				  ";
 				  }
 	else{
-				upLapangan5($filename5);
-				upLapangan1($filename);
+				if(isset($filename5)){
+					upLapangan5($filename5);
+				}
+
+				if(isset($filename)){
+					upLapangan1($filename);
+				}
 					$SQL="UPDATE peserta SET  
 					ktp='$filename5',
                     cv='$filename',  
@@ -271,9 +279,13 @@ if(isset($_SESSION['username']) AND isset($_SESSION['password'])){
 				  </script>
 				  ";
 				  }else{
-					  
-				upLapangan6($filename9);
-				upLapangan($filename1);
+				if(isset($filename9)){
+					upLapangan6($filename9);
+				}
+				if(isset($filename1)){
+					upLapangan($filename1);
+				}
+
 					$SQL="UPDATE peserta SET 
                       suratkesehatan='$filename9',
                       ijazah='$filename1', 					  

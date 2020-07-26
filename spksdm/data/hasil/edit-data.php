@@ -94,49 +94,9 @@ $dataHasil = mysqli_fetch_array($sql_hasil);
               <tbody>
               <?php
 				   echo"
-				  <tr class='$class'>
-           <td> <input type='hidden' name='id' value='$_data[id_calon]'> 
-           <input type='text' class='span15'  name='txtnama' value='$_data[nama]'readonly  /></td>
-                  <td>KEMINATAN : </td>
-				  <td><input type='text' class='span15'  name='nilai_keminatan' value='$_data[keminatan]' readonly /></td>
-    <td>
-      <input type='text' class='span10' readonly name='bobot_keminatan' value='$bobot1 ' required />
-    </td>
-    <td>
-    ";
-      if($_data['keminatan'] == 90){
-        echo "<input type='text' class='span10' readonly name='sub_bobot_keminatan' value='0.611' required />";
-      }elseif($_data['keminatan'] == 80){
-        echo "<input type='text' class='span10' readonly name='sub_bobot_keminatan' value='0.278' required />";
-      }else{
-        echo "<input type='text' class='span10' readonly name='sub_bobot_keminatan' value='0.111' required />";
-      }
-      echo "
-  </td>
-    
-    <td>
-	<select name='r1' class='span10' readonly >
-				
-                  
-				  
-				  <option value='100' > 100</option>
-                </select>	</td>
-                <td><input type='text' class='span15'  name='' value='$dataHasil[u1]' readonly /></td>
-                <td><input type='text' class='span15'  name='' value='$dataHasil[rank]' readonly /></td>
-                </tr> 
-				<tr>
-    <th rowspan>&nbsp;</th>
-    <tH>&nbsp;</tH>
-    <th>&nbsp;</th>
-	 <th>&nbsp;</th>
-    <th> </th>
-    <th> </th>
-    <th> </th>
-    
-    <th>		</th>
-  </tr>
+				 
   <tr>
-  <th rowspan>&nbsp;</th>
+  <td rowspan>  <input type='text' class='span15'  name='txtnama' value='$_data[nama]'readonly  /></td>
     <td>USIA :  </td>
 	<td><input type='text' class='span15'  name='nilai_usia' value='$_data[usia]' readonly /> </td>
     <td>
@@ -161,7 +121,7 @@ $dataHasil = mysqli_fetch_array($sql_hasil);
                 </select>	</td>
                 
     <td><input type='text' class='span15'  name='' value='$dataHasil[u2]' readonly /></td>
-    <td>&nbsp;</td>
+    <td><input type='text' class='span15'  name='' value='$dataHasil[rank]' readonly /></td>
   </tr>
  
   <tr>
@@ -176,6 +136,46 @@ $dataHasil = mysqli_fetch_array($sql_hasil);
     <th>		</th>
 
   </tr>
+  <tr class='$class'>
+  <th> <input type='hidden' name='id' value='$_data[id_calon]'> </th>
+         <td>KEMINATAN : </td>
+ <td><input type='text' class='span15'  name='nilai_keminatan' value='$_data[keminatan]' readonly /></td>
+<td>
+<input type='text' class='span10' readonly name='bobot_keminatan' value='$bobot1 ' required />
+</td>
+<td>
+";
+if($_data['keminatan'] == 90){
+echo "<input type='text' class='span10' readonly name='sub_bobot_keminatan' value='0.611' required />";
+}elseif($_data['keminatan'] == 80){
+echo "<input type='text' class='span10' readonly name='sub_bobot_keminatan' value='0.278' required />";
+}else{
+echo "<input type='text' class='span10' readonly name='sub_bobot_keminatan' value='0.111' required />";
+}
+echo "
+</td>
+
+<td>
+<select name='r1' class='span10' readonly >
+
+         
+ 
+ <option value='100' > 100</option>
+       </select>	</td>
+       <td><input type='text' class='span15'  name='' value='$dataHasil[u1]' readonly /></td>
+       <td></td>
+       </tr> 
+<tr>
+<th rowspan>&nbsp;</th>
+<tH>&nbsp;</tH>
+<th>&nbsp;</th>
+<th>&nbsp;</th>
+<th> </th>
+<th> </th>
+<th> </th>
+
+<th>		</th>
+</tr>
   <tr>
   <th rowspan>&nbsp;</th>
     <td>KETERAMPILAN : </td>

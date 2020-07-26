@@ -88,21 +88,21 @@ $_data=mysqli_fetch_array($SQL);
 				  <tr class='$class'>
            <td> <input type='hidden' name='id' value='$_data[id_calon]'> 
            <input type='text' class='span15'  name='txtnama' value='$_data[nama]'readonly  /></td>
-                  <td>KEMINATAN : </td>
-				  <td><input type='text' class='span15'  name='nilai_keminatan' value='$_data[keminatan]' readonly /></td>
+                
+           <td>USIA :  </td>
+	<td><input type='text' class='span15'  name='nilai_usia' value='$_data[usia]' readonly /> </td>
     <td>
-      <input type='text' class='span10' readonly name='bobot_keminatan' value='$bobot1 ' required />
-    </td>
+	<input type='number' class='span10'  name='bobot_usia' value='$bobot2' readonly />	</td>
     <td>
     ";
-      if($_data['keminatan'] == 90){
-        echo "<input type='text' class='span10' readonly name='sub_bobot_keminatan' value='0.611' required />";
-      }elseif($_data['keminatan'] == 80){
-        echo "<input type='text' class='span10' readonly name='sub_bobot_keminatan' value='0.278' required />";
-      }else{
-        echo "<input type='text' class='span10' readonly name='sub_bobot_keminatan' value='0.111' required />";
-      }
-      echo "
+  if($_data['usia'] <= 15){
+    echo "<input type='text' class='span10' readonly name='sub_bobot_usia' value='0.611' required />";
+  }elseif($_data['usia'] >= 16 && $_data['usia'] <= 20){
+    echo "<input type='text' class='span10' readonly name='sub_bobot_usia' value='0.278' required />";
+  }else{
+    echo "<input type='text' class='span10' readonly name='sub_bobot_usia' value='0.111' required />";
+  }
+  echo "
 	</td>
     
     <td>
@@ -124,21 +124,23 @@ $_data=mysqli_fetch_array($SQL);
   </tr>
   <tr>
   <th rowspan>&nbsp;</th>
-    <td>USIA :  </td>
-	<td><input type='text' class='span15'  name='nilai_usia' value='$_data[usia]' readonly /> </td>
-    <td>
-	<input type='number' class='span10'  name='bobot_usia' value='$bobot2' readonly />	</td>
-    <td>
-    ";
-  if($_data['usia'] <= 15){
-    echo "<input type='text' class='span10' readonly name='sub_bobot_usia' value='0.611' required />";
-  }elseif($_data['usia'] >= 16 && $_data['usia'] <= 20){
-    echo "<input type='text' class='span10' readonly name='sub_bobot_usia' value='0.278' required />";
-  }else{
-    echo "<input type='text' class='span10' readonly name='sub_bobot_usia' value='0.111' required />";
-  }
-  echo "
-	</td>
+    
+  <td>KEMINATAN : </td>
+  <td><input type='text' class='span15'  name='nilai_keminatan' value='$_data[keminatan]' readonly /></td>
+<td>
+<input type='text' class='span10' readonly name='bobot_keminatan' value='$bobot1 ' required />
+</td>
+<td>
+";
+if($_data['keminatan'] == 90){
+echo "<input type='text' class='span10' readonly name='sub_bobot_keminatan' value='0.611' required />";
+}elseif($_data['keminatan'] == 80){
+echo "<input type='text' class='span10' readonly name='sub_bobot_keminatan' value='0.278' required />";
+}else{
+echo "<input type='text' class='span10' readonly name='sub_bobot_keminatan' value='0.111' required />";
+}
+echo "
+</td>
     <td>
 	<select name='r2' class='span10' readonly >
 				

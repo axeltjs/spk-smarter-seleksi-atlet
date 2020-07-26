@@ -33,13 +33,13 @@
                   <th width="5%" height="58">No</th>
 				  <th width="2%">Rengking</th>
                   <th width="14%">Nama</th>
-                   <th width="13%">Jenjang Pendidikan</th>
                    <th width="5%">Usia</th>
 					 <th width="13%">Keminatan</th>
 					  <th width="13%">Nilai Tes</th>
 					   <th width="13%">Keterampilan</th>
 					    <th width="15%">Kelengkapan Berkas</th>
 					    <th width="15%">Hasil Akhir</th>
+				   <th width="13%">Keterangan</th>
 					
                   <th width="20%">Aksi</th>
                 </tr>
