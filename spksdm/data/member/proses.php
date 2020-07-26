@@ -85,7 +85,6 @@ if(isset($_SESSION['username']) AND isset($_SESSION['password'])){
 			
 		}elseif($loadPage=="member" AND $action=="ubahData"  ){
 			$txtn2 = $_POST['txtn2'] ?? 0;
-			$nilaites = $_POST[txtnilaites] ?? 0;
 			// $txtn3 = $_POST['txtn3'] ?? 0;
 				
 				$SQL1="UPDATE peserta SET 
@@ -100,7 +99,6 @@ if(isset($_SESSION['username']) AND isset($_SESSION['password'])){
 				alamat='$_POST[txtAlamat]',
 				no_hp='$_POST[txtkontak]',
 				usia='$_POST[txtusia]',
-				nilaites='$nilaites',
 				n1=0,
 				n2='$txtn2',
 				keminatan='$_POST[keminatan]',
