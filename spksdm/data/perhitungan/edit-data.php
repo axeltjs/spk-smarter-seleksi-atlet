@@ -107,9 +107,6 @@ $_data=mysqli_fetch_array($SQL);
     
     <td>
 	<select name='r1' class='span10' readonly >
-				
-                  
-				  
 				  <option value='100' > 100</option>
                 </select>	</td>
                 </tr> 

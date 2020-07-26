@@ -86,6 +86,7 @@ $dataHasil = mysqli_fetch_array($sql_hasil);
 	<th width="10%">Sub Kriteria Yang Terpilih </th>
     <th width="2%">Bobot Kriteria</th>
 	<th width="2%">Bobot Sub Kriteria</th>
+    <th width="2%">Nilai Utility</th>
     <th width="2%">Nilai Real</th>
     <th width="2%">Hasil</th>
     <th width="2%">Hasil Akhir</th>
@@ -112,15 +113,9 @@ $dataHasil = mysqli_fetch_array($sql_hasil);
   }
   echo "
 	</td>
-    <td>
-	<select name='r2' class='span10' readonly >
-				
-                 
-				  
-				  <option value='100' > 100</option>
-                </select>	</td>
-                
     <td><input type='text' class='span15'  name='' value='$dataHasil[u2]' readonly /></td>
+    <td><select name='r2' class='span10' readonly > <option value='100' > 100</option></select>	</td>
+    <td><input type='text' class='span15'  name='' value='$dataHasil[h2]' readonly /></td>
     <td><input type='text' class='span15'  name='' value='$dataHasil[rank]' readonly /></td>
   </tr>
  
@@ -129,6 +124,7 @@ $dataHasil = mysqli_fetch_array($sql_hasil);
     <tH>&nbsp;</tH>
 	<tH>&nbsp;</tH>
     <tH>&nbsp;</tH>
+    <th></th>
     <th></th>
     <th></th>
     <th></th>
@@ -154,15 +150,9 @@ echo "<input type='text' class='span10' readonly name='sub_bobot_keminatan' valu
 }
 echo "
 </td>
-
-<td>
-<select name='r1' class='span10' readonly >
-
-         
- 
- <option value='100' > 100</option>
-       </select>	</td>
        <td><input type='text' class='span15'  name='' value='$dataHasil[u1]' readonly /></td>
+      <td><select name='r1' class='span10' readonly > <option value='100' > 100</option></select>	</td>
+       <td><input type='text' class='span15'  name='' value='$dataHasil[h1]' readonly /></td>
        <td></td>
        </tr> 
 <tr>
@@ -170,6 +160,7 @@ echo "
 <tH>&nbsp;</tH>
 <th>&nbsp;</th>
 <th>&nbsp;</th>
+<th> </th>
 <th> </th>
 <th> </th>
 <th> </th>
@@ -195,16 +186,10 @@ echo "
       echo "
     </td>
    
-<td>
-	
-	<select name='r3' class='span10' readonly >
-				
-                 
-				  
-				  <option value='100' > 100</option>
-                </select>	</td>
                 
     <td><input type='text' class='span15'  name='' value='$dataHasil[u5]' readonly /></td>
+    <td><select name='r3' class='span10' readonly > <option value='100' > 100</option></select>	</td>
+    <td><input type='text' class='span15'  name='' value='$dataHasil[h5]' readonly /></td>
     <td>&nbsp;</td>
   </tr>
   <tr>
@@ -212,6 +197,7 @@ echo "
     <tH>&nbsp;</tH>
 	<tH>&nbsp;</tH>
     <tH>&nbsp;</tH>
+    <th></th>
     <th></th>
     <th></th>
     <th></th>
@@ -235,13 +221,10 @@ echo "
     }
     echo "
   	</td>
-    
-    <td>
-	<select name='r4' class='span10' readonly >
-				  <option value='100' > 100</option>
-                </select>	</td>
                 
     <td><input type='text' class='span15'  name='' value='$dataHasil[u3]' readonly /></td>
+    <td><select name='r4' class='span10' readonly > <option value='100' > 100</option></select>	</td>
+    <td><input type='text' class='span15'  name='' value='$dataHasil[h3]' readonly /></td>
     <td>&nbsp;</td>
   </tr>
   <tr>
@@ -249,6 +232,7 @@ echo "
     <tH>&nbsp;</tH>
 	 <tH>&nbsp;</tH>
     <tH></tH>
+    <th> </th>
     <th> </th>
     <th> </th>
     <th> </th>
@@ -276,16 +260,10 @@ echo "
     }
     echo "
 </td>
-   
-    <td>
-	<select name='r5' class='span10'readonly >
-				
-                 
-				  
-				  <option value='100' > 100</option>
-                </select>	</td>
-                
+  
     <td><input type='text' class='span15'  name='' value='$dataHasil[u4]' readonly /></td>
+    <td><select name='r5' class='span10' readonly > <option value='100' > 100</option></select>	</td>
+    <td><input type='text' class='span15'  name='' value='$dataHasil[h4]' readonly /></td>
     <td>&nbsp;</td>
   </tr>
   <tr>
@@ -295,6 +273,7 @@ echo "
     <tH>&nbsp;</tH>
     <th></th>
     
+    <th></th>
     <th></th>
     <th></th>
     <th></th>
