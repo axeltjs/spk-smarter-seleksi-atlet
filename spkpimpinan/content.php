@@ -31,6 +31,8 @@ if(isset($_SESSION['username']) AND isset ($_SESSION['password'])){
 		include"data/kategori/input-data.php";
 	}elseif($_GET['load']=="kategori-edit"){
 		include"data/kategori/edit-data.php";
+	}elseif($_GET['load']=="kategori-detail"){
+		include"data/kategori/detail.php";
 	}elseif($_GET['load']=="record"){
 		include"data/record/view.php";
 	}elseif($_GET['load']=="record-edit"){

@@ -30,7 +30,9 @@
 				  <tr class='$class'>
                   <td>$no</td>
 				  <td>$_data[nama]</td>
-           <td><a class='btn btn-warning' href='frame.php?load=kategori-edit&id=".$_data[id]."'> Edit</a> 
+           <td>
+           <a class='btn btn-info' href='frame.php?load=kategori-detail&id=".$_data[id]."'> Lihat Peserta</a>
+           <a class='btn btn-warning' href='frame.php?load=kategori-edit&id=".$_data[id]."'> Edit</a> 
            <a class='btn btn-danger' onclick='return confirm(".'"Anda yakin ingin menghapus data ini?"'.")' href='/spkpimpinan/data/kategori/hapus.php?id=".$_data[id]."'> Hapus</a></td>
                 </tr> 
 				   ";
