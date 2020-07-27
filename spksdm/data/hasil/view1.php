@@ -105,9 +105,6 @@
           </div>
         </div>
 		
-		<div class='form-actions'>
-		<button type='submit' class='btn btn-success' ><i class='icon-save'>  </i>SIMPAN</button>
-			   </div>
 			 </form>  
 			 
 			
