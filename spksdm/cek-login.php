@@ -25,7 +25,6 @@ if($level === 'admin' || $level === 'pelatih'){
 }
 $in=mysqli_num_rows($query);
 $r=mysqli_fetch_array($query);
-// echo var_dump($in);
 
 if ($in == 1){
   session_start();
@@ -58,6 +57,7 @@ if($level === 'admin'){
     window.location =('index.php')</script>";
   }
 }elseif($level === 'pelatih'){
+
   if ($r['username']== $username AND $r['password'] == $pass AND $r['aktif']=='Y' ){	
     header('location:/spkpimpinan/frame.php?load=dashboard');
   }else{
