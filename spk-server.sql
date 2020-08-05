@@ -316,7 +316,7 @@ CREATE TABLE `sub_kriteria` (
 
 LOCK TABLES `sub_kriteria` WRITE;
 /*!40000 ALTER TABLE `sub_kriteria` DISABLE KEYS */;
-INSERT INTO `sub_kriteria` VALUES ('S0001','11 - 15 Tahun',1,0.611,'USIA'),('S0002','16 -20 Tahun',2,0.278,'USIA'),('S0003','â‰¤ 25 tahun',3,0.111,'USIA'),('S0004','Sangat Berminat',1,0.611,'KEMINATAN'),('S0006','Berminat',2,0.278,'KEMINATAN'),('S0007','Kurang Berminat',3,0.111,'KEMINATAN'),('S0008','Sangat Terampil',1,0.611,'KETERAMPILAN'),('S0009','Cukup Terampil',2,0.278,'KETERAMPILAN'),('S0010','Kurang Terampil',3,0.111,'KETERAMPILAN'),('S0011','Nilai > 80',1,0.611,'NILAI TEST'),('S0012','Nilai 71 - 80',2,0.278,'NILAI TEST'),('S0013','Nilai 60 - 70',3,0.111,'NILAI TEST'),('S0014','Sangat Lengkap',1,0.611,'KELENGKAPAN BERKAS'),('S0015','Cukup Lengkap',2,0.278,'KELENGKAPAN BERKAS'),('S0016','Kurang Lengkap',3,0.111,'KELENGKAPAN BERKAS');
+INSERT INTO `sub_kriteria` VALUES ('S0001','11 - 15 Tahun',1,0.611,'USIA'),('S0002','16 -20 Tahun',2,0.278,'USIA'),('S0003','â‰¤ 25 tahun',3,0.111,'USIA'),('S0004','Berminat',1,0.611,'KEMINATAN'),('S0006','Berminat',2,0.278,'KEMINATAN'),('S0007','Kurang Berminat',3,0.111,'KEMINATAN'),('S0008','Sangat Terampil',1,0.611,'KETERAMPILAN'),('S0009','Cukup Terampil',2,0.278,'KETERAMPILAN'),('S0010','Kurang Terampil',3,0.111,'KETERAMPILAN'),('S0011','Nilai > 80',1,0.611,'NILAI TEST'),('S0012','Nilai 71 - 80',2,0.278,'NILAI TEST'),('S0013','Nilai 60 - 70',3,0.111,'NILAI TEST'),('S0014','Sangat Lengkap',1,0.611,'KELENGKAPAN BERKAS'),('S0015','Cukup Lengkap',2,0.278,'KELENGKAPAN BERKAS'),('S0016','Kurang Lengkap',3,0.111,'KELENGKAPAN BERKAS');
 /*!40000 ALTER TABLE `sub_kriteria` ENABLE KEYS */;
 UNLOCK TABLES;
 

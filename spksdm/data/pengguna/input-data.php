@@ -93,7 +93,7 @@ include"../../../appConfig/conn.php";
               <select class="form-control"name="level" required>
                                                <option value="">Pilih</option>
 													<option value="admin">ADMIN</option>
-													<option value="Pimpinan">PIMPINAN</option>
+													<option value="pelatih">PELATIH</option>
                                             </select>
 											</div>
             </div>

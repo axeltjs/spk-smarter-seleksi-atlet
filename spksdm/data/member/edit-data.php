@@ -92,8 +92,8 @@ echo"
               <label class='control-label'>Keminatan</label>
               <div class='controls'>
 				<select name='keminatan' >
-					<option value='90' ".($_data[keminatan] == 90 ? 'selected' : '').">Sangat Berminat</option>
-					<option value='80' ".($_data[keminatan] == 80 ? 'selected' : '').">Berminat</option>
+					<option value='90' ".($_data[keminatan] == 90 ? 'selected' : '').">Berminat</option>
+					<option value='80' ".($_data[keminatan] == 80 ? 'selected' : '').">Cukup Berminat</option>
 					<option value='70' ".($_data[keminatan] == 70 ? 'selected' : '').">Kurang Berminat</option>
                 </select> ";
 				echo" 
@@ -257,7 +257,7 @@ echo"
               <label class='control-label'>Keterampilan</label>
               <div class='controls'>
                 <select name='keterampilan' required >
-				  <option value='90' ".($_data[keterampilan] == 90 ? 'selected' : '')."> Sangat Terampil</option>
+				  <option value='90' ".($_data[keterampilan] == 90 ? 'selected' : '')."> Terampil</option>
 					<option value='80' ".($_data[keterampilan] == 80 ? 'selected' : '')."> Cukup Terampil</option>
 					<option value='70' ".($_data[keterampilan] == 70 ? 'selected' : '')."> Kurang Terampil</option>
                 </select>
@@ -302,7 +302,7 @@ echo"
               <label class='control-label'>Kelengkapan Berkas</label>
               <div class='controls'>
                 <select name='kelengkapan' required >
-				  <option value='90'".($_data[kelengkapan] == 90 ? 'selected' : '')."> Sangat Lengkap</option>
+				  <option value='90'".($_data[kelengkapan] == 90 ? 'selected' : '')."> Lengkap</option>
 					<option value='80' ".($_data[kelengkapan] == 80 ? 'selected' : '')."> Cukup Lengkap</option>
 					<option value='70'".($_data[kelengkapan] == 70 ? 'selected' : '')." > Kurang Lengkap</option>
                 </select>

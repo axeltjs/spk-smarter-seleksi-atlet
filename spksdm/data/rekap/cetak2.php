@@ -122,7 +122,7 @@ else {
       <td>&nbsp;</td>
       <td>&nbsp;</td>
       <td>&nbsp;</td>
-      <td><div align="center">Ketua Harian</div></td>
+      <td><div align="center">Ketua FCSI Provinsi Kalimantan Timur</div></td>
     </tr>
   </table>
 </body>

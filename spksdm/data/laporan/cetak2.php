@@ -108,7 +108,7 @@ while($data = mysqli_fetch_array($tampil)){
         <div align="center"></div>
         <div align="center"></div>
        <div align="center"></div>       
-       <div align="center">Ketua Harian</div></td>
+       <div align="center">Ketua FCSI Provinsi Kalimantan Timur</div></td>
     </tr>
     <tr>
       <td>&nbsp;</td>
