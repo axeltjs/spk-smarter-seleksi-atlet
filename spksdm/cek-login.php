@@ -15,7 +15,7 @@ $level		= antiinjection($_POST['level']);
 $waktu = time()+25200;
 $expired=60;
 
-if($level === 'admin' || $level === 'pimpinan'){
+if($level === 'admin' || $level === 'pelatih'){
   $query=mysqli_query($koneksi,"SELECT * FROM tpengguna WHERE username='$username' AND password='$pass' AND aktif='Y' AND level='$level' ");
 }elseif($level === 'peserta'){
   $query=mysqli_query($koneksi,"SELECT * FROM peserta WHERE username='$username' 
@@ -38,7 +38,7 @@ if ($in == 1){
     $_SESSION['kdPengguna']   	  = $r['kdPengguna'];
     $_SESSION['nmPengguna']  		  = $r['nmPengguna'];
     $_SESSION['password']      	  = $r['password'];
-  }elseif($level === 'pimpinan'){
+  }elseif($level === 'pelatih'){
     $_SESSION['kdPengguna']   	  = $r['kdPengguna'];
     $_SESSION['password']      	  = $r['password'];
   }else{
@@ -57,7 +57,7 @@ if($level === 'admin'){
     window.alert('Username Atau Password Anda Salah'); 
     window.location =('index.php')</script>";
   }
-}elseif($level === 'pimpinan'){
+}elseif($level === 'pelatih'){
   if ($r['username']== $username AND $r['password'] == $pass AND $r['aktif']=='Y' ){	
     header('location:/spkpimpinan/frame.php?load=dashboard');
   }else{
