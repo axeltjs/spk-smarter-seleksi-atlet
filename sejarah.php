@@ -1,6 +1,13 @@
 
 <div class="parallax cover overlay cover-image-full home">
-        <img class="user-image img-responsive" src="images/SEJARAHBRI.jpg" alt="Learning Cover" />
+        <div style="width:80%; margin:auto; height:auto;">
+            <h2 style="text-align:center; border-bottom:1px solid #999; padding-bottom:20px; margin-bottom:20px;">Sejarah Singkat FCSI</h2>
+            <p style="text-align:justify; font-size:15px;">
+            Federasi Cheerleading Seluruh Indonesia (FCSI) adalah organisasi yang menaungi olah raga Cheerleading di Indonesia, yang telah berdiri sejak tanggal 25 Februari 2005, dan telah menjadi anggota dari International Federation of Cheerleading (IFC).  <br><br>
+            Beberapa program kerja utama FCSI antara lain Kejuaraan Nasional, Sertifikasi Pelatih dan Juri berstandar Internasional, Seminar Penjurian, Seminar Pelatih, serta beberapa kegiatan lainnya dengan standar dari International Federation of Cheerleading (IFC). Sejak 14 tahun silam, Federasi Cheerleading Seluruh Indonesia (FCSI) resmi didirikan. Organisasi tersebut bergerak menaungi olah raga cheerleading yang kerap dipandang biasa. Kendati demikian, FCSI terus bergerak konsisten dan semakin melebarkan sayap ke berbagai daerah di Tanah Air. 
+            </p>
+        </div>
+        
         <div class="parallax-layer overlay overlay-full overlay-bg-white bg-transparent" data-speed="8" data-opacity="true">
             
         </div>

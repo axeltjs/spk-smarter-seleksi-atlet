@@ -1,7 +1,19 @@
 <div class="parallax cover overlay cover-image-full home">
-        <img class="user-image img-responsive" src="images/visibruu.jpg" alt="Learning Cover" />
-        <div class="parallax-layer overlay overlay-full overlay-bg-white bg-transparent" data-speed="8" data-opacity="true">
-            
+        <div style="width:80%; margin:auto; height:auto;">
+            <h2 style="text-align:center; border-bottom:1px solid #999; padding-bottom:20px; margin-bottom:20px;">Visi & Misi FCSI Samarinda</h2>
+            <p style="text-align:justify;">
+            <h3>Visi</h3>
+            <ol style="font-size:15px;">
+                <li>Menjadi organisasi yang efektif, merangkul semua pihak, dengan personil yang kompeten, fleksibel dan sesuai kebutuhan, sehingga tercipta komunikasi yang lancar antara pusat dan daerah.</li>
+                <li>Memastikan terjadinya kompetisi tahunan yang reguler dan terjadwal.</li>
+                <li>Melakukan pembinaan atlet Cheerleading dari usia dini, agar dapat memunculkan atlet-atlet berkelas internasional yang dapat bersaing di Kejuaraan Dunia.</li>
+                <li>Melakukan perbaikan kualitas SDM yang merata di semua daerah. Menggalang dana melalui sumber dana internal, pemerintah pusat, pemda, donatur, dan sponsor.</li>
+            </ol>
+            <h3>Misi</h3>
+            <p style="font-size:15px;">
+                Meningkatkan kualitas Cheerleading di Indonesia dan mencetak atlet-atlet yang dapat berprestasi di tingkat dunia.
+            </p>
+            </p>
         </div>
     </div>
  <?php
