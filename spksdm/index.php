@@ -14,7 +14,7 @@
     <body>
         <div id="loginbox">            
             <form  class="form-vertical" action="cek-login.php" method="post">
-				 <div class="control-group normal_text"> <h3><img src="img/logo.png" alt="Logo" /></h3></div>
+				 <div class="control-group normal_text"> <h3>FCSI Samarinda</h3></div>
                 <div class="control-group">
                     <div class="controls">
                         <div class="main_input_box">

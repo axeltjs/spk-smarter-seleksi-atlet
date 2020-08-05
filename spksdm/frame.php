@@ -41,8 +41,8 @@ include"../appConfig/libb.php";
 <body>
 
 <!--Header-part-->
-<div id="header">
-  <h1><a href="#">Vigor Admin</a></h1>
+<div id="header" style="color:#fff !important;">
+  <h3 style="padding-top:17px; padding-left:12px; color:#fff !important;"><a href="#">FSCI Samarinda</a></h3>
 </div>
 
 <div id="user-nav" class="navbar navbar-inverse">
