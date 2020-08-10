@@ -17,7 +17,7 @@ $tgl1= $_POST['tahun'];
 <p align="center">&nbsp;</p>
 <p align="center">&nbsp;</p>
 <p align="center"><img src="/images/kop-fcsi.png" width="1016" height="118"></p>
-<p align="center" class="style1">Laporan Data Pengumuman Pendaftar Yang Tidak Lulus Per Periode Tahun <?php echo $tgl1?> </p>
+<p align="center" class="style1">Laporan Data Pengumuman Pendaftar Yang BELUM LAYAK Per Periode Tahun <?php echo $tgl1?> </p>
 <p align="center" class="style1">&nbsp;</p>
 <div align="center">
   <div align="center">
@@ -42,7 +42,7 @@ $tgl1= $_POST['tahun'];
 
 
 $no=1;
-$tampil = mysqli_query($koneksi,"SELECT * FROM hasil where  thn_hitung ='$tgl1' AND ket='TIDAK LULUS' order by rank DESC") or die(mysqli_error($koneksi));
+$tampil = mysqli_query($koneksi,"SELECT * FROM hasil where  thn_hitung ='$tgl1' AND ket='BELUM LAYAK' order by rank DESC") or die(mysqli_error($koneksi));
 while($data = mysqli_fetch_array($tampil)){
 ?>
     

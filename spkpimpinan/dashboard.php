@@ -28,7 +28,7 @@
          <li class="bg_lo"> <a href="?load=hasil"> <i class="icon-th-list"></i> <span class="label label-important">
 		
         <?php
-		$totInvoice=mysqli_query($koneksi,"SELECT * FROM hasil where ket='LULUS'");
+		$totInvoice=mysqli_query($koneksi,"SELECT * FROM hasil where ket='LAYAK'");
 		$tot=mysqli_num_rows($totInvoice);
 		echo"$tot";
         ?>

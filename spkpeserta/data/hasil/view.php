@@ -13,10 +13,10 @@
 			   $no=1;
 			   $_data=mysqli_fetch_array($SQL);
 				 
-				  if ($_data['ket']== 'LULUS' ){
-									$keputusan = '<span style="color:green">LULUS</span>';
-								}else IF($_data['ket']== 'TIDAK LULUS' ){
-									$keputusan = '<span style="color:red">TIDAK LULUS </span>';
+				  if ($_data['ket']== 'LAYAK' ){
+									$keputusan = '<span style="color:green">LAYAK</span>';
+								}else IF($_data['ket']== 'BELUM LAYAK' ){
+									$keputusan = '<span style="color:red">BELUM LAYAK </span>';
 								}else{
 									$keputusan = '<span style="color:yellow">??? </span>';
 								}
@@ -59,10 +59,10 @@
 			   $no=1;
 			   while($_data=mysqli_fetch_array($SQL)){
 				 
-				  if ($_data['ket']== 'LULUS' ){
-									$keputusan = '<span style="color:green">LULUS</span>';
+				  if ($_data['ket']== 'LAYAK' ){
+									$keputusan = '<span style="color:green">LAYAK</span>';
 								}else{
-									$keputusan = '<span style="color:red">TIDAK LULUS</span>';
+									$keputusan = '<span style="color:red">BELUM LAYAK</span>';
 								}
 				   
 				   echo"

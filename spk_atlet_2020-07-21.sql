@@ -81,9 +81,9 @@ LOCK TABLES `hasil` WRITE;
 
 INSERT INTO `hasil` (`id_calon`, `nama`, `thn_hitung`, `jpendidikan`, `usia`, `pengalaman`, `nilaites`, `wawancara`, `kesehatan`, `nreal`, `rank`, `n1`, `n2`, `n3`, `n4`, `h1`, `h2`, `h3`, `h4`, `h5`, `h6`, `ket`, `u1`, `u2`, `u3`, `u4`, `u5`, `u6`)
 VALUES
-	('A0001','yayan','2019','SARJANA',20,'Lebih Dari Samadengan 2 Tahun',90,'Sangat Komunikatif','Tidak ADA(sehat,bebas narkoba, tidak buta warna)',100,71,100,84,88,90,31,18,10,6,4,2,'LULUS',0.31,0.18,0.1,0.06,0.04,0.02),
-	('A0002','ria','2019','SARJANA',24,'Kurang Dari 2 Tahun',90,'Sangat Komunikatif','Tidak ADA(sehat,bebas narkoba, tidak buta warna)',100,65,99,86,76,90,31,18,4,6,4,2,'LULUS',0.31,0.18,0.04,0.06,0.04,0.02),
-	('A0003','yayan','2019','SARJANA',21,'Lebih Dari Samadengan 2 Tahun',98,'Komunikatif','Tidak ADA(sehat,bebas narkoba, tidak buta warna)',100,69,99,97,84,80,31,18,10,6,2,2,'LULUS',0.31,0.18,0.1,0.06,0.02,0.02),
+	('A0001','yayan','2019','SARJANA',20,'Lebih Dari Samadengan 2 Tahun',90,'Sangat Komunikatif','Tidak ADA(sehat,bebas narkoba, tidak buta warna)',100,71,100,84,88,90,31,18,10,6,4,2,'LAYAK',0.31,0.18,0.1,0.06,0.04,0.02),
+	('A0002','ria','2019','SARJANA',24,'Kurang Dari 2 Tahun',90,'Sangat Komunikatif','Tidak ADA(sehat,bebas narkoba, tidak buta warna)',100,65,99,86,76,90,31,18,4,6,4,2,'LAYAK',0.31,0.18,0.04,0.06,0.04,0.02),
+	('A0003','yayan','2019','SARJANA',21,'Lebih Dari Samadengan 2 Tahun',98,'Komunikatif','Tidak ADA(sehat,bebas narkoba, tidak buta warna)',100,69,99,97,84,80,31,18,10,6,2,2,'LAYAK',0.31,0.18,0.1,0.06,0.02,0.02),
 	('A0005','abdi rahman','2020','SARJANA',16,'Lebih Dari Samadengan 2 Tahun',90,'Sangat Komunikatif','Tidak ADA(sehat,bebas narkoba, tidak buta warna)',100,55,99,0,99,90,33,0,10,6,4,2,'PILIH KEPUTUSAN',0.33,0,0.1,0.06,0.04,0.02);
 
 /*!40000 ALTER TABLE `hasil` ENABLE KEYS */;

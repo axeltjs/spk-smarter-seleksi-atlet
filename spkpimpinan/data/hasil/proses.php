@@ -33,7 +33,7 @@ if(isset($_SESSION['username']) AND isset($_SESSION['password'])){
 	
 		
 		
-		$SQL5="UPDATE hasil SET ket='LULUS' where id_calon='$_GET[id]'";
+		$SQL5="UPDATE hasil SET ket='LAYAK' where id_calon='$_GET[id]'";
 	mysqli_query($koneksi,$SQL5) or die (mysqli_error($koneksi));
 	
 	
@@ -52,7 +52,7 @@ if(isset($_SESSION['username']) AND isset($_SESSION['password'])){
 	
 		
 		
-		$SQL5="UPDATE hasil SET ket='TIDAK LULUS' where id_calon='$_GET[id]'";
+		$SQL5="UPDATE hasil SET ket='BELUM LAYAK' where id_calon='$_GET[id]'";
 	mysqli_query($koneksi,$SQL5) or die (mysqli_error($koneksi));
 	
 	

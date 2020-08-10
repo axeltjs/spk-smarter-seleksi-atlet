@@ -62,10 +62,10 @@
 			   $no=1;
 			   while($_data=mysqli_fetch_array($SQL)){
 				 if ($no >= 1 && $no <= $angka ){
-									$keputusan = 'LULUS';
+									$keputusan = 'LAYAK';
 								}
 								else{
-									$keputusan = 'TIDAK LULUS';
+									$keputusan = 'BELUM LAYAK';
 								}
 		
 				 	mysqli_query($koneksi, "UPDATE hasil SET ket = '$keputusan' WHERE id_calon = '$_data[id_calon]'");
