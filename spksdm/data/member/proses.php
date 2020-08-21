@@ -100,7 +100,7 @@ if(isset($_SESSION['username']) AND isset($_SESSION['password'])){
 				no_hp='$_POST[txtkontak]',
 				usia='$_POST[txtusia]',
 				n1=0,
-				n2='$txtn2',
+				n2=0,
 				keminatan='$_POST[keminatan]',
 				kelengkapan='$_POST[kelengkapan]',
 				keterampilan='$_POST[keterampilan]',
