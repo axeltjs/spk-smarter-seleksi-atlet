@@ -111,7 +111,7 @@ echo"
           $text_keminatan = "Belum ada nilai";
         }
         echo "<input type='text' class='span6' value='$text_keminatan' readonly>";
-        echo "<input type='hidden' class='span6' name='keminatan' readonly value='$_data[keminatan]'>";
+        echo "<input type='hidden' class='span6' name='keminatan' readonly value='".($_data[keminatan] ?? 0)."'>";
 
 				echo" 
               </div>
