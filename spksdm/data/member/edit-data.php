@@ -1,3 +1,11 @@
+<style>
+.span6{
+  width:400px !important;
+}
+.span7{
+  width:400px !important;
+}
+</style>
 <?php
 $SQL=mysqli_query($koneksi,"SELECT * FROM peserta WHERE id_calon='$_GET[id]'");
 $_data=mysqli_fetch_array($SQL);
@@ -53,7 +61,7 @@ echo"
 			<div class='control-group'>
               <label class='control-label'>Jenis Kelamin</label>
               <div class='controls'>
-                <select name='jk' readonly >
+                <select name='jk' readonly  class='span6'>
 				
                   <option  >$_data[jenkel]</option>
 				  
@@ -91,18 +99,20 @@ echo"
             <div class='control-group'>
               <label class='control-label'>Keminatan</label>
               <div class='controls'>
-        <input type='number' class='span6' name='keminatan' >
-        &nbsp;
         ";
+
         if($_data[keminatan] >= 80){
-          echo 'Berminat';
+          $text_keminatan = $_data[keminatan].' (Berminat)';
         }elseif($_data[keminatan] >= 70){
-          echo 'Cukup Berminat';
+          $text_keminatan = $_data[keminatan].' (Cukup Berminat)';
         }elseif($_data[keminatan] >= 60 || $_data[keminatan] < 60){
-          echo 'Kurang Berminat';
-        }elseif($_data[keterampilan] == null){
-          echo "-";
+          $text_keminatan = $_data[keminatan].' (Kurang Berminat)';
+        }elseif($_data[keminatan] == null){
+          $text_keminatan = $_data[keminatan];
         }
+        echo "<input type='text' class='span6' value='$text_keminatan' readonly>";
+        echo "<input type='hidden' class='span6' name='keminatan' readonly value='$_data[keminatan]'>";
+
 				echo" 
               </div>
             </div>
@@ -191,29 +201,41 @@ echo"
 				echo"
               </div>
             </div>
-            <div class='control-group'>
-              <label class='control-label'>Nilai Tes:</label>
-              <div class='controls'>
-                <input type='number' class='span2'  name='txtnilaites' value='$_data[nilaites]' readonly />
-              </div>
-            </div>
+            
+			<div class='control-group'>
+      <label class='control-label'>Kedisiplinan</label>
+      <div class='controls'>";
+      if($_data[keterampilan] >= 80){
+        $txt_disiplin = $_data[keterampilan].' (Disiplin)';
+      }elseif($_data[keterampilan] >= 70){
+        $txt_disiplin = $_data[keterampilan].' (Cukup Disiplin)';
+      }elseif($_data[keterampilan] >= 60 || $_data[keterampilan] < 60){
+        $txt_disiplin = $_data[keterampilan].' (Kurang Disiplin)';
+      }elseif($_data[keterampilan] == null){
+        $txt_disiplin = $_data[keterampilan];
+      }
+      echo "
+        <input type='hidden' class='span2'  name='keterampilan' value='$_data[keterampilan]' readonly />
+        <input type='text' class='span2' value='$txt_disiplin' readonly/>
+      </div>
 			<div class='control-group'>
               <label class='control-label'>Keterampilan</label>
               <div class='controls'>
-              <input type='hidden' class='span2'  name='keterampilan' value='".$_data[nilaites] ?? 0."' readonly />
-              &nbsp;";
+              <input type='hidden' class='span2'  name='txtnilaites' value='$_data[nilaites]' readonly />
+              ";
 
-              if($_data[keterampilan] >= 90){
-                echo 'Terampil';
-              }elseif($_data[keterampilan] >= 80){
-                echo 'Cukup Terampil';
-              }elseif($_data[keterampilan] >= 70 || $_data[keterampilan] < 70){
-                echo 'Kurang Terampil';
-              }elseif($_data[keterampilan] == null){
-                echo "-";
+              if($_data[nilaites] >= 80){
+                $text_keterampilan = $_data[nilaites].' (Terampil)';
+              }elseif($_data[nilaites] >= 70){
+                $text_keterampilan = $_data[nilaites].' (Cukup Terampil)';
+              }elseif($_data[nilaites] >= 60 || $_data[nilaites] < 60){
+                $text_keterampilan = $_data[nilaites].' (Kurang Terampil)';
+              }elseif($_data[nilaites] == null){
+                $text_keterampilan = $_data[nilaites];
               }
 
               echo "
+              <input type='text' value='$text_keterampilan' readonly />
               </div>
             </div>
 			<div class='control-group'>
@@ -254,7 +276,7 @@ echo"
               <label class='control-label'>Kelengkapan Berkas</label>
               <div class='controls'>
               
-                <select name='kelengkapan' required>
+                <select name='kelengkapan' disabled required>
 				  <option readonly value='90'".($_data[kelengkapan] == 90 ? 'selected' : '')."> Lengkap</option>
 					<option readonly value='80' ".($_data[kelengkapan] == 80 ? 'selected' : '')."> Cukup Lengkap</option>
 					<option readonly value='70'".($_data[kelengkapan] == 70 ? 'selected' : '')." > Kurang Lengkap</option>
