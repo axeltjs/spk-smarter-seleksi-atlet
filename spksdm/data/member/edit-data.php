@@ -215,13 +215,13 @@ echo"
         $txt_disiplin = "Belum ada nilai";
       }
       echo "
-        <input type='hidden' class='span2'  name='keterampilan' value='$_data[keterampilan]' readonly />
+        <input type='hidden' class='span2'  name='keterampilan' value='".($_data[keterampilan] ?? 0)."' readonly />
         <input type='text' class='span2' value='$txt_disiplin' readonly/>
       </div>
 			<div class='control-group'>
               <label class='control-label'>Keterampilan</label>
               <div class='controls'>
-              <input type='hidden' class='span2'  name='txtnilaites' value='$_data[nilaites]' readonly />
+              <input type='hidden' class='span2'  name='txtnilaites' value='".($_data[nilaites] ?? 0)."' readonly />
               ";
 
               if($_data[nilaites] >= 80){
