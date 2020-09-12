@@ -161,7 +161,7 @@
               <label class="control-label">Cetak Laporan</label>
               <div class="controls">
                <ul style="list-style:none;margin:10px 0 0">
-	<li><input id="op_semua" checked type="radio" class="" name="op_lap" value="hasil"/><label for="op_s">&nbsp; Pendaftar yang Belum Layak</label></li>
+	<li><input id="op_semua" checked type="radio" class="" name="op_lap" value="hasil"/><label for="op_s">&nbsp; Pendaftar yang Tidak Layak</label></li>
 	</ul>
               </div>
             </div>

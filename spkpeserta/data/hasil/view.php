@@ -15,8 +15,8 @@
 				 
 				  if ($_data['ket']== 'LAYAK' ){
 									$keputusan = '<span style="color:green">LAYAK</span>';
-								}else IF($_data['ket']== 'BELUM LAYAK' ){
-									$keputusan = '<span style="color:red">BELUM LAYAK </span>';
+								}else IF($_data['ket']== 'TIDAK LAYAK' ){
+									$keputusan = '<span style="color:red">TIDAK LAYAK </span>';
 								}else{
 									$keputusan = '<span style="color:yellow">??? </span>';
 								}
@@ -62,7 +62,7 @@
 				  if ($_data['ket']== 'LAYAK' ){
 									$keputusan = '<span style="color:green">LAYAK</span>';
 								}else{
-									$keputusan = '<span style="color:red">BELUM LAYAK</span>';
+									$keputusan = '<span style="color:red">TIDAK LAYAK</span>';
 								}
 				   
 				   echo"

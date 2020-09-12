@@ -65,7 +65,7 @@
 									$keputusan = 'LAYAK';
 								}
 								else{
-									$keputusan = 'BELUM LAYAK';
+									$keputusan = 'TIDAK LAYAK';
 								}
 		
 				 	mysqli_query($koneksi, "UPDATE hasil SET ket = '$keputusan' WHERE id_calon = '$_data[id_calon]'");

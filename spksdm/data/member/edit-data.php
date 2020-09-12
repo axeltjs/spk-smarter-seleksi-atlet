@@ -91,11 +91,18 @@ echo"
             <div class='control-group'>
               <label class='control-label'>Keminatan</label>
               <div class='controls'>
-				<select name='keminatan' >
-					<option value='90' ".($_data[keminatan] == 90 ? 'selected' : '').">Berminat</option>
-					<option value='80' ".($_data[keminatan] == 80 ? 'selected' : '').">Cukup Berminat</option>
-					<option value='70' ".($_data[keminatan] == 70 ? 'selected' : '').">Kurang Berminat</option>
-                </select> ";
+        <input type='number' class='span6' name='keminatan' >
+        &nbsp;
+        ";
+        if($_data[keminatan] >= 80){
+          echo 'Berminat';
+        }elseif($_data[keminatan] >= 70){
+          echo 'Cukup Berminat';
+        }elseif($_data[keminatan] >= 60 || $_data[keminatan] < 60){
+          echo 'Kurang Berminat';
+        }elseif($_data[keterampilan] == null){
+          echo "-";
+        }
 				echo" 
               </div>
             </div>
@@ -193,12 +200,20 @@ echo"
 			<div class='control-group'>
               <label class='control-label'>Keterampilan</label>
               <div class='controls'>
-                <select name='keterampilan' required >
-				  <option value='90' ".($_data[keterampilan] == 90 ? 'selected' : '')."> Terampil</option>
-					<option value='80' ".($_data[keterampilan] == 80 ? 'selected' : '')."> Cukup Terampil</option>
-					<option value='70' ".($_data[keterampilan] == 70 ? 'selected' : '')."> Kurang Terampil</option>
-                </select>
-				
+              <input type='hidden' class='span2'  name='keterampilan' value='".$_data[nilaites] ?? 0."' readonly />
+              &nbsp;";
+
+              if($_data[keterampilan] >= 90){
+                echo 'Terampil';
+              }elseif($_data[keterampilan] >= 80){
+                echo 'Cukup Terampil';
+              }elseif($_data[keterampilan] >= 70 || $_data[keterampilan] < 70){
+                echo 'Kurang Terampil';
+              }elseif($_data[keterampilan] == null){
+                echo "-";
+              }
+
+              echo "
               </div>
             </div>
 			<div class='control-group'>
@@ -238,10 +253,11 @@ echo"
 			<div class='control-group'>
               <label class='control-label'>Kelengkapan Berkas</label>
               <div class='controls'>
-                <select name='kelengkapan' required >
-				  <option value='90'".($_data[kelengkapan] == 90 ? 'selected' : '')."> Lengkap</option>
-					<option value='80' ".($_data[kelengkapan] == 80 ? 'selected' : '')."> Cukup Lengkap</option>
-					<option value='70'".($_data[kelengkapan] == 70 ? 'selected' : '')." > Kurang Lengkap</option>
+              
+                <select name='kelengkapan' required>
+				  <option readonly value='90'".($_data[kelengkapan] == 90 ? 'selected' : '')."> Lengkap</option>
+					<option readonly value='80' ".($_data[kelengkapan] == 80 ? 'selected' : '')."> Cukup Lengkap</option>
+					<option readonly value='70'".($_data[kelengkapan] == 70 ? 'selected' : '')." > Kurang Lengkap</option>
                 </select>
               </div>
             </div>

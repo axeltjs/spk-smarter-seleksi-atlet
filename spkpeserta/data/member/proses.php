@@ -6,23 +6,13 @@ if(isset($_SESSION['username']) AND isset($_SESSION['password'])){
 	$loadPage= $_GET['load'];
 	$action =$_GET['action'];
 	$tgl=date('Y');
-	
-	
-	
-	
-	 
-	 
-	 
-	 
-	 
 	 
 	if($loadPage=="member" AND $action=="simpanData"){
-	
-	
-	
+
 	$SQL="INSERT INTO peserta (id_calon,nama,tgl_lhr,tempat_lhr,jenkel,alamat,no_hp,tgl_input,jpendidikan,usia,pengalaman,nilaites,wawancara,kesehatan) 
 		VALUES ('$_POST[idp]','$_POST[txtNmLengkap]','$_POST[txttgllhr]','$_POST[txttmptlhr]','$_POST[jk]','$_POST[txtAlamat]','$_POST[txtKontak]','$tgl','$_POST[txtjp]','$_POST[txtusia] ','$_POST[pengalaman]','$_POST[txtnilaites]','$_POST[txtwawancara]','$_POST[txtmcu]')";
 	mysqli_query($koneksi,$SQL) or die (mysqli_error($koneksi));
+	
 	$SQL2="INSERT INTO perhitungan (id_calon,nama,status,jpendidikan,usia,pengalaman,nilaites,wawancara,kesehatan) 
 		VALUES ('$_POST[idp]','$_POST[txtNmLengkap]','BELUM DIPROSES','$_POST[txtjp]','$_POST[txtusia]','$_POST[pengalaman]','$_POST[txtnilaites]','$_POST[txtwawancara]','$_POST[txtmcu]')";
 	mysqli_query($koneksi,$SQL2) or die (mysqli_error($koneksi));
@@ -46,14 +36,9 @@ if(isset($_SESSION['username']) AND isset($_SESSION['password'])){
 	</script>
 	";
 		
-		
-		
 	}elseif($loadPage=="member" AND $action=="aktif"){
 	
-	
-		
-		
-		$SQL5="UPDATE peserta SET aktif='Y' where id_calon='$_GET[id]'";
+	$SQL5="UPDATE peserta SET aktif='Y' where id_calon='$_GET[id]'";
 	mysqli_query($koneksi,$SQL5) or die (mysqli_error($koneksi));
 	
 	
@@ -121,15 +106,42 @@ if(isset($_SESSION['username']) AND isset($_SESSION['password'])){
 		// 		</script>
 		// 	";
 		// 	}
+		
+		$nilai_kelengkapan = 0;
+		
+		if(isset($filename5)){
+			$nilai_kelengkapan++;
+		}
 
+		if(isset($filename9)){
+			$nilai_kelengkapan++;
+		}
+
+		if(isset($filename1)){
+			$nilai_kelengkapan++;
+		}
+
+		if(isset($filename)){
+			$nilai_kelengkapan++;
+		}
 
 		if(isset($filename_kk)){
+			$nilai_kelengkapan++;
 			upLapangan4($filename_kk);
+		}
+
+		if($nilai_kelengkapan == 5){
+			$nilai_kelengkapan = 90;
+		}elseif($nilai_kelengkapan == 4){
+			$nilai_kelengkapan = 80;
+		}else{
+			$nilai_kelengkapan = 70;
 		}
 
 		  $SQL="UPDATE peserta SET 
 		  		agama = '$_POST[agama]',
-		 		kk ='$filename_kk' 
+		 		kk ='$filename_kk',
+				kelengkapan = '$nilai_kelengkapan', 
 		  WHERE id_calon='$_POST[id]'";	
 		  mysqli_query($koneksi,$SQL) or die (mysqli_error($koneksi));
 
