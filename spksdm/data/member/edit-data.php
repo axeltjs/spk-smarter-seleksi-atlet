@@ -105,10 +105,10 @@ echo"
           $text_keminatan = $_data[keminatan].' (Berminat)';
         }elseif($_data[keminatan] >= 70){
           $text_keminatan = $_data[keminatan].' (Cukup Berminat)';
-        }elseif($_data[keminatan] >= 60 || $_data[keminatan] < 60){
+        }elseif($_data[keminatan] >= 60 || $_data[keminatan] > 1){
           $text_keminatan = $_data[keminatan].' (Kurang Berminat)';
-        }elseif($_data[keminatan] == null){
-          $text_keminatan = $_data[keminatan];
+        }else{
+          $text_keminatan = "Belum ada nilai";
         }
         echo "<input type='text' class='span6' value='$text_keminatan' readonly>";
         echo "<input type='hidden' class='span6' name='keminatan' readonly value='$_data[keminatan]'>";
@@ -209,10 +209,10 @@ echo"
         $txt_disiplin = $_data[keterampilan].' (Disiplin)';
       }elseif($_data[keterampilan] >= 70){
         $txt_disiplin = $_data[keterampilan].' (Cukup Disiplin)';
-      }elseif($_data[keterampilan] >= 60 || $_data[keterampilan] < 60){
+      }elseif($_data[keterampilan] >= 60 || $_data[keterampilan] > 1){
         $txt_disiplin = $_data[keterampilan].' (Kurang Disiplin)';
-      }elseif($_data[keterampilan] == null){
-        $txt_disiplin = $_data[keterampilan];
+      }else{
+        $txt_disiplin = "Belum ada nilai";
       }
       echo "
         <input type='hidden' class='span2'  name='keterampilan' value='$_data[keterampilan]' readonly />
@@ -228,10 +228,10 @@ echo"
                 $text_keterampilan = $_data[nilaites].' (Terampil)';
               }elseif($_data[nilaites] >= 70){
                 $text_keterampilan = $_data[nilaites].' (Cukup Terampil)';
-              }elseif($_data[nilaites] >= 60 || $_data[nilaites] < 60){
+              }elseif($_data[nilaites] >= 60 || $_data[nilaites] > 1){
                 $text_keterampilan = $_data[nilaites].' (Kurang Terampil)';
-              }elseif($_data[nilaites] == null){
-                $text_keterampilan = $_data[nilaites];
+              }else{
+                $text_keterampilan = "Belum ada nilai";
               }
 
               echo "
