@@ -275,8 +275,8 @@ echo"
 			<div class='control-group'>
               <label class='control-label'>Kelengkapan Berkas</label>
               <div class='controls'>
-              
-                <select name='kelengkapan' disabled required>
+              <input type='hidden' class='span6' name='kelengkapan' readonly value='".($_data[kelengkapan] ?? 0)."'>
+                <select name='' disabled required>
 				  <option readonly value='90'".($_data[kelengkapan] == 90 ? 'selected' : '')."> Lengkap</option>
 					<option readonly value='80' ".($_data[kelengkapan] == 80 ? 'selected' : '')."> Cukup Lengkap</option>
 					<option readonly value='70'".($_data[kelengkapan] == 70 ? 'selected' : '')." > Kurang Lengkap</option>
