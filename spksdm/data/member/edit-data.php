@@ -291,7 +291,7 @@ echo"
 						echo"<button type='submit' class='btn btn-success' disabled >Validasi</button> ";
 					
 						}
-				elseif(($_data['kesehatan']== '' AND $_data['wawancara']== ''AND $_data['nilaites']== 0)){
+				elseif(($_data['validasi1']== 'CEK')){
 					echo" <button type='submit' class='btn btn-success' >Validasi</button>";
 					
 					

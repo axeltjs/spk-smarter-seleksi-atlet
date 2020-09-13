@@ -141,7 +141,7 @@ if(isset($_SESSION['username']) AND isset($_SESSION['password'])){
 		  $SQL="UPDATE peserta SET 
 		  		agama = '$_POST[agama]',
 		 		kk ='$filename_kk',
-				kelengkapan = '$nilai_kelengkapan', 
+				kelengkapan = '$nilai_kelengkapan'
 		  WHERE id_calon='$_POST[id]'";	
 		  mysqli_query($koneksi,$SQL) or die (mysqli_error($koneksi));
 

@@ -89,38 +89,16 @@ if(isset($_SESSION['username']) AND isset($_SESSION['password'])){
 				
 				$SQL1="UPDATE peserta SET 
 				validasi1='ACC',
-				validasi='SIAP1',
-				nama='$_POST[txtNmLengkap]',
-				
-				tgl_lhr='$_POST[txttgllhr]',
-				tempat_lhr='$_POST[txttmptlhr]',
-				jenkel='$_POST[jk]',
-				
-				alamat='$_POST[txtAlamat]',
-				no_hp='$_POST[txtkontak]',
-				usia='$_POST[txtusia]',
-				n1=0,
-				n2=0,
-				keminatan='$_POST[keminatan]',
-				kelengkapan='$_POST[kelengkapan]',
-				keterampilan='$_POST[keterampilan]',
-				n3=0
+				validasi='SIAP1'
+				-- status='SUDAH DIPROSES'
 				WHERE id_calon='$_POST[id]'";
 				mysqli_query($koneksi,$SQL1) or die (mysqli_error($koneksi));
 			// Hai axel, yg dipake cuma n2, keminatan s/d keterampilan
 
-			// $SQL3="UPDATE perhitungan SET nama='$_POST[txtNmLengkap]',
-										
-			// 							  status='BELUM DIPROSES',
-		
-			// 							  jpendidikan='$_POST[txtjp]',
-			// 							  usia='$_POST[txtusia]',
-			// 							  pengalaman='$_POST[pengalaman]',
-			// 							  nilaites='$_POST[txtnilaites]',
-			// 							 wawancara='$_POST[txtwawancara]',
-			// 							  kesehatan='$_POST[txtmcu]'
-			// 		WHERE id_calon='$_POST[id]'";
-			// mysqli_query($koneksi,$SQL3) or die (mysqli_error($koneksi));
+			$SQL3="UPDATE perhitungan SET 
+										  status='SUDAH DIPROSES'
+					WHERE id_calon='$_POST[id]'";
+			mysqli_query($koneksi,$SQL3) or die (mysqli_error($koneksi));
 				 
 			echo"
 			<script language='javascript'>

@@ -11,12 +11,15 @@ if(isset($_POST['id'])){
   $nilai = $_POST['disiplin'] + $_POST['kehandalan'] + $_POST['kerjasama'] + $_POST['tanggungjawab'];
   $nilai = $nilai / 4;
 
+  $keminatan = ($nilai + $_POST['disiplin']) / 2;
   $SQL="UPDATE peserta SET nilaites ='$nilai',
                           disiplin ='$_POST[disiplin]',
+                          keterampilan ='$_POST[disiplin]',
                           kehandalan ='$_POST[kehandalan]',
                           kerjasama ='$_POST[kerjasama]',
                           tanggungjawab ='$_POST[tanggungjawab]',
-                          kategori = '$_POST[kategori]'
+                          kategori = '$_POST[kategori]',
+                          keminatan = '$keminatan'
                          WHERE id_calon='$_POST[id]'";	
 	mysqli_query($koneksi,$SQL) or die (mysqli_error($koneksi));
 		 
