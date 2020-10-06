@@ -88,7 +88,7 @@ $_data=mysqli_fetch_array($SQL);
 				  <tr class='$class'>
            <td> <input type='hidden' name='id' value='$_data[id_calon]'> 
            <input type='text' class='span15'  name='txtnama' value='$_data[nama]'readonly  /></td>
-           <td>NILAI TES :  </td>
+           <td>KETERAMPILAN :  </td>
            <td> <input type='number' class='span15'  name='nilai_tes' value='$_data[nilaites]' readonly /> </td>
              <td><input type='number' class='span10'  name='bobot_nilai_tes' value='$bobot1' readonly /></td>
              <td>
@@ -156,7 +156,7 @@ echo "
   </tr>
   <tr>
   <th rowspan>&nbsp;</th>
-    <td>KETERAMPILAN : </td>
+    <td>KEDISIPLINAN : </td>
 				    <td> <select name='nilai_keterampilan' class='span19' readonly >
                   <option  >$_data[keterampilan]</option>
                 </select></td>
