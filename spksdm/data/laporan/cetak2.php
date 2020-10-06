@@ -29,8 +29,8 @@ $tgl1=$_POST['tahun'];
       <th><div align="center">NAMA</span></th>
 	   <th><div align="center"> Usia</span></th>
 	   <th><div align="center"> Keminatan</span></th>
-	   <th><div align="center"> Keterampilan</span></th>
-      <th><div align="center">Nilai Tes</span></th>
+	   <th><div align="center"> Kedisiplinan</span></th>
+      <th><div align="center">Nilai Keterampilan</span></th>
 	   <th><div align="center"> Kelengkapan Berkas</span></th>
        <th><div align="center">Rank</span></th>
        

@@ -20,7 +20,7 @@
 				 <th width="2%">Jenjang Pendidikan</th>
 				 <th width="2%">Usia</th>
 				 <th width="2%">Pengalaman Kerja</th>
-				 <th width="2%">Nilai Tes</th>
+				 <th width="2%">Keterampilan</th>
 				 <th width="1%">Kemampuan Berkomunikasi</th>
 				 <th width="5%">Kesehatan(MCU)</th>
                   

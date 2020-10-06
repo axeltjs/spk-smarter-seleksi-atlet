@@ -8,8 +8,12 @@ $sql_kategori =  mysqli_query($koneksi, "SELECT * FROM kategori");
 if(isset($_POST['id'])){
 
   $nilai = 0;
-  $nilai = $_POST['disiplin'] + $_POST['kehandalan'] + $_POST['kerjasama'] + $_POST['tanggungjawab'];
-  $nilai = $nilai / 4;
+  // $nilai = $_POST['disiplin'] + $_POST['kehandalan'] + $_POST['kerjasama'] + $_POST['tanggungjawab'];
+  // $nilai = $nilai / 4;
+
+  
+  $nilai = $_POST['kehandalan'] + $_POST['kerjasama'] + $_POST['tanggungjawab'];
+  $nilai = $nilai / 3;
 
   $keminatan = ($nilai + $_POST['disiplin']) / 2;
   $SQL="UPDATE peserta SET nilaites ='$nilai',
