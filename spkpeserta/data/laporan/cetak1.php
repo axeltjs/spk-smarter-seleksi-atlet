@@ -26,7 +26,7 @@
 	   <th><div align="center"> Usia</span></th>
        
       <th><div align="center">Pengalaman Kerja</span></th>
-      <th><div align="center">Nilai Tes</span></th>
+      <th><div align="center">Keterampilan</span></th>
        <th><div align="center">Kemampuan Berkomunikasi</span></th>
        <th><div align="center">Kesehatan(MCU)</span></th>
        

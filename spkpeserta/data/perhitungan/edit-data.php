@@ -196,7 +196,7 @@ $_data=mysqli_fetch_array($SQL);
   </tr>
   <tr>
   <th rowspan>&nbsp;</th>
-    <td>NILAI TES :  </td>
+    <td>KETERAMPILAN :  </td>
 	<td> <input type='number' class='span15'  name='txtnilai' value='$_data[nilaites]' readonly /> </td>
     <td><input type='number' class='span15'  name='k4' value='$_data4[bobot]' readonly /></td>
     <td><input type='number' class='span15'  name='sk4'value='$_data9[bobot]' readonly /> </td>

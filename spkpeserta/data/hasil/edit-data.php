@@ -196,7 +196,7 @@ $_data=mysqli_fetch_array($SQL);
   </tr>
   <tr>
   <th rowspan>&nbsp;</th>
-    <td>NILAI TES :  </td>
+    <td>KETERAMPILAN :  </td>
 	<td><b><div class='alert alert-success'>$_data[nilaites] </div></b></td>
     <td>$_data4[bobot]</td>
     <td>NILAI &gt; 80</td>

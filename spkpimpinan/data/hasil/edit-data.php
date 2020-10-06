@@ -169,7 +169,7 @@ echo "
 </tr>
   <tr>
   <th rowspan>&nbsp;</th>
-    <td>KETERAMPILAN : </td>
+    <td>KEDISIPLINAN : </td>
 				    <td> <select name='nilai_keterampilan' class='span19' readonly >
                   <option  >$_data[keterampilan]</option>
                 </select></td>
@@ -207,7 +207,7 @@ echo "
   </tr>
   <tr>
   <th rowspan>&nbsp;</th>
-    <td>NILAI TES :  </td>
+    <td>KETERAMPILAN :  </td>
 	<td> <input type='number' class='span15'  name='nilai_tes' value='$_data[nilaites]' readonly /> </td>
     <td><input type='number' class='span10'  name='bobot_nilai_tes' value='$bobot4' readonly /></td>
     <td>

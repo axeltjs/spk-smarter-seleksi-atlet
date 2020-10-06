@@ -19,7 +19,7 @@
                   <th width="1%">No</th>
                     <th width="2%">Nama</th>
                   <th width="2%">Usia</th>
-                  <th width="2%">Nilai Tes</th>
+                  <th width="2%">Keterampilan</th>
                   <th width="1%">Status</th>
                   
                   <th width="1%">Aksi</th>

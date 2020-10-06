@@ -35,8 +35,8 @@
                   <th width="14%">Nama</th>
 				    <th width="5%">Usia</th>
 					  <th width="13%">Keminatan</th>
-					  <th width="13%">Nilai Tes</th>
-					   <th width="13%">Keterampilan</th>
+					  <th width="13%">Keterampilan</th>
+					   <th width="13%">Kedisiplinan</th>
 					    <th width="15%">Kelengkapan Berkas</th>
                   <th width="13%">Hasil Akhir</th>
 				   <th width="13%">Keterangan</th>

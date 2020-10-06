@@ -29,8 +29,8 @@
        <th><div align="center">NAMA</span></th>
 	   <th><div align="center">USIA</span></th>
       <th><div align="center">NILAI KEMINATAN</span></th>
-      <th><div align="center">NILAI KETERAMPILAN</span></th>
-       <th><div align="center">NILAI TES</span></th>
+      <th><div align="center">NILAI KEDISIPLINAN</span></th>
+       <th><div align="center">NILAI KETERAMPILAN</span></th>
 	   <th><div align="center">NILAI KELENGKAPAN BERKAS</span></th>
       <?php
 include"conn.php";

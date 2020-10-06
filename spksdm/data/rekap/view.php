@@ -73,8 +73,8 @@
                   <th width="2%">Nama </th>
                   <th th width="2%">Usia</th>
 				  <th th width="2%">Nilai Keminatan</th>
-				  <th th width="2%">Nilai Keterampilan</th>
-				  <th width="2%">Nilai Tes</th>
+				  <th th width="2%">Nilai Kedisiplinan</th>
+				  <th width="2%">Nilai Keterampilan</th>
 				  <th th width="2%">Nilai Kelengkapan Berkas</th>
                   <th width="1%">Aksi</th>
                 </tr>

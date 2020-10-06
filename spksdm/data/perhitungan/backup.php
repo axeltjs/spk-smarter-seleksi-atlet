@@ -160,7 +160,7 @@ echo"<input type='text' class='span10'  name='s1' readonly value=' $bobot7'/>";
   </tr>
   <tr>
   <th rowspan>&nbsp;</th>
-    <td>KETERAMPILAN : </td>
+    <td>KEDISIPLINAN : </td>
 				    <td> <select name='pn' class='span19' readonly >
 				
                   <option  >$_data[keterampilan]</option>
@@ -190,7 +190,7 @@ echo"<input type='text' class='span10'  name='s1' readonly value=' $bobot7'/>";
   </tr>
   <tr>
   <th rowspan>&nbsp;</th>
-    <td>NILAI TES :  </td>
+    <td>KETERAMPILAN :  </td>
 	<td> <input type='number' class='span15'  name='txtnilai' value='$_data[nilaites]' readonly /> </td>
     <td><input type='number' class='span10'  name='k4' value='$bobot4' readonly /></td>
     <td>
